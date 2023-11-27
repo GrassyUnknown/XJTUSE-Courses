@@ -1,0 +1,122 @@
+Flow report for tjl2
+Wed Oct 29 20:46:01 2014
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Wed Oct 29 20:46:01 2014    ;
+; Quartus II Version      ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name           ; tjl2                                     ;
+; Top-level Entity Name   ; Block2                                   ;
+; Family                  ; Cyclone                                  ;
+; Device                  ; EP1C6Q240C8                              ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; Yes                                      ;
+; Total logic elements    ; 169 / 5,980 ( 3 % )                      ;
+; Total pins              ; 26 / 185 ( 14 % )                        ;
+; Total virtual pins      ; 0                                        ;
+; Total memory bits       ; 2,048 / 92,160 ( 2 % )                   ;
+; Total PLLs              ; 0 / 2 ( 0 % )                            ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/29/2014 20:45:43 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; tjl2                ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                               ;
++------------------------------------+----------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                      ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+----------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 6112296611.141458674303600 ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_RAM_DQ                 ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                        ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                         ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                          ; --            ; --          ; --             ;
+; MISC_FILE                          ; D:/tjl2/tjl2.dpf           ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_ram_dq0.bsf            ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_ram_dq0.cmp            ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                   ; --            ; Block2      ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                     ; --            ; Block2      ; Top            ;
+; TOP_LEVEL_ENTITY                   ; Block2                     ; tjl2          ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                        ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+----------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:04     ; 1.0                     ; 199 MB              ; 00:00:04                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 188 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:04     ; 1.0                     ; 158 MB              ; 00:00:04                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 121 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:13     ; --                      ; --                  ; 00:00:13                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                       ;
++-------------------------+------------------+------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis    ; lenovo           ; Windows XP ; 5.1        ; i686           ;
+; Fitter                  ; lenovo           ; Windows XP ; 5.1        ; i686           ;
+; Assembler               ; lenovo           ; Windows XP ; 5.1        ; i686           ;
+; Classic Timing Analyzer ; lenovo           ; Windows XP ; 5.1        ; i686           ;
++-------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off tjl2 -c tjl2
+quartus_fit --read_settings_files=off --write_settings_files=off tjl2 -c tjl2
+quartus_asm --read_settings_files=off --write_settings_files=off tjl2 -c tjl2
+quartus_tan --read_settings_files=off --write_settings_files=off tjl2 -c tjl2 --timing_analysis_only
+
+
+

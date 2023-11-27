@@ -1,0 +1,126 @@
+Flow report for alu
+Tue Nov 12 19:07:46 2013
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Tue Nov 12 19:07:46 2013    ;
+; Quartus II Version      ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name           ; alu                                      ;
+; Top-level Entity Name   ; Block1                                   ;
+; Family                  ; Cyclone                                  ;
+; Device                  ; EP1C6Q240C8                              ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; Yes                                      ;
+; Total logic elements    ; 380 / 5,980 ( 6 % )                      ;
+; Total pins              ; 41 / 185 ( 22 % )                        ;
+; Total virtual pins      ; 0                                        ;
+; Total memory bits       ; 0 / 92,160 ( 0 % )                       ;
+; Total PLLs              ; 0 / 2 ( 0 % )                            ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 11/12/2013 19:07:25 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; alu                 ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++------------------------------------+----------------------------+---------------+-------------+----------------------+
+; Assignment Name                    ; Value                      ; Default Value ; Entity Name ; Section Id           ;
++------------------------------------+----------------------------+---------------+-------------+----------------------+
+; COMPILER_SIGNATURE_ID              ; 6112296611.138425444500288 ; --            ; --          ; --                   ;
+; EDA_DESIGN_ENTRY_SYNTHESIS_TOOL    ; Synplify                   ; <None>        ; --          ; --                   ;
+; EDA_INPUT_DATA_FORMAT              ; Vqm                        ; --            ; --          ; eda_design_synthesis ;
+; EDA_LMF_FILE                       ; synplcty.lmf               ; --            ; --          ; eda_design_synthesis ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                ; --            ; --          ; --                   ;
+; IP_TOOL_VERSION                    ; 9.0                        ; --            ; --          ; --                   ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                         ; --            ; --          ; --                   ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                          ; --            ; --          ; --                   ;
+; MISC_FILE                          ; lpm_counter0.bsf           ; --            ; --          ; --                   ;
+; MISC_FILE                          ; lpm_counter0.cmp           ; --            ; --          ; --                   ;
+; MISC_FILE                          ; D:/alu/alu.dpf             ; --            ; --          ; --                   ;
+; PARTITION_COLOR                    ; 16764057                   ; --            ; Block1      ; Top                  ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                     ; --            ; Block1      ; Top                  ;
+; TOP_LEVEL_ENTITY                   ; Block1                     ; alu           ; --          ; --                   ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                        ; --            ; --          ; eda_blast_fpga       ;
++------------------------------------+----------------------------+---------------+-------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 190 MB              ; 00:00:04                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 186 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:04     ; 1.0                     ; 159 MB              ; 00:00:04                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 122 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:12     ; --                      ; --                  ; 00:00:13                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                       ;
++-------------------------+------------------+------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis    ; lenovo           ; Windows XP ; 5.1        ; i686           ;
+; Fitter                  ; lenovo           ; Windows XP ; 5.1        ; i686           ;
+; Assembler               ; lenovo           ; Windows XP ; 5.1        ; i686           ;
+; Classic Timing Analyzer ; lenovo           ; Windows XP ; 5.1        ; i686           ;
++-------------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
+quartus_fit --read_settings_files=off --write_settings_files=off alu -c alu
+quartus_asm --read_settings_files=off --write_settings_files=off alu -c alu
+quartus_tan --read_settings_files=off --write_settings_files=off alu -c alu --timing_analysis_only
+quartus_eda --read_settings_files=off --write_settings_files=off alu -c alu
+
+
+

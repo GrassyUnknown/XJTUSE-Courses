@@ -1,0 +1,117 @@
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		MCU8951_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 4.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:52:23  AUGUST 25, 2005"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name VHDL_FILE IRAM.VHD
+set_global_assignment -name VHDL_FILE ROM4K.VHD
+set_global_assignment -name VHDL_FILE reg8b.vhd
+set_global_assignment -name VHDL_FILE ETESTER.VHD
+set_global_assignment -name VHDL_FILE reg4b.vhd
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_28 -to CLK
+set_location_assignment PIN_5 -to NESW
+set_location_assignment PIN_222 -to POE[0]
+set_location_assignment PIN_219 -to POE[1]
+set_location_assignment PIN_226 -to POE[2]
+set_location_assignment PIN_223 -to POE[3]
+set_location_assignment PIN_55 -to POE[4]
+set_location_assignment PIN_224 -to POE[5]
+set_location_assignment PIN_21 -to P1O[0]
+set_location_assignment PIN_41 -to P1O[1]
+set_location_assignment PIN_128 -to P1O[2]
+set_location_assignment PIN_132 -to P1O[3]
+set_location_assignment PIN_133 -to P1O[4]
+set_location_assignment PIN_134 -to P1O[5]
+set_location_assignment PIN_135 -to P1O[6]
+set_location_assignment PIN_136 -to P1O[7]
+set_location_assignment PIN_137 -to P2O[0]
+set_location_assignment PIN_138 -to P2O[1]
+set_location_assignment PIN_139 -to P2O[2]
+set_location_assignment PIN_140 -to P2O[3]
+set_location_assignment PIN_141 -to P2O[4]
+set_location_assignment PIN_158 -to P2O[5]
+set_location_assignment PIN_159 -to P2O[6]
+set_location_assignment PIN_160 -to P2O[7]
+set_location_assignment PIN_13 -to P0O[0]
+set_location_assignment PIN_14 -to P0O[1]
+set_location_assignment PIN_15 -to P0O[2]
+set_location_assignment PIN_16 -to P0O[3]
+set_location_assignment PIN_17 -to P0O[4]
+set_location_assignment PIN_18 -to P0O[5]
+set_location_assignment PIN_19 -to P0O[6]
+set_location_assignment PIN_20 -to P0O[7]
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name TOP_LEVEL_ENTITY MCU8951
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name CYCLONE_CONFIGURATION_DEVICE EPCS4
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT OFF
+
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name MISC_FILE "C:/Documents and Settings/Administrator/×ÀÃæ/moebasic/MCU8951.dpf"
+set_location_assignment PIN_169 -to P0I[0]
+set_location_assignment PIN_173 -to P0I[1]
+set_global_assignment -name MISC_FILE "C:/Documents and Settings/Administrator/×ÀÃæ/moebasic2.0/moebasic/MCU8951.dpf"
+set_location_assignment PIN_104 -to SPK
+set_location_assignment PIN_174 -to P3O[0]
+set_global_assignment -name MISC_FILE "C:/Documents and Settings/Administrator/×ÀÃæ/8051Terminal/moebasic2.0/MCU8951.dpf"
+set_location_assignment PIN_161 -to P3O[7]
+set_location_assignment PIN_163 -to P3O[6]
+set_location_assignment PIN_165 -to P3O[5]
+set_location_assignment PIN_167 -to P3O[4]
+set_global_assignment -name VECTOR_WAVEFORM_FILE MCU8951.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf

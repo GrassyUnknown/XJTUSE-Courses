@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Nov 26 21:57:56 2013
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : shiyan1
+Top-level Entity Name : shiyan1
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 7 / 5,980 ( < 1 % )
+Total pins : 21 / 185 ( 11 % )
+Total virtual pins : 0
+Total memory bits : 0 / 92,160 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,1370 @@
+// Copyright (C) 1991-2004 Altera Corporation
+// Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+// support information,  device programming or simulation file,  and any other
+// associated  documentation or information  provided by  Altera  or a partner
+// under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+// to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+// other  use  of such  megafunction  design,  netlist,  support  information,
+// device programming or simulation file,  or any other  related documentation
+// or information  is prohibited  for  any  other purpose,  including, but not
+// limited to  modification,  reverse engineering,  de-compiling, or use  with
+// any other  silicon devices,  unless such use is  explicitly  licensed under
+// a separate agreement with  Altera  or a megafunction partner.  Title to the
+// intellectual property,  including patents,  copyrights,  trademarks,  trade
+// secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+// support  information,  device programming or simulation file,  or any other
+// related documentation or information provided by  Altera  or a megafunction
+// partner, remains with Altera, the megafunction partner, or their respective
+// licensors. No other licenses, including any licenses needed under any third
+// party's intellectual property, are provided herein.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 4.1 Build 181 06/29/2004 SJ Full Version"
+
+// DATE "10/07/2006 19:02:30"
+
+module 	STEP4 (
+	RESET,
+	CLK,
+	STEP,
+	NESW,
+	DOUT,
+	XX0,
+	XX1,
+	XX2,
+	T1,
+	T2,
+	T3,
+	T4,
+	POE);
+input 	RESET;
+input 	CLK;
+input 	STEP;
+input 	NESW;
+output 	DOUT;
+output 	XX0;
+output 	XX1;
+output 	XX2;
+output 	T1;
+output 	T2;
+output 	T3;
+output 	T4;
+output 	[7:0] POE;
+wire \STEP:inst12|16 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[0]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[0]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[0] ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[1]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[1]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[1] ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[2]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[2]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[2] ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[3]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[3]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[3] ;
+wire \SCHKT:inst1|CLKA~59 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[4] ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[5]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[5]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[5] ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[6]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[6]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[6] ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[7]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[7]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[7] ;
+wire \SCHKT:inst1|CLKA~60 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8~COUT ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[8]~COUT0 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[8]~COUT1 ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[8] ;
+wire \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[9] ;
+wire \SCHKT:inst1|CLKA~61 ;
+wire \NESW~combout ;
+wire \SCHKT:inst1|Mux~3600 ;
+wire \SCHKT:inst1|Mux~109 ;
+wire \SCHKT:inst1|LOK[0] ;
+wire \SCHKT:inst1|CT2[1] ;
+wire \SCHKT:inst1|LOK[1] ;
+wire \SCHKT:inst1|Mux~3601 ;
+wire \SCHKT:inst1|Mux~3605 ;
+wire \SCHKT:inst1|Mux~3606 ;
+wire \SCHKT:inst1|Mux~160 ;
+wire \RESET~combout ;
+wire \SCHKT:inst1|Q[3] ;
+wire \SCHKT:inst1|Mux~111 ;
+wire \SCHKT:inst1|Mux~3588 ;
+wire \SCHKT:inst1|Mux~3589 ;
+wire \SCHKT:inst1|Mux~3590 ;
+wire \SCHKT:inst1|Mux~3591 ;
+wire \SCHKT:inst1|Mux~3592 ;
+wire \SCHKT:inst1|Q[2] ;
+wire \SCHKT:inst1|Mux~114 ;
+wire \SCHKT:inst1|process0~2 ;
+wire \SCHKT:inst1|add~9 ;
+wire \SCHKT:inst1|CT2[2] ;
+wire \SCHKT:inst1|Mux~3594 ;
+wire \SCHKT:inst1|Mux~3581 ;
+wire \SCHKT:inst1|Mux~161 ;
+wire \SCHKT:inst1|Mux~162 ;
+wire \SCHKT:inst1|Q[0] ;
+wire \SCHKT:inst1|Mux~3279 ;
+wire \SCHKT:inst1|Mux~3288 ;
+wire \SCHKT:inst1|Mux~3287 ;
+wire \SCHKT:inst1|Mux~3294 ;
+wire \SCHKT:inst1|Q[1] ;
+wire \SCHKT:inst1|Mux~3596 ;
+wire \SCHKT:inst1|LOK[2] ;
+wire \SCHKT:inst1|process0~0 ;
+wire \SCHKT:inst1|Q[5] ;
+wire \SCHKT:inst1|Mux~3597 ;
+wire \SCHKT:inst1|Mux~3415 ;
+wire \SCHKT:inst1|Mux~3603 ;
+wire \SCHKT:inst1|Mux~3598 ;
+wire \SCHKT:inst1|Mux~163 ;
+wire \SCHKT:inst1|Mux~3604 ;
+wire \SCHKT:inst1|Q[4] ;
+wire \SCHKT:inst1|A1~24 ;
+wire \SCHKT:inst1|A1~22 ;
+wire \SCHKT:inst1|ENA ;
+wire \STEP~combout ;
+wire \STEP:inst12|1 ;
+wire \STEP:inst12|4 ;
+wire \STEP:inst12|5 ;
+wire \STEP:inst12|3 ;
+wire inst11;
+wire \CLK~combout ;
+wire \STEP:inst12|18 ;
+wire inst8;
+wire inst9;
+wire inst10;
+wire \SCHKT:inst1|FA[2]~3 ;
+wire \SCHKT:inst1|FA[1]~4 ;
+wire \SCHKT:inst1|FA[0]~5 ;
+wire [2:0] \SCHKT:inst1|CT2 ;
+wire [5:0] \SCHKT:inst1|Q ;
+wire [9:0] \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q ;
+wire [2:0] \SCHKT:inst1|LOK ;
+
+wire \SCHKT:inst1|__ALT_INV__LOK[0] ;
+wire \__ALT_INV__STEP~combout ;
+
+wire gnd;
+wire vcc;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+
+assign \SCHKT:inst1|__ALT_INV__LOK[0]  = ~ \SCHKT:inst1|LOK[0] ;
+assign \__ALT_INV__STEP~combout  = ~ \STEP~combout ;
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0 (
+	.clk(\CLK~combout ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[0] ),
+	.aclr(gnd),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[0] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0 .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0 .lut_mask = "33CC";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1 (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[1] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella0~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[1] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1 .lut_mask = "5A5F";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2 (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[2] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella1~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[2] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2 .lut_mask = "A50A";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3 (
+	.clk(\CLK~combout ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[3] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella2~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[3] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3 .lut_mask = "3C3F";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|CLKA~59_I (
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[3] ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[0] ),
+	.datac(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[2] ),
+	.datad(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[1] ),
+	.combout(\SCHKT:inst1|CLKA~59 ));
+defparam \SCHKT:inst1|CLKA~59_I .operation_mode = "normal";
+defparam \SCHKT:inst1|CLKA~59_I .synch_mode = "off";
+defparam \SCHKT:inst1|CLKA~59_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|CLKA~59_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|CLKA~59_I .lut_mask = "7FFF";
+defparam \SCHKT:inst1|CLKA~59_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4 (
+	.clk(\CLK~combout ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[4] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella3~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[4] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4 .lut_mask = "C30C";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5 (
+	.clk(\CLK~combout ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[5] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella4~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[5] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5 .lut_mask = "3C3F";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6 (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[6] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella5~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[6] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6 .lut_mask = "A50A";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7 (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[7] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella6~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[7] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7 .lut_mask = "5A5F";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|CLKA~60_I (
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[7] ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[4] ),
+	.datac(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[5] ),
+	.datad(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[6] ),
+	.combout(\SCHKT:inst1|CLKA~60 ));
+defparam \SCHKT:inst1|CLKA~60_I .operation_mode = "normal";
+defparam \SCHKT:inst1|CLKA~60_I .synch_mode = "off";
+defparam \SCHKT:inst1|CLKA~60_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|CLKA~60_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|CLKA~60_I .lut_mask = "7FFF";
+defparam \SCHKT:inst1|CLKA~60_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8 (
+	.clk(\CLK~combout ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[8] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella7~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[8] ),
+	.cout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8~COUT ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8 .operation_mode = "arithmetic";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8 .lut_mask = "C30C";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella9 (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[9] ),
+	.aclr(gnd),
+	.cin(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella8~COUT ),
+	.regout(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[9] ));
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella9 .operation_mode = "normal";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella9 .synch_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella9 .register_cascade_mode = "off";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella9 .sum_lutc_input = "cin";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella9 .lut_mask = "5A5A";
+defparam \SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|counter_cella9 .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|CLKA~61_I (
+	.dataa(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[8] ),
+	.datab(\SCHKT:inst1|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated|safe_q[9] ),
+	.datac(\SCHKT:inst1|CLKA~59 ),
+	.datad(\SCHKT:inst1|CLKA~60 ),
+	.combout(\SCHKT:inst1|CLKA~61 ));
+defparam \SCHKT:inst1|CLKA~61_I .operation_mode = "normal";
+defparam \SCHKT:inst1|CLKA~61_I .synch_mode = "off";
+defparam \SCHKT:inst1|CLKA~61_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|CLKA~61_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|CLKA~61_I .lut_mask = "0008";
+defparam \SCHKT:inst1|CLKA~61_I .output_mode = "comb_only";
+
+cyclone_io \NESW~I (
+	.combout(\NESW~combout ),
+	.padio(NESW));
+defparam \NESW~I .operation_mode = "input";
+defparam \NESW~I .input_register_mode = "none";
+defparam \NESW~I .output_register_mode = "none";
+defparam \NESW~I .oe_register_mode = "none";
+defparam \NESW~I .input_async_reset = "none";
+defparam \NESW~I .output_async_reset = "none";
+defparam \NESW~I .oe_async_reset = "none";
+defparam \NESW~I .input_sync_reset = "none";
+defparam \NESW~I .output_sync_reset = "none";
+defparam \NESW~I .oe_sync_reset = "none";
+defparam \NESW~I .input_power_up = "low";
+defparam \NESW~I .output_power_up = "low";
+defparam \NESW~I .oe_power_up = "low";
+
+cyclone_lcell \SCHKT:inst1|Mux~3600_I (
+	.dataa(\SCHKT:inst1|Q[3] ),
+	.datab(\SCHKT:inst1|Mux~3596 ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\NESW~combout ),
+	.combout(\SCHKT:inst1|Mux~3600 ));
+defparam \SCHKT:inst1|Mux~3600_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3600_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3600_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3600_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3600_I .lut_mask = "4004";
+defparam \SCHKT:inst1|Mux~3600_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~109_I (
+	.datab(\SCHKT:inst1|Q[0] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\NESW~combout ),
+	.combout(\SCHKT:inst1|Mux~109 ));
+defparam \SCHKT:inst1|Mux~109_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~109_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~109_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~109_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~109_I .lut_mask = "03FC";
+defparam \SCHKT:inst1|Mux~109_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|LOK[0]~I (
+	.clk(\SCHKT:inst1|CLKA~61 ),
+	.datac(\SCHKT:inst1|LOK[0] ),
+	.aclr(gnd),
+	.regout(\SCHKT:inst1|LOK[0] ));
+defparam \SCHKT:inst1|LOK[0]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|LOK[0]~I .synch_mode = "off";
+defparam \SCHKT:inst1|LOK[0]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|LOK[0]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|LOK[0]~I .lut_mask = "0F0F";
+defparam \SCHKT:inst1|LOK[0]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|CT2[1]~I (
+	.clk(\SCHKT:inst1|CLKA~61 ),
+	.datad(\SCHKT:inst1|CT2[1] ),
+	.aclr(gnd),
+	.ena(\SCHKT:inst1|__ALT_INV__LOK[0] ),
+	.regout(\SCHKT:inst1|CT2[1] ));
+defparam \SCHKT:inst1|CT2[1]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|CT2[1]~I .synch_mode = "off";
+defparam \SCHKT:inst1|CT2[1]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|CT2[1]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|CT2[1]~I .lut_mask = "00FF";
+defparam \SCHKT:inst1|CT2[1]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|LOK[1]~I (
+	.clk(\SCHKT:inst1|CLKA~61 ),
+	.datac(\SCHKT:inst1|CT2[1] ),
+	.datad(\NESW~combout ),
+	.aclr(gnd),
+	.sload(vcc),
+	.combout(\SCHKT:inst1|process0~2 ),
+	.regout(\SCHKT:inst1|LOK[1] ));
+defparam \SCHKT:inst1|LOK[1]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|LOK[1]~I .synch_mode = "on";
+defparam \SCHKT:inst1|LOK[1]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|LOK[1]~I .sum_lutc_input = "qfbk";
+defparam \SCHKT:inst1|LOK[1]~I .lut_mask = "0FF0";
+defparam \SCHKT:inst1|LOK[1]~I .output_mode = "reg_and_comb";
+
+cyclone_lcell \SCHKT:inst1|Mux~3601_I (
+	.dataa(\NESW~combout ),
+	.datab(\SCHKT:inst1|Q[0] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\SCHKT:inst1|LOK[1] ),
+	.combout(\SCHKT:inst1|Mux~3601 ));
+defparam \SCHKT:inst1|Mux~3601_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3601_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3601_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3601_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3601_I .lut_mask = "DEEE";
+defparam \SCHKT:inst1|Mux~3601_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3605_I (
+	.dataa(\SCHKT:inst1|Q[0] ),
+	.datab(\SCHKT:inst1|Q[4] ),
+	.datac(\SCHKT:inst1|Q[2] ),
+	.datad(\SCHKT:inst1|LOK[0] ),
+	.combout(\SCHKT:inst1|Mux~3605 ));
+defparam \SCHKT:inst1|Mux~3605_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3605_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3605_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3605_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3605_I .lut_mask = "0989";
+defparam \SCHKT:inst1|Mux~3605_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3606_I (
+	.dataa(\NESW~combout ),
+	.datab(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|Q[2] ),
+	.datad(\SCHKT:inst1|Mux~3605 ),
+	.combout(\SCHKT:inst1|Mux~3606 ));
+defparam \SCHKT:inst1|Mux~3606_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3606_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3606_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3606_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3606_I .lut_mask = "D1E2";
+defparam \SCHKT:inst1|Mux~3606_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~160_I (
+	.dataa(\SCHKT:inst1|Q[1] ),
+	.datab(\SCHKT:inst1|Mux~109 ),
+	.datac(\SCHKT:inst1|Mux~3601 ),
+	.datad(\SCHKT:inst1|Mux~3606 ),
+	.combout(\SCHKT:inst1|Mux~160 ));
+defparam \SCHKT:inst1|Mux~160_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~160_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~160_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~160_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~160_I .lut_mask = "5F88";
+defparam \SCHKT:inst1|Mux~160_I .output_mode = "comb_only";
+
+cyclone_io \RESET~I (
+	.combout(\RESET~combout ),
+	.padio(RESET));
+defparam \RESET~I .operation_mode = "input";
+defparam \RESET~I .input_register_mode = "none";
+defparam \RESET~I .output_register_mode = "none";
+defparam \RESET~I .oe_register_mode = "none";
+defparam \RESET~I .input_async_reset = "none";
+defparam \RESET~I .output_async_reset = "none";
+defparam \RESET~I .oe_async_reset = "none";
+defparam \RESET~I .input_sync_reset = "none";
+defparam \RESET~I .output_sync_reset = "none";
+defparam \RESET~I .oe_sync_reset = "none";
+defparam \RESET~I .input_power_up = "low";
+defparam \RESET~I .output_power_up = "low";
+defparam \RESET~I .oe_power_up = "low";
+
+cyclone_lcell \SCHKT:inst1|Q[3]~I (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|Q[5] ),
+	.datab(\SCHKT:inst1|Mux~3600 ),
+	.datac(\SCHKT:inst1|Q[3] ),
+	.datad(\SCHKT:inst1|Mux~160 ),
+	.aclr(\RESET~combout ),
+	.regout(\SCHKT:inst1|Q[3] ));
+defparam \SCHKT:inst1|Q[3]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|Q[3]~I .synch_mode = "off";
+defparam \SCHKT:inst1|Q[3]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Q[3]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Q[3]~I .lut_mask = "DCCC";
+defparam \SCHKT:inst1|Q[3]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~111_I (
+	.datab(\SCHKT:inst1|Q[3] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\NESW~combout ),
+	.combout(\SCHKT:inst1|Mux~111 ));
+defparam \SCHKT:inst1|Mux~111_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~111_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~111_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~111_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~111_I .lut_mask = "CF30";
+defparam \SCHKT:inst1|Mux~111_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3588_I (
+	.dataa(\SCHKT:inst1|Q[2] ),
+	.datac(\SCHKT:inst1|Q[5] ),
+	.datad(\SCHKT:inst1|Q[1] ),
+	.combout(\SCHKT:inst1|Mux~3588 ));
+defparam \SCHKT:inst1|Mux~3588_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3588_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3588_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3588_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3588_I .lut_mask = "000A";
+defparam \SCHKT:inst1|Mux~3588_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3589_I (
+	.dataa(\NESW~combout ),
+	.datab(\SCHKT:inst1|Q[3] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\SCHKT:inst1|LOK[0] ),
+	.combout(\SCHKT:inst1|Mux~3589 ));
+defparam \SCHKT:inst1|Mux~3589_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3589_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3589_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3589_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3589_I .lut_mask = "A969";
+defparam \SCHKT:inst1|Mux~3589_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3590_I (
+	.dataa(\SCHKT:inst1|Q[0] ),
+	.datab(\SCHKT:inst1|Mux~111 ),
+	.datac(\SCHKT:inst1|Mux~3588 ),
+	.datad(\SCHKT:inst1|Mux~3589 ),
+	.combout(\SCHKT:inst1|Mux~3590 ));
+defparam \SCHKT:inst1|Mux~3590_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3590_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3590_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3590_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3590_I .lut_mask = "E040";
+defparam \SCHKT:inst1|Mux~3590_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3591_I (
+	.dataa(\NESW~combout ),
+	.datab(\SCHKT:inst1|Q[3] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\SCHKT:inst1|LOK[1] ),
+	.combout(\SCHKT:inst1|Mux~3591 ));
+defparam \SCHKT:inst1|Mux~3591_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3591_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3591_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3591_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3591_I .lut_mask = "9656";
+defparam \SCHKT:inst1|Mux~3591_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3592_I (
+	.dataa(\SCHKT:inst1|Q[0] ),
+	.datab(\SCHKT:inst1|Mux~111 ),
+	.datac(\SCHKT:inst1|Q[2] ),
+	.datad(\SCHKT:inst1|Mux~3591 ),
+	.combout(\SCHKT:inst1|Mux~3592 ));
+defparam \SCHKT:inst1|Mux~3592_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3592_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3592_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3592_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3592_I .lut_mask = "5202";
+defparam \SCHKT:inst1|Mux~3592_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Q[2]~I (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|Q[5] ),
+	.datab(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|Mux~3590 ),
+	.datad(\SCHKT:inst1|Mux~3592 ),
+	.aclr(\RESET~combout ),
+	.regout(\SCHKT:inst1|Q[2] ));
+defparam \SCHKT:inst1|Q[2]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|Q[2]~I .synch_mode = "off";
+defparam \SCHKT:inst1|Q[2]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Q[2]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Q[2]~I .lut_mask = "F4F0";
+defparam \SCHKT:inst1|Q[2]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~114_I (
+	.datab(\SCHKT:inst1|Q[3] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\NESW~combout ),
+	.combout(\SCHKT:inst1|Mux~114 ));
+defparam \SCHKT:inst1|Mux~114_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~114_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~114_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~114_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~114_I .lut_mask = "F30C";
+defparam \SCHKT:inst1|Mux~114_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|add~9_I (
+	.datac(\SCHKT:inst1|LOK[0] ),
+	.datad(\SCHKT:inst1|CT2[1] ),
+	.combout(\SCHKT:inst1|add~9 ));
+defparam \SCHKT:inst1|add~9_I .operation_mode = "normal";
+defparam \SCHKT:inst1|add~9_I .synch_mode = "off";
+defparam \SCHKT:inst1|add~9_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|add~9_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|add~9_I .lut_mask = "0F00";
+defparam \SCHKT:inst1|add~9_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|CT2[2]~I (
+	.clk(\SCHKT:inst1|CLKA~61 ),
+	.datac(\SCHKT:inst1|CT2[2] ),
+	.aclr(gnd),
+	.ena(\SCHKT:inst1|add~9 ),
+	.regout(\SCHKT:inst1|CT2[2] ));
+defparam \SCHKT:inst1|CT2[2]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|CT2[2]~I .synch_mode = "off";
+defparam \SCHKT:inst1|CT2[2]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|CT2[2]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|CT2[2]~I .lut_mask = "0F0F";
+defparam \SCHKT:inst1|CT2[2]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|LOK[2]~I (
+	.clk(\SCHKT:inst1|CLKA~61 ),
+	.dataa(\SCHKT:inst1|Q[4] ),
+	.datab(\SCHKT:inst1|Q[3] ),
+	.datac(\SCHKT:inst1|CT2[2] ),
+	.datad(\NESW~combout ),
+	.aclr(gnd),
+	.sload(vcc),
+	.combout(\SCHKT:inst1|Mux~3594 ),
+	.regout(\SCHKT:inst1|LOK[2] ));
+defparam \SCHKT:inst1|LOK[2]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|LOK[2]~I .synch_mode = "on";
+defparam \SCHKT:inst1|LOK[2]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|LOK[2]~I .sum_lutc_input = "qfbk";
+defparam \SCHKT:inst1|LOK[2]~I .lut_mask = "A846";
+defparam \SCHKT:inst1|LOK[2]~I .output_mode = "reg_and_comb";
+
+cyclone_lcell \SCHKT:inst1|Mux~3581_I (
+	.dataa(\SCHKT:inst1|Q[4] ),
+	.datab(\SCHKT:inst1|Q[3] ),
+	.datac(\SCHKT:inst1|process0~2 ),
+	.datad(\SCHKT:inst1|Mux~3594 ),
+	.combout(\SCHKT:inst1|Mux~3581 ));
+defparam \SCHKT:inst1|Mux~3581_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3581_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3581_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3581_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3581_I .lut_mask = "FF01";
+defparam \SCHKT:inst1|Mux~3581_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~161_I (
+	.dataa(\SCHKT:inst1|Q[2] ),
+	.datab(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|Mux~114 ),
+	.datad(\SCHKT:inst1|Mux~3581 ),
+	.combout(\SCHKT:inst1|Mux~161 ));
+defparam \SCHKT:inst1|Mux~161_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~161_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~161_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~161_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~161_I .lut_mask = "9D8C";
+defparam \SCHKT:inst1|Mux~161_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~162_I (
+	.dataa(\SCHKT:inst1|Q[2] ),
+	.datab(\SCHKT:inst1|Mux~3591 ),
+	.datac(\SCHKT:inst1|Mux~111 ),
+	.datad(\SCHKT:inst1|Mux~161 ),
+	.combout(\SCHKT:inst1|Mux~162 ));
+defparam \SCHKT:inst1|Mux~162_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~162_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~162_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~162_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~162_I .lut_mask = "DDA0";
+defparam \SCHKT:inst1|Mux~162_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Q[0]~I (
+	.clk(\CLK~combout ),
+	.datab(\SCHKT:inst1|Q[0] ),
+	.datac(\SCHKT:inst1|Q[5] ),
+	.datad(\SCHKT:inst1|Mux~162 ),
+	.aclr(\RESET~combout ),
+	.regout(\SCHKT:inst1|Q[0] ));
+defparam \SCHKT:inst1|Q[0]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|Q[0]~I .synch_mode = "off";
+defparam \SCHKT:inst1|Q[0]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Q[0]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Q[0]~I .lut_mask = "0300";
+defparam \SCHKT:inst1|Q[0]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3279_I (
+	.dataa(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|LOK[0] ),
+	.datad(\SCHKT:inst1|LOK[1] ),
+	.combout(\SCHKT:inst1|Mux~3279 ));
+defparam \SCHKT:inst1|Mux~3279_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3279_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3279_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3279_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3279_I .lut_mask = "FA50";
+defparam \SCHKT:inst1|Mux~3279_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3288_I (
+	.dataa(\SCHKT:inst1|Q[3] ),
+	.datab(\SCHKT:inst1|Q[2] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\SCHKT:inst1|Mux~3279 ),
+	.combout(\SCHKT:inst1|Mux~3288 ));
+defparam \SCHKT:inst1|Mux~3288_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3288_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3288_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3288_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3288_I .lut_mask = "4D4C";
+defparam \SCHKT:inst1|Mux~3288_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3287_I (
+	.dataa(\SCHKT:inst1|Q[3] ),
+	.datab(\SCHKT:inst1|Q[2] ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\SCHKT:inst1|Mux~3279 ),
+	.combout(\SCHKT:inst1|Mux~3287 ));
+defparam \SCHKT:inst1|Mux~3287_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3287_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3287_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3287_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3287_I .lut_mask = "CB4A";
+defparam \SCHKT:inst1|Mux~3287_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3294_I (
+	.dataa(\NESW~combout ),
+	.datab(\SCHKT:inst1|Q[0] ),
+	.datac(\SCHKT:inst1|Mux~3288 ),
+	.datad(\SCHKT:inst1|Mux~3287 ),
+	.combout(\SCHKT:inst1|Mux~3294 ));
+defparam \SCHKT:inst1|Mux~3294_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3294_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3294_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3294_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3294_I .lut_mask = "659A";
+defparam \SCHKT:inst1|Mux~3294_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Q[1]~I (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|Q[1] ),
+	.datab(\SCHKT:inst1|Q[5] ),
+	.datac(\SCHKT:inst1|Q[0] ),
+	.datad(\SCHKT:inst1|Mux~3294 ),
+	.aclr(\RESET~combout ),
+	.regout(\SCHKT:inst1|Q[1] ));
+defparam \SCHKT:inst1|Q[1]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|Q[1]~I .synch_mode = "off";
+defparam \SCHKT:inst1|Q[1]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Q[1]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Q[1]~I .lut_mask = "0012";
+defparam \SCHKT:inst1|Q[1]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3596_I (
+	.dataa(\SCHKT:inst1|Q[5] ),
+	.datab(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|Q[0] ),
+	.datad(\SCHKT:inst1|Q[2] ),
+	.combout(\SCHKT:inst1|Mux~3596 ));
+defparam \SCHKT:inst1|Mux~3596_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3596_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3596_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3596_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3596_I .lut_mask = "4000";
+defparam \SCHKT:inst1|Mux~3596_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|process0~0_I (
+	.dataa(\NESW~combout ),
+	.datad(\SCHKT:inst1|LOK[2] ),
+	.combout(\SCHKT:inst1|process0~0 ));
+defparam \SCHKT:inst1|process0~0_I .operation_mode = "normal";
+defparam \SCHKT:inst1|process0~0_I .synch_mode = "off";
+defparam \SCHKT:inst1|process0~0_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|process0~0_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|process0~0_I .lut_mask = "55AA";
+defparam \SCHKT:inst1|process0~0_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Q[5]~I (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|Mux~3596 ),
+	.datab(\SCHKT:inst1|Q[4] ),
+	.datac(\SCHKT:inst1|Q[3] ),
+	.datad(\SCHKT:inst1|process0~0 ),
+	.aclr(\RESET~combout ),
+	.regout(\SCHKT:inst1|Q[5] ));
+defparam \SCHKT:inst1|Q[5]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|Q[5]~I .synch_mode = "off";
+defparam \SCHKT:inst1|Q[5]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Q[5]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Q[5]~I .lut_mask = "0080";
+defparam \SCHKT:inst1|Q[5]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3597_I (
+	.dataa(\SCHKT:inst1|Q[3] ),
+	.datab(\SCHKT:inst1|Mux~3596 ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\NESW~combout ),
+	.combout(\SCHKT:inst1|Mux~3597 ));
+defparam \SCHKT:inst1|Mux~3597_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3597_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3597_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3597_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3597_I .lut_mask = "0008";
+defparam \SCHKT:inst1|Mux~3597_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3415_I (
+	.dataa(\SCHKT:inst1|Q[3] ),
+	.datab(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|Q[0] ),
+	.datad(\SCHKT:inst1|LOK[2] ),
+	.combout(\SCHKT:inst1|Mux~3415 ));
+defparam \SCHKT:inst1|Mux~3415_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3415_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3415_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3415_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3415_I .lut_mask = "E9E8";
+defparam \SCHKT:inst1|Mux~3415_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3603_I (
+	.dataa(\SCHKT:inst1|Q[0] ),
+	.datab(\NESW~combout ),
+	.datac(\SCHKT:inst1|Q[2] ),
+	.datad(\SCHKT:inst1|Mux~3415 ),
+	.combout(\SCHKT:inst1|Mux~3603 ));
+defparam \SCHKT:inst1|Mux~3603_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3603_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3603_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3603_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3603_I .lut_mask = "9C93";
+defparam \SCHKT:inst1|Mux~3603_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3598_I (
+	.dataa(\NESW~combout ),
+	.datab(\SCHKT:inst1|Q[0] ),
+	.datac(\SCHKT:inst1|Q[1] ),
+	.datad(\SCHKT:inst1|LOK[0] ),
+	.combout(\SCHKT:inst1|Mux~3598 ));
+defparam \SCHKT:inst1|Mux~3598_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3598_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3598_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3598_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3598_I .lut_mask = "0A06";
+defparam \SCHKT:inst1|Mux~3598_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~163_I (
+	.dataa(\SCHKT:inst1|Q[0] ),
+	.datab(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|process0~2 ),
+	.datad(\SCHKT:inst1|Mux~3598 ),
+	.combout(\SCHKT:inst1|Mux~163 ));
+defparam \SCHKT:inst1|Mux~163_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~163_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~163_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~163_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~163_I .lut_mask = "FF04";
+defparam \SCHKT:inst1|Mux~163_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Mux~3604_I (
+	.dataa(\SCHKT:inst1|Q[3] ),
+	.datab(\SCHKT:inst1|Q[2] ),
+	.datac(\SCHKT:inst1|Mux~3603 ),
+	.datad(\SCHKT:inst1|Mux~163 ),
+	.combout(\SCHKT:inst1|Mux~3604 ));
+defparam \SCHKT:inst1|Mux~3604_I .operation_mode = "normal";
+defparam \SCHKT:inst1|Mux~3604_I .synch_mode = "off";
+defparam \SCHKT:inst1|Mux~3604_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Mux~3604_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Mux~3604_I .lut_mask = "DA52";
+defparam \SCHKT:inst1|Mux~3604_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|Q[4]~I (
+	.clk(\CLK~combout ),
+	.dataa(\SCHKT:inst1|Q[5] ),
+	.datab(\SCHKT:inst1|Mux~3597 ),
+	.datac(\SCHKT:inst1|Q[4] ),
+	.datad(\SCHKT:inst1|Mux~3604 ),
+	.aclr(\RESET~combout ),
+	.regout(\SCHKT:inst1|Q[4] ));
+defparam \SCHKT:inst1|Q[4]~I .operation_mode = "normal";
+defparam \SCHKT:inst1|Q[4]~I .synch_mode = "off";
+defparam \SCHKT:inst1|Q[4]~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|Q[4]~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|Q[4]~I .lut_mask = "DCCC";
+defparam \SCHKT:inst1|Q[4]~I .output_mode = "reg_only";
+
+cyclone_lcell \SCHKT:inst1|A1~24_I (
+	.datab(\SCHKT:inst1|Q[4] ),
+	.datac(\SCHKT:inst1|Q[5] ),
+	.datad(\SCHKT:inst1|Q[3] ),
+	.combout(\SCHKT:inst1|A1~24 ));
+defparam \SCHKT:inst1|A1~24_I .operation_mode = "normal";
+defparam \SCHKT:inst1|A1~24_I .synch_mode = "off";
+defparam \SCHKT:inst1|A1~24_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|A1~24_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|A1~24_I .lut_mask = "FFCF";
+defparam \SCHKT:inst1|A1~24_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|A1~22_I (
+	.dataa(\SCHKT:inst1|A1~24 ),
+	.datab(\SCHKT:inst1|Q[1] ),
+	.datac(\SCHKT:inst1|Q[2] ),
+	.datad(\SCHKT:inst1|Q[0] ),
+	.combout(\SCHKT:inst1|A1~22 ));
+defparam \SCHKT:inst1|A1~22_I .operation_mode = "normal";
+defparam \SCHKT:inst1|A1~22_I .synch_mode = "off";
+defparam \SCHKT:inst1|A1~22_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|A1~22_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|A1~22_I .lut_mask = "0001";
+defparam \SCHKT:inst1|A1~22_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|ENA~I (
+	.clk(\SCHKT:inst1|A1~22 ),
+	.aclr(\RESET~combout ),
+	.regout(\SCHKT:inst1|ENA ));
+defparam \SCHKT:inst1|ENA~I .operation_mode = "normal";
+defparam \SCHKT:inst1|ENA~I .synch_mode = "off";
+defparam \SCHKT:inst1|ENA~I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|ENA~I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|ENA~I .lut_mask = "FFFF";
+defparam \SCHKT:inst1|ENA~I .output_mode = "reg_only";
+
+cyclone_io \STEP~I (
+	.combout(\STEP~combout ),
+	.padio(STEP));
+defparam \STEP~I .operation_mode = "input";
+defparam \STEP~I .input_register_mode = "none";
+defparam \STEP~I .output_register_mode = "none";
+defparam \STEP~I .oe_register_mode = "none";
+defparam \STEP~I .input_async_reset = "none";
+defparam \STEP~I .output_async_reset = "none";
+defparam \STEP~I .oe_async_reset = "none";
+defparam \STEP~I .input_sync_reset = "none";
+defparam \STEP~I .output_sync_reset = "none";
+defparam \STEP~I .oe_sync_reset = "none";
+defparam \STEP~I .input_power_up = "low";
+defparam \STEP~I .output_power_up = "low";
+defparam \STEP~I .oe_power_up = "low";
+
+cyclone_lcell \STEP:inst12|1~I (
+	.clk(\STEP:inst12|18 ),
+	.datac(\STEP:inst12|3 ),
+	.datad(\SCHKT:inst1|ENA ),
+	.aclr(\__ALT_INV__STEP~combout ),
+	.sload(vcc),
+	.combout(inst8),
+	.regout(\STEP:inst12|1 ));
+defparam \STEP:inst12|1~I .operation_mode = "normal";
+defparam \STEP:inst12|1~I .synch_mode = "on";
+defparam \STEP:inst12|1~I .register_cascade_mode = "off";
+defparam \STEP:inst12|1~I .sum_lutc_input = "qfbk";
+defparam \STEP:inst12|1~I .lut_mask = "F000";
+defparam \STEP:inst12|1~I .output_mode = "reg_and_comb";
+
+cyclone_lcell \STEP:inst12|4~I (
+	.clk(\STEP:inst12|18 ),
+	.datac(\STEP:inst12|1 ),
+	.datad(\SCHKT:inst1|ENA ),
+	.aclr(\__ALT_INV__STEP~combout ),
+	.sload(vcc),
+	.combout(inst9),
+	.regout(\STEP:inst12|4 ));
+defparam \STEP:inst12|4~I .operation_mode = "normal";
+defparam \STEP:inst12|4~I .synch_mode = "on";
+defparam \STEP:inst12|4~I .register_cascade_mode = "off";
+defparam \STEP:inst12|4~I .sum_lutc_input = "qfbk";
+defparam \STEP:inst12|4~I .lut_mask = "F000";
+defparam \STEP:inst12|4~I .output_mode = "reg_and_comb";
+
+cyclone_lcell \STEP:inst12|5~I (
+	.clk(\STEP:inst12|18 ),
+	.datac(\STEP:inst12|4 ),
+	.datad(\SCHKT:inst1|ENA ),
+	.aclr(\__ALT_INV__STEP~combout ),
+	.sload(vcc),
+	.combout(inst10),
+	.regout(\STEP:inst12|5 ));
+defparam \STEP:inst12|5~I .operation_mode = "normal";
+defparam \STEP:inst12|5~I .synch_mode = "on";
+defparam \STEP:inst12|5~I .register_cascade_mode = "off";
+defparam \STEP:inst12|5~I .sum_lutc_input = "qfbk";
+defparam \STEP:inst12|5~I .lut_mask = "F000";
+defparam \STEP:inst12|5~I .output_mode = "reg_and_comb";
+
+cyclone_lcell \STEP:inst12|3~I (
+	.clk(\STEP:inst12|18 ),
+	.dataa(\STEP:inst12|5 ),
+	.datab(\STEP:inst12|1 ),
+	.datac(\STEP:inst12|3 ),
+	.datad(\STEP:inst12|4 ),
+	.aclr(\__ALT_INV__STEP~combout ),
+	.regout(\STEP:inst12|3 ));
+defparam \STEP:inst12|3~I .operation_mode = "normal";
+defparam \STEP:inst12|3~I .synch_mode = "off";
+defparam \STEP:inst12|3~I .register_cascade_mode = "off";
+defparam \STEP:inst12|3~I .sum_lutc_input = "datac";
+defparam \STEP:inst12|3~I .lut_mask = "0001";
+defparam \STEP:inst12|3~I .output_mode = "reg_only";
+
+cyclone_lcell \inst11~I (
+	.datac(\STEP:inst12|3 ),
+	.datad(\SCHKT:inst1|ENA ),
+	.combout(inst11));
+defparam \inst11~I .operation_mode = "normal";
+defparam \inst11~I .synch_mode = "off";
+defparam \inst11~I .register_cascade_mode = "off";
+defparam \inst11~I .sum_lutc_input = "datac";
+defparam \inst11~I .lut_mask = "F000";
+defparam \inst11~I .output_mode = "comb_only";
+
+cyclone_io \CLK~I (
+	.combout(\CLK~combout ),
+	.padio(CLK));
+defparam \CLK~I .operation_mode = "input";
+defparam \CLK~I .input_register_mode = "none";
+defparam \CLK~I .output_register_mode = "none";
+defparam \CLK~I .oe_register_mode = "none";
+defparam \CLK~I .input_async_reset = "none";
+defparam \CLK~I .output_async_reset = "none";
+defparam \CLK~I .oe_async_reset = "none";
+defparam \CLK~I .input_sync_reset = "none";
+defparam \CLK~I .output_sync_reset = "none";
+defparam \CLK~I .oe_sync_reset = "none";
+defparam \CLK~I .input_power_up = "low";
+defparam \CLK~I .output_power_up = "low";
+defparam \CLK~I .oe_power_up = "low";
+
+cyclone_lcell \STEP:inst12|16~I (
+	.clk(\STEP:inst12|18 ),
+	.datac(\STEP:inst12|5 ),
+	.datad(\CLK~combout ),
+	.aclr(\__ALT_INV__STEP~combout ),
+	.sload(vcc),
+	.combout(\STEP:inst12|18 ),
+	.regout(\STEP:inst12|16 ));
+defparam \STEP:inst12|16~I .operation_mode = "normal";
+defparam \STEP:inst12|16~I .synch_mode = "on";
+defparam \STEP:inst12|16~I .register_cascade_mode = "off";
+defparam \STEP:inst12|16~I .sum_lutc_input = "qfbk";
+defparam \STEP:inst12|16~I .lut_mask = "FFF0";
+defparam \STEP:inst12|16~I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|FA[2]~3_I (
+	.dataa(\SCHKT:inst1|ENA ),
+	.datad(\SCHKT:inst1|LOK[2] ),
+	.combout(\SCHKT:inst1|FA[2]~3 ));
+defparam \SCHKT:inst1|FA[2]~3_I .operation_mode = "normal";
+defparam \SCHKT:inst1|FA[2]~3_I .synch_mode = "off";
+defparam \SCHKT:inst1|FA[2]~3_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|FA[2]~3_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|FA[2]~3_I .lut_mask = "5500";
+defparam \SCHKT:inst1|FA[2]~3_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|FA[1]~4_I (
+	.dataa(\SCHKT:inst1|ENA ),
+	.datad(\SCHKT:inst1|LOK[1] ),
+	.combout(\SCHKT:inst1|FA[1]~4 ));
+defparam \SCHKT:inst1|FA[1]~4_I .operation_mode = "normal";
+defparam \SCHKT:inst1|FA[1]~4_I .synch_mode = "off";
+defparam \SCHKT:inst1|FA[1]~4_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|FA[1]~4_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|FA[1]~4_I .lut_mask = "5500";
+defparam \SCHKT:inst1|FA[1]~4_I .output_mode = "comb_only";
+
+cyclone_lcell \SCHKT:inst1|FA[0]~5_I (
+	.datac(\SCHKT:inst1|LOK[0] ),
+	.datad(\SCHKT:inst1|ENA ),
+	.combout(\SCHKT:inst1|FA[0]~5 ));
+defparam \SCHKT:inst1|FA[0]~5_I .operation_mode = "normal";
+defparam \SCHKT:inst1|FA[0]~5_I .synch_mode = "off";
+defparam \SCHKT:inst1|FA[0]~5_I .register_cascade_mode = "off";
+defparam \SCHKT:inst1|FA[0]~5_I .sum_lutc_input = "datac";
+defparam \SCHKT:inst1|FA[0]~5_I .lut_mask = "00F0";
+defparam \SCHKT:inst1|FA[0]~5_I .output_mode = "comb_only";
+
+cyclone_io \DOUT~I (
+	.datain(\SCHKT:inst1|ENA ),
+	.padio(DOUT));
+defparam \DOUT~I .operation_mode = "output";
+defparam \DOUT~I .input_register_mode = "none";
+defparam \DOUT~I .output_register_mode = "none";
+defparam \DOUT~I .oe_register_mode = "none";
+defparam \DOUT~I .input_async_reset = "none";
+defparam \DOUT~I .output_async_reset = "none";
+defparam \DOUT~I .oe_async_reset = "none";
+defparam \DOUT~I .input_sync_reset = "none";
+defparam \DOUT~I .output_sync_reset = "none";
+defparam \DOUT~I .oe_sync_reset = "none";
+defparam \DOUT~I .input_power_up = "low";
+defparam \DOUT~I .output_power_up = "low";
+defparam \DOUT~I .oe_power_up = "low";
+
+cyclone_io \XX0~I (
+	.datain(\SCHKT:inst1|ENA ),
+	.padio(XX0));
+defparam \XX0~I .operation_mode = "output";
+defparam \XX0~I .input_register_mode = "none";
+defparam \XX0~I .output_register_mode = "none";
+defparam \XX0~I .oe_register_mode = "none";
+defparam \XX0~I .input_async_reset = "none";
+defparam \XX0~I .output_async_reset = "none";
+defparam \XX0~I .oe_async_reset = "none";
+defparam \XX0~I .input_sync_reset = "none";
+defparam \XX0~I .output_sync_reset = "none";
+defparam \XX0~I .oe_sync_reset = "none";
+defparam \XX0~I .input_power_up = "low";
+defparam \XX0~I .output_power_up = "low";
+defparam \XX0~I .oe_power_up = "low";
+
+cyclone_io \XX1~I (
+	.datain(gnd),
+	.padio(XX1));
+defparam \XX1~I .operation_mode = "output";
+defparam \XX1~I .input_register_mode = "none";
+defparam \XX1~I .output_register_mode = "none";
+defparam \XX1~I .oe_register_mode = "none";
+defparam \XX1~I .input_async_reset = "none";
+defparam \XX1~I .output_async_reset = "none";
+defparam \XX1~I .oe_async_reset = "none";
+defparam \XX1~I .input_sync_reset = "none";
+defparam \XX1~I .output_sync_reset = "none";
+defparam \XX1~I .oe_sync_reset = "none";
+defparam \XX1~I .input_power_up = "low";
+defparam \XX1~I .output_power_up = "low";
+defparam \XX1~I .oe_power_up = "low";
+
+cyclone_io \XX2~I (
+	.datain(gnd),
+	.padio(XX2));
+defparam \XX2~I .operation_mode = "output";
+defparam \XX2~I .input_register_mode = "none";
+defparam \XX2~I .output_register_mode = "none";
+defparam \XX2~I .oe_register_mode = "none";
+defparam \XX2~I .input_async_reset = "none";
+defparam \XX2~I .output_async_reset = "none";
+defparam \XX2~I .oe_async_reset = "none";
+defparam \XX2~I .input_sync_reset = "none";
+defparam \XX2~I .output_sync_reset = "none";
+defparam \XX2~I .oe_sync_reset = "none";
+defparam \XX2~I .input_power_up = "low";
+defparam \XX2~I .output_power_up = "low";
+defparam \XX2~I .oe_power_up = "low";
+
+cyclone_io \T1~I (
+	.datain(inst11),
+	.padio(T1));
+defparam \T1~I .operation_mode = "output";
+defparam \T1~I .input_register_mode = "none";
+defparam \T1~I .output_register_mode = "none";
+defparam \T1~I .oe_register_mode = "none";
+defparam \T1~I .input_async_reset = "none";
+defparam \T1~I .output_async_reset = "none";
+defparam \T1~I .oe_async_reset = "none";
+defparam \T1~I .input_sync_reset = "none";
+defparam \T1~I .output_sync_reset = "none";
+defparam \T1~I .oe_sync_reset = "none";
+defparam \T1~I .input_power_up = "low";
+defparam \T1~I .output_power_up = "low";
+defparam \T1~I .oe_power_up = "low";
+
+cyclone_io \T2~I (
+	.datain(inst8),
+	.padio(T2));
+defparam \T2~I .operation_mode = "output";
+defparam \T2~I .input_register_mode = "none";
+defparam \T2~I .output_register_mode = "none";
+defparam \T2~I .oe_register_mode = "none";
+defparam \T2~I .input_async_reset = "none";
+defparam \T2~I .output_async_reset = "none";
+defparam \T2~I .oe_async_reset = "none";
+defparam \T2~I .input_sync_reset = "none";
+defparam \T2~I .output_sync_reset = "none";
+defparam \T2~I .oe_sync_reset = "none";
+defparam \T2~I .input_power_up = "low";
+defparam \T2~I .output_power_up = "low";
+defparam \T2~I .oe_power_up = "low";
+
+cyclone_io \T3~I (
+	.datain(inst9),
+	.padio(T3));
+defparam \T3~I .operation_mode = "output";
+defparam \T3~I .input_register_mode = "none";
+defparam \T3~I .output_register_mode = "none";
+defparam \T3~I .oe_register_mode = "none";
+defparam \T3~I .input_async_reset = "none";
+defparam \T3~I .output_async_reset = "none";
+defparam \T3~I .oe_async_reset = "none";
+defparam \T3~I .input_sync_reset = "none";
+defparam \T3~I .output_sync_reset = "none";
+defparam \T3~I .oe_sync_reset = "none";
+defparam \T3~I .input_power_up = "low";
+defparam \T3~I .output_power_up = "low";
+defparam \T3~I .oe_power_up = "low";
+
+cyclone_io \T4~I (
+	.datain(inst10),
+	.padio(T4));
+defparam \T4~I .operation_mode = "output";
+defparam \T4~I .input_register_mode = "none";
+defparam \T4~I .output_register_mode = "none";
+defparam \T4~I .oe_register_mode = "none";
+defparam \T4~I .input_async_reset = "none";
+defparam \T4~I .output_async_reset = "none";
+defparam \T4~I .oe_async_reset = "none";
+defparam \T4~I .input_sync_reset = "none";
+defparam \T4~I .output_sync_reset = "none";
+defparam \T4~I .oe_sync_reset = "none";
+defparam \T4~I .input_power_up = "low";
+defparam \T4~I .output_power_up = "low";
+defparam \T4~I .oe_power_up = "low";
+
+cyclone_io \POE[7]~I (
+	.datain(gnd),
+	.padio(POE[7]));
+defparam \POE[7]~I .operation_mode = "output";
+defparam \POE[7]~I .input_register_mode = "none";
+defparam \POE[7]~I .output_register_mode = "none";
+defparam \POE[7]~I .oe_register_mode = "none";
+defparam \POE[7]~I .input_async_reset = "none";
+defparam \POE[7]~I .output_async_reset = "none";
+defparam \POE[7]~I .oe_async_reset = "none";
+defparam \POE[7]~I .input_sync_reset = "none";
+defparam \POE[7]~I .output_sync_reset = "none";
+defparam \POE[7]~I .oe_sync_reset = "none";
+defparam \POE[7]~I .input_power_up = "low";
+defparam \POE[7]~I .output_power_up = "low";
+defparam \POE[7]~I .oe_power_up = "low";
+
+cyclone_io \POE[6]~I (
+	.datain(vcc),
+	.padio(POE[6]));
+defparam \POE[6]~I .operation_mode = "output";
+defparam \POE[6]~I .input_register_mode = "none";
+defparam \POE[6]~I .output_register_mode = "none";
+defparam \POE[6]~I .oe_register_mode = "none";
+defparam \POE[6]~I .input_async_reset = "none";
+defparam \POE[6]~I .output_async_reset = "none";
+defparam \POE[6]~I .oe_async_reset = "none";
+defparam \POE[6]~I .input_sync_reset = "none";
+defparam \POE[6]~I .output_sync_reset = "none";
+defparam \POE[6]~I .oe_sync_reset = "none";
+defparam \POE[6]~I .input_power_up = "low";
+defparam \POE[6]~I .output_power_up = "low";
+defparam \POE[6]~I .oe_power_up = "low";
+
+cyclone_io \POE[5]~I (
+	.datain(\SCHKT:inst1|ENA ),
+	.padio(POE[5]));
+defparam \POE[5]~I .operation_mode = "output";
+defparam \POE[5]~I .input_register_mode = "none";
+defparam \POE[5]~I .output_register_mode = "none";
+defparam \POE[5]~I .oe_register_mode = "none";
+defparam \POE[5]~I .input_async_reset = "none";
+defparam \POE[5]~I .output_async_reset = "none";
+defparam \POE[5]~I .oe_async_reset = "none";
+defparam \POE[5]~I .input_sync_reset = "none";
+defparam \POE[5]~I .output_sync_reset = "none";
+defparam \POE[5]~I .oe_sync_reset = "none";
+defparam \POE[5]~I .input_power_up = "low";
+defparam \POE[5]~I .output_power_up = "low";
+defparam \POE[5]~I .oe_power_up = "low";
+
+cyclone_io \POE[4]~I (
+	.datain(\RESET~combout ),
+	.padio(POE[4]));
+defparam \POE[4]~I .operation_mode = "output";
+defparam \POE[4]~I .input_register_mode = "none";
+defparam \POE[4]~I .output_register_mode = "none";
+defparam \POE[4]~I .oe_register_mode = "none";
+defparam \POE[4]~I .input_async_reset = "none";
+defparam \POE[4]~I .output_async_reset = "none";
+defparam \POE[4]~I .oe_async_reset = "none";
+defparam \POE[4]~I .input_sync_reset = "none";
+defparam \POE[4]~I .output_sync_reset = "none";
+defparam \POE[4]~I .oe_sync_reset = "none";
+defparam \POE[4]~I .input_power_up = "low";
+defparam \POE[4]~I .output_power_up = "low";
+defparam \POE[4]~I .oe_power_up = "low";
+
+cyclone_io \POE[3]~I (
+	.datain(\CLK~combout ),
+	.padio(POE[3]));
+defparam \POE[3]~I .operation_mode = "output";
+defparam \POE[3]~I .input_register_mode = "none";
+defparam \POE[3]~I .output_register_mode = "none";
+defparam \POE[3]~I .oe_register_mode = "none";
+defparam \POE[3]~I .input_async_reset = "none";
+defparam \POE[3]~I .output_async_reset = "none";
+defparam \POE[3]~I .oe_async_reset = "none";
+defparam \POE[3]~I .input_sync_reset = "none";
+defparam \POE[3]~I .output_sync_reset = "none";
+defparam \POE[3]~I .oe_sync_reset = "none";
+defparam \POE[3]~I .input_power_up = "low";
+defparam \POE[3]~I .output_power_up = "low";
+defparam \POE[3]~I .oe_power_up = "low";
+
+cyclone_io \POE[2]~I (
+	.datain(\SCHKT:inst1|FA[2]~3 ),
+	.padio(POE[2]));
+defparam \POE[2]~I .operation_mode = "output";
+defparam \POE[2]~I .input_register_mode = "none";
+defparam \POE[2]~I .output_register_mode = "none";
+defparam \POE[2]~I .oe_register_mode = "none";
+defparam \POE[2]~I .input_async_reset = "none";
+defparam \POE[2]~I .output_async_reset = "none";
+defparam \POE[2]~I .oe_async_reset = "none";
+defparam \POE[2]~I .input_sync_reset = "none";
+defparam \POE[2]~I .output_sync_reset = "none";
+defparam \POE[2]~I .oe_sync_reset = "none";
+defparam \POE[2]~I .input_power_up = "low";
+defparam \POE[2]~I .output_power_up = "low";
+defparam \POE[2]~I .oe_power_up = "low";
+
+cyclone_io \POE[1]~I (
+	.datain(\SCHKT:inst1|FA[1]~4 ),
+	.padio(POE[1]));
+defparam \POE[1]~I .operation_mode = "output";
+defparam \POE[1]~I .input_register_mode = "none";
+defparam \POE[1]~I .output_register_mode = "none";
+defparam \POE[1]~I .oe_register_mode = "none";
+defparam \POE[1]~I .input_async_reset = "none";
+defparam \POE[1]~I .output_async_reset = "none";
+defparam \POE[1]~I .oe_async_reset = "none";
+defparam \POE[1]~I .input_sync_reset = "none";
+defparam \POE[1]~I .output_sync_reset = "none";
+defparam \POE[1]~I .oe_sync_reset = "none";
+defparam \POE[1]~I .input_power_up = "low";
+defparam \POE[1]~I .output_power_up = "low";
+defparam \POE[1]~I .oe_power_up = "low";
+
+cyclone_io \POE[0]~I (
+	.datain(\SCHKT:inst1|FA[0]~5 ),
+	.padio(POE[0]));
+defparam \POE[0]~I .operation_mode = "output";
+defparam \POE[0]~I .input_register_mode = "none";
+defparam \POE[0]~I .output_register_mode = "none";
+defparam \POE[0]~I .oe_register_mode = "none";
+defparam \POE[0]~I .input_async_reset = "none";
+defparam \POE[0]~I .output_async_reset = "none";
+defparam \POE[0]~I .oe_async_reset = "none";
+defparam \POE[0]~I .input_sync_reset = "none";
+defparam \POE[0]~I .output_sync_reset = "none";
+defparam \POE[0]~I .oe_sync_reset = "none";
+defparam \POE[0]~I .input_power_up = "low";
+defparam \POE[0]~I .output_power_up = "low";
+defparam \POE[0]~I .oe_power_up = "low";
+
+endmodule

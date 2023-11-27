@@ -1,0 +1,50 @@
+|mg7k7
+data[0] => data[0]~7.IN1
+data[1] => data[1]~6.IN1
+data[2] => data[2]~5.IN1
+data[3] => data[3]~4.IN1
+data[4] => data[4]~3.IN1
+data[5] => data[5]~2.IN1
+data[6] => data[6]~1.IN1
+data[7] => data[7]~0.IN1
+gate => gate~0.IN1
+q[0] <= lpm_latch:mgl_prim1.q
+q[1] <= lpm_latch:mgl_prim1.q
+q[2] <= lpm_latch:mgl_prim1.q
+q[3] <= lpm_latch:mgl_prim1.q
+q[4] <= lpm_latch:mgl_prim1.q
+q[5] <= lpm_latch:mgl_prim1.q
+q[6] <= lpm_latch:mgl_prim1.q
+q[7] <= lpm_latch:mgl_prim1.q
+
+
+|mg7k7|lpm_latch:mgl_prim1
+data[0] => latches[0].DATAIN
+data[1] => latches[1].DATAIN
+data[2] => latches[2].DATAIN
+data[3] => latches[3].DATAIN
+data[4] => latches[4].DATAIN
+data[5] => latches[5].DATAIN
+data[6] => latches[6].DATAIN
+data[7] => latches[7].DATAIN
+gate => latches[7].LATCH_ENABLE
+gate => latches[6].LATCH_ENABLE
+gate => latches[5].LATCH_ENABLE
+gate => latches[4].LATCH_ENABLE
+gate => latches[3].LATCH_ENABLE
+gate => latches[2].LATCH_ENABLE
+gate => latches[1].LATCH_ENABLE
+gate => latches[0].LATCH_ENABLE
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+q[0] <= latches[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= latches[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= latches[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= latches[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= latches[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= latches[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= latches[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= latches[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

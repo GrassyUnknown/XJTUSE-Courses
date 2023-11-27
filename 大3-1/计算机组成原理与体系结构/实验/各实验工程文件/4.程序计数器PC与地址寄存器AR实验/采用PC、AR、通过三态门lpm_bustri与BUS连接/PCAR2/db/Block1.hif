@@ -1,0 +1,566 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+41
+2978
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+synplcty.lmf
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+lpm_latch0
+# storage
+db|Block1.(1).cnf
+db|Block1.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_latch0.vhd
+95d5a5815736d9c9886481d12bf91dc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_latch0:inst9
+}
+# lmf
+c:|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+lpm_latch
+# storage
+db|Block1.(2).cnf
+db|Block1.(2).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|megafunctions|lpm_latch.tdf
+cad34e62fc523bd962a435fe954f3211
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+gate
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# include_file {
+c:|altera|90|quartus|libraries|megafunctions|lpm_constant.inc
+dcde44eee59335c1e2fe75d574f9646
+}
+# hierarchies {
+lpm_latch0:inst9|lpm_latch:lpm_latch_component
+}
+# lmf
+c:|altera|90|quartus|lmf|synplcty.lmf
+3057712873b497a38b70a3917f30cc38
+# macro_sequence
+
+# end
+# entity
+lpm_bustri0
+# storage
+db|Block1.(3).cnf
+db|Block1.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_bustri0.vhd
+185c75a2fa6764399bfe3a32c13ac219
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_bustri0:inst11
+lpm_bustri0:inst10
+}
+# lmf
+c:|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+lpm_bustri
+# storage
+db|Block1.(4).cnf
+db|Block1.(4).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|megafunctions|lpm_bustri.tdf
+b65f80b3279882c7ccd88f7e8666b5f
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# used_port {
+tridata7
+-1
+3
+tridata6
+-1
+3
+tridata5
+-1
+3
+tridata4
+-1
+3
+tridata3
+-1
+3
+tridata2
+-1
+3
+tridata1
+-1
+3
+tridata0
+-1
+3
+enabledt
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+lpm_bustri0:inst11|lpm_bustri:lpm_bustri_component
+lpm_bustri0:inst10|lpm_bustri:lpm_bustri_component
+}
+# lmf
+c:|altera|90|quartus|lmf|synplcty.lmf
+3057712873b497a38b70a3917f30cc38
+# macro_sequence
+
+# end
+# entity
+lpm_counter0
+# storage
+db|Block1.(5).cnf
+db|Block1.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_counter0.vhd
+d620c5f51333d2793b14dd2ca0f275b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_counter0:inst
+}
+# lmf
+c:|altera|90|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|Block1.(6).cnf
+db|Block1.(6).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|megafunctions|lpm_counter.tdf
+775da77f476c58b7ddeb65edee82b5
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_pqi
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sload
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# include_file {
+c:|altera|90|quartus|libraries|megafunctions|alt_counter_f10ke.inc
+536f8da8218b4a93689416f9baea1880
+c:|altera|90|quartus|libraries|megafunctions|lpm_constant.inc
+dcde44eee59335c1e2fe75d574f9646
+c:|altera|90|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
+c:|altera|90|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+c:|altera|90|quartus|libraries|megafunctions|lpm_compare.inc
+aec4ea1b78f4cda1c3effe18f1abbf63
+c:|altera|90|quartus|libraries|megafunctions|alt_synch_counter_f.inc
+93a5aae1d8bd19c9e8e8eef93ab2177d
+c:|altera|90|quartus|libraries|megafunctions|dffeea.inc
+55d29d20f7e852c37746bec4e2495ec
+c:|altera|90|quartus|libraries|megafunctions|lpm_add_sub.inc
+7d9a33dd39f13aa690c3d0edd88351
+c:|altera|90|quartus|libraries|megafunctions|cmpconst.inc
+e61874547688138e6fc0b49ff8760
+c:|altera|90|quartus|libraries|megafunctions|lpm_counter.inc
+7f888b135ddf66f0653c44cb18ac5
+c:|altera|90|quartus|libraries|megafunctions|alt_counter_stratix.inc
+2251b94d26afaa53635df1aff6b6e7be
+c:|altera|90|quartus|libraries|megafunctions|alt_synch_counter.inc
+09966d10c3e95c888bf8e443df34d8
+}
+# hierarchies {
+lpm_counter0:inst|lpm_counter:lpm_counter_component
+}
+# lmf
+c:|altera|90|quartus|lmf|synplcty.lmf
+3057712873b497a38b70a3917f30cc38
+# macro_sequence
+
+# end
+# entity
+cntr_pqi
+# storage
+db|Block1.(7).cnf
+db|Block1.(7).cnf
+# case_insensitive
+# source_file
+db|cntr_pqi.tdf
+1f834685424309fc34105f67ac576
+7
+# used_port {
+sload
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_pqi:auto_generated
+}
+# lmf
+c:|altera|90|quartus|lmf|synplcty.lmf
+3057712873b497a38b70a3917f30cc38
+# macro_sequence
+
+# end
+# entity
+Block1
+# storage
+db|Block1.(0).cnf
+db|Block1.(0).cnf
+# case_insensitive
+# source_file
+Block1.bdf
+7a2e5813d9acdece68e470ee99722a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|90|quartus|lmf|synplcty.lmf
+3057712873b497a38b70a3917f30cc38
+# macro_sequence
+
+# end
+# complete
+

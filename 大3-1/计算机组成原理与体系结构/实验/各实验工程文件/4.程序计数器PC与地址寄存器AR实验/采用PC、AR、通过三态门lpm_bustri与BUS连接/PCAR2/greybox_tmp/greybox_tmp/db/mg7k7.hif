@@ -1,0 +1,99 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+41
+3344
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+mg7k7
+# storage
+db|mg7k7.(0).cnf
+db|mg7k7.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+mg7k7.v
+da8de552df5913fbe8bdbd515857d83
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lpm_latch
+# storage
+db|mg7k7.(1).cnf
+db|mg7k7.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|megafunctions|lpm_latch.tdf
+cad34e62fc523bd962a435fe954f3211
+7
+# user_parameter {
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+q
+-1
+3
+gate
+-1
+3
+data
+-1
+3
+}
+# include_file {
+c:|altera|90|quartus|libraries|megafunctions|lpm_constant.inc
+dcde44eee59335c1e2fe75d574f9646
+}
+# hierarchies {
+lpm_latch:mgl_prim1
+}
+# macro_sequence
+
+# end
+# complete
+

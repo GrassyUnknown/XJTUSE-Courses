@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MCU8951">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU8951|lpm_rom0:inst2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_iq51.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MCU8951|ram256:inst6|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_it91.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

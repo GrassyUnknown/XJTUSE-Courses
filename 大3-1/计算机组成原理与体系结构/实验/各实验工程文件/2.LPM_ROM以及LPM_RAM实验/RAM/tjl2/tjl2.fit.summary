@@ -1,0 +1,12 @@
+Fitter Status : Successful - Wed Oct 29 20:45:53 2014
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : tjl2
+Top-level Entity Name : Block2
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 169 / 5,980 ( 3 % )
+Total pins : 26 / 185 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 92,160 ( 2 % )
+Total PLLs : 0 / 2 ( 0 % )

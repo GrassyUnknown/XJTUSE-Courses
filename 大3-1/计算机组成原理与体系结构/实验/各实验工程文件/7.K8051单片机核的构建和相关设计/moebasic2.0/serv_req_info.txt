@@ -1,0 +1,38 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0a5402d1: sld_red + 0x102d1 (sld_red_dll_get_template_classes + 0x7eb1)
+	0x786d7d6b: mfc90 + 0xf7d6b
+	0x0a54104c: sld_red + 0x1104c (sld_red_dll_get_template_classes + 0x8c2c)
+	0x0a54154b: sld_red + 0x1154b (sld_red_dll_get_template_classes + 0x912b)
+	0x78642ca7: mfc90 + 0x62ca7
+	0x78611250: mfc90 + 0x31250
+	0x100062ac: GCL_AFC + 0x62ac (?OnWndMsg@AFC_NESTED_FRAME@@UAEHIIJPAJ@Z + 0x3c)
+	0x78610e19: mfc90 + 0x30e19
+	0x7860fa0b: mfc90 + 0x2fa0b
+	0x7860fc97: mfc90 + 0x2fc97
+	0x7860da38: mfc90 + 0x2da38
+	0x77d18733: USER32 + 0x8733 (GetDC + 0x6c)
+	0x77d18815: USER32 + 0x8815 (GetDC + 0x14e)
+	0x77d1b4bf: USER32 + 0xb4bf (DefWindowProcW + 0x183)
+	0x77d1b50b: USER32 + 0xb50b (DefWindowProcW + 0x1cf)
+	0x7c92eae2: ntdll + 0xeae2 (KiUserCallbackDispatcher + 0x12)
+	0x77d196c6: USER32 + 0x96c6 (DispatchMessageA + 0xe)
+	0x7864fc07: mfc90 + 0x6fc07
+	0x00691968: ccl_thr + 0x1968 (thr_thread_var_destroy + 0x28)
+	0x7861c869: mfc90 + 0x3c869
+	0x0044f42e: quartus + 0x4f42e (Pjm_Uninit + 0x401ee)
+	0x7c816fe6: kernel32 + 0x16fe6 (RegisterWaitForInputIdle + 0x48)
+	0xffffffffffffffff:
+	</callstack>
+	<error>Current editor: GED, RPW</error>
+	<date>Wed Mar 26 17:30:03 2014</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X0A5402D1
+Current editor: GED, RPW
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

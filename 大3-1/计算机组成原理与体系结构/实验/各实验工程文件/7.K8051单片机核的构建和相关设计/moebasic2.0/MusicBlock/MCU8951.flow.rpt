@@ -1,0 +1,104 @@
+Flow report for MCU8951
+Tue Mar 25 19:29:14 2014
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------+
+; Flow Summary                                                       ;
++-------------------------+------------------------------------------+
+; Flow Status             ; Successful - Tue Mar 25 19:29:14 2014    ;
+; Quartus II Version      ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name           ; MCU8951                                  ;
+; Top-level Entity Name   ; MCU8951                                  ;
+; Family                  ; Cyclone                                  ;
+; Device                  ; EP1C6Q240C8                              ;
+; Timing Models           ; Final                                    ;
+; Met timing requirements ; N/A                                      ;
+; Total logic elements    ; 1,716                                    ;
+; Total pins              ; 19                                       ;
+; Total virtual pins      ; 0                                        ;
+; Total memory bits       ; 34,816                                   ;
+; Total PLLs              ; 1                                        ;
++-------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 03/25/2014 19:29:06 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; MCU8951             ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                    ;
++-----------------------+------------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name       ; Value                                                            ; Default Value ; Entity Name ; Section Id ;
++-----------------------+------------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID ; 6112296831.139574694501208                                       ; --            ; --          ; --         ;
+; FITTER_EFFORT         ; Standard Fit                                                     ; Auto Fit      ; --          ; --         ;
+; MISC_FILE             ; C:/Documents and Settings/Administrator/×ÀÃæ/music90/MCU8951.dpf ; --            ; --          ; --         ;
++-----------------------+------------------------------------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 208 MB              ; 00:00:09                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; lenovo           ; Windows XP ; 5.1        ; i686           ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off MCU8951 -c MCU8951
+
+
+

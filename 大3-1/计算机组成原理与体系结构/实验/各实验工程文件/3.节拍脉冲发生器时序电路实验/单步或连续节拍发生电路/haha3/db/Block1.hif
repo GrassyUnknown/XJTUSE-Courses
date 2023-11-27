@@ -1,0 +1,63 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+41
+2978
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Block1
+# storage
+db|Block1.(0).cnf
+db|Block1.(0).cnf
+# case_insensitive
+# source_file
+Block1.bdf
+83ffa81e9bf413f5ccdbc575cc1f3a0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+21mux
+# storage
+db|Block1.(1).cnf
+db|Block1.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|others|maxplus2|21mux.bdf
+58999bd3808c6118fcb8193d74b5b94f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+21mux:inst8
+21mux:inst6
+}
+# macro_sequence
+
+# end
+# complete
+

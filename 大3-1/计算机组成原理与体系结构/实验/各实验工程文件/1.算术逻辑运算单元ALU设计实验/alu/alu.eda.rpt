@@ -1,0 +1,59 @@
+EDA Netlist Writer report for alu
+Tue Nov 12 19:07:46 2013
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                                       ;
++---------------------------+------------------------------------------------------+
+; EDA Netlist Writer Status ; No Output Files Generated - Tue Nov 12 19:07:46 2013 ;
+; Revision Name             ; alu                                                  ;
+; Top-level Entity Name     ; Block1                                               ;
+; Family                    ; Cyclone                                              ;
++---------------------------+------------------------------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus II EDA Netlist Writer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Tue Nov 12 19:07:45 2013
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off alu -c alu
+Warning: Can't generate output files. Specify command-line options to generate output files, or update EDA tool settings using GUI or Tcl script.
+Info: Quartus II EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 125 megabytes
+    Info: Processing ended: Tue Nov 12 19:07:46 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

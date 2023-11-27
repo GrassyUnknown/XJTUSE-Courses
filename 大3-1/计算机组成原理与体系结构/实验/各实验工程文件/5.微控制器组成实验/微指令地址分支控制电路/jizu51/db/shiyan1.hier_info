@@ -1,0 +1,32 @@
+|shiyan1
+SE[1] <= inst15.DB_MAX_OUTPUT_PORT_TYPE
+SE[2] <= inst14.DB_MAX_OUTPUT_PORT_TYPE
+SE[3] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+SE[4] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+SE[5] <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+SE[6] <= <VCC>
+I[2] => inst12.IN0
+I[3] => inst9.IN0
+I[4] => inst11.IN0
+I[5] => inst8.IN0
+I[6] => inst19.IN0
+I[7] => inst18.IN0
+T4 => inst11.IN1
+T4 => inst12.IN1
+T4 => inst13.IN1
+T4 => inst8.IN1
+T4 => inst9.IN1
+T4 => inst10.IN1
+T4 => inst19.IN1
+T4 => inst17.IN1
+T4 => inst18.IN1
+P[1] => inst1.IN0
+P[2] => inst2.IN0
+P[3] => inst3.IN0
+P[4] => inst4.IN0
+SWA => inst13.IN2
+SWB => inst10.IN2
+FZ => inst.IN0
+FC => inst.IN1
+
+

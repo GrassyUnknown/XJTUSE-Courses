@@ -1,0 +1,12 @@
+Fitter Status : Successful - Tue Mar 25 19:15:59 2014
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : MCU8951
+Top-level Entity Name : MCU8951
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 1,709 / 5,980 ( 29 % )
+Total pins : 19 / 185 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 34,816 / 92,160 ( 38 % )
+Total PLLs : 1 / 2 ( 50 % )

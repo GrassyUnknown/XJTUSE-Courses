@@ -1,0 +1,413 @@
+                                                                                        页     1
+                                                                                        03-07-13
+                                                                                        10:01:03
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            SPK EQU P1.0 ; 蜂鸣器所在端口
+            
+            ORG 0000H
+0000 020003 JMP START
+            
+            START:
+0003 7B00   MOV R3,#00H
+            NEXT:
+0005 EB     MOV A,R3
+0006 9000B8 MOV DPTR,#TABLE
+0009 93     MOVC A,@A+DPTR
+000A 60F7   JZ START
+000C FF     MOV R7,A
+000D 0B     INC R3
+000E EB     MOV A,R3
+000F 93     MOVC A,@A+DPTR
+0010 FA     MOV R2,A
+0011 1116   ACALL SONG
+0013 0B     INC R3
+0014 80EF   SJMP NEXT
+            
+            
+            ;===============================================================================?
+            ;=== ?歌曲播放子程序 ===?
+            SONG:
+0016 EA     MOV A,R2 ; 取出节拍?
+0017 23     RL A
+0018 7002   JNZ KEEP
+001A 7401   MOV A,#01H
+            KEEP:
+001C FA     MOV R2,A
+            REPEAT:
+001D 1122   ACALL EIGHTH
+001F DAFC   DJNZ R2,REPEAT
+0021 22     RET
+            
+            ;===============================================================================?
+            ;=== ?产生1/8拍延时子程序 ?===?
+            EIGHTH:
+0022 EF     MOV A,R7 ; 查表取出廷时参数,保存到R4?
+0023 90007F MOV DPTR,#DELAY_T
+0026 93     MOVC A,@A+DPTR
+0027 FC     MOV R4,A
+0028 EF     MOV A,R7 ; 查表取出1/8拍周期数,保存到R5?
+0029 900046 MOV DPTR,#S_PARA
+002C 93     MOVC A,@A+DPTR
+002D FD     MOV R5,A
+            NEXTCYC:
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC1.ASM                                                  
+ 
+                                                                                        页     2
+                                                                                        03-07-13
+                                                                                        10:01:03
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+002E 1133   ACALL SOUND
+0030 DDFC   DJNZ R5,NEXTCYC
+0032 22     RET
+            
+            ;===============================================================================?
+            ;=== ?发声子程序 ===?
+            SOUND:
+0033 D290   SETB SPK
+0035 113C   ACALL SDELAY
+0037 C290   CLR SPK
+0039 113C   ACALL SDELAY
+003B 22     RET
+            
+            SDELAY:
+003C EC     MOV A,R4 ; 廷时值在R4内
+003D F8     MOV R0,A
+            XL2:
+003E 7903   MOV R1,#03H
+            DL1:
+0040 00     NOP
+0041 D9FD   DJNZ R1,DL1
+0043 D8F9   DJNZ R0,XL2
+0045 22     RET
+            ;===============================================================================?
+            ;=== ?1/8拍周期表 ?===
+            S_PARA:
+            DS 1DH
+0063 151600 DB 15H,16H,00
+0066 19001C 
+0069 001F21 
+006C 0025   DB 19H,00H,1CH,00H,1FH,21H,00H,25H
+006E 00292C 
+0071 003134 
+0074 3700   DB 00H,29H,2CH,00H,31H,34H,37H,00H
+0076 3E4100 
+0079 490052 
+007C 5700   DB 3EH,41H,00H,49H,00H,52H,57H,00H
+007E 62     DB 62H
+            
+            ;===============================================================================?
+            ;=== ?延时参数表 ?===?
+            DELAY_T:
+            DS 1DH
+009C 7E7700 DB 7EH,77H,00H
+009F 6A005E 
+00A2 00544F 
+00A5 0046   DB 6AH,00H,5EH,00H,54H,4FH,00H,46H
+00A7 003F3B 
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC1.ASM                                                  
+ 
+                                                                                        页     3
+                                                                                        03-07-13
+                                                                                        10:01:03
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+00AA 003532 
+00AD 2F00   DB 00H,3FH,3BH,00H,35H,32H,2FH,00H
+00AF 2A2700 
+00B2 23001F 
+00B5 1DC0   DB 2AH,27H,00H,23H,00H,1FH,1DH,0C0H
+00B7 1A     DB 1AH
+            
+            ;===============================================================================?
+            ;=== ?歌曲表 ?===?
+            TABLE:
+00B8 2202   
+00BA 2902   
+00BC 2902   
+00BE 2902   
+00C0 2906   
+00C2 2702   DW 2202H,2902H,2902H,2902H,2906H,2702H ;我从山中来
+00C4 2502   
+00C6 2702   
+00C8 2502   
+00CA 2402   
+00CC 2208   DW 2502H,2702H,2502H,2402H,2208H ;带着兰花草
+00CE 2E02   
+00D0 2E02   
+00D2 2E02   
+00D4 2E02   
+00D6 2E06   
+00D8 2C02   DW 2E02H,2E02H,2E02H,2E02H,2E06H,2C02H ;种在小园中
+00DA 2902   
+00DC 2C02   
+00DE 2D02   
+00E0 2A02   
+00E2 2908   DW 2902H,2C02H,2D02H,2A02H,2908H ;祈祷花开早
+00E4 2902   
+00E6 2E02   
+00E8 2E02   
+00EA 2C02   
+00EC 2906   
+00EE 2702   DW 2902H,2E02H,2E02H,2C02H,2906H,2702H ;一日看三回
+00F0 2502   
+00F2 2702   
+00F4 2502   
+00F6 2402   
+00F8 2206   
+00FA 1D02   DW 2502H,2702H,2502H,2402H,2206H,1D02H ;看得花时过
+00FC 1D02   
+00FE 2502   
+0100 2502   
+0102 2402   
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC1.ASM                                                  
+ 
+                                                                                        页     4
+                                                                                        03-07-13
+                                                                                        10:01:03
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+0104 2206   
+0106 2902   DW 1D02H,2502H,2502H,2402H,2206H,2902H ;兰花却依然
+0108 2702   
+010A 2502   
+010C 2402   
+010E 2002   
+0110 2208   DW 2702H,2502H,2402H,2002H,2208H ;苞也无一个
+0112 0000   DW 0000H ;
+            
+            END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC1.ASM                                                  
+ 
+                                                                                        页     5
+                                                                                        03-07-13
+                                                                                        10:01:03
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+
+
+            符号                       值     类型
+
+            AC                       = 00D6H CONST 常量 
+            ACC                      = 00E0H CONST 常量 
+            B                        = 00F0H CONST 常量 
+            BGEN                     = 00CBH CONST 常量 
+            CP_RL2                   = 00C8H CONST 常量 
+            CY                       = 00D7H CONST 常量 
+            C_T2                     = 00C9H CONST 常量 
+            DELAY_T                  = 007FH CODE  标号 
+            DL1                      = 0040H CODE  标号 
+            DPH                      = 0083H CONST 常量 
+            DPL                      = 0082H CONST 常量 
+            EA                       = 00AFH CONST 常量 
+            EIGHTH                   = 0022H CODE  标号 
+            ES                       = 00ACH CONST 常量 
+            ET0                      = 00A9H CONST 常量 
+            ET1                      = 00ABH CONST 常量 
+            ET2                      = 00ADH CONST 常量 
+            EX0                      = 00A8H CONST 常量 
+            EX1                      = 00AAH CONST 常量 
+            F0                       = 00D5H CONST 常量 
+            IE                       = 00A8H CONST 常量 
+            IE0                      = 0089H CONST 常量 
+            IE1                      = 008BH CONST 常量 
+            INT0                     = 00B2H CONST 常量 
+            INT1                     = 00B3H CONST 常量 
+            IP                       = 00B8H CONST 常量 
+            IT0                      = 0088H CONST 常量 
+            IT1                      = 008AH CONST 常量 
+            KEEP                     = 001CH CODE  标号 
+            NEXT                     = 0005H CODE  标号 
+            NEXTCYC                  = 002EH CODE  标号 
+            OV                       = 00D2H CONST 常量 
+            P                        = 00D0H CONST 常量 
+            P0                       = 0080H CONST 常量 
+            P1                       = 0090H CONST 常量 
+            P2                       = 00A0H CONST 常量 
+            P3                       = 00B0H CONST 常量 
+            PCON                     = 0087H CONST 常量 
+            PS                       = 00BCH CONST 常量 
+            PSW                      = 00D0H CONST 常量 
+            PT0                      = 00B9H CONST 常量 
+            PT1                      = 00BBH CONST 常量 
+            PX0                      = 00B8H CONST 常量 
+            PX1                      = 00BAH CONST 常量 
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC1.ASM                                                  
+ 
+                                                                                        页     6
+                                                                                        03-07-13
+                                                                                        10:01:03
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            RB8                      = 009AH CONST 常量 
+            RCAP2H                   = 00CBH CONST 常量 
+            RCAP2L                   = 00CAH CONST 常量 
+            RD                       = 00B7H CONST 常量 
+            REN                      = 009CH CONST 常量 
+            REPEAT                   = 001DH CODE  标号 
+            RI                       = 0098H CONST 常量 
+            RS0                      = 00D3H CONST 常量 
+            RS1                      = 00D4H CONST 常量 
+            RXD                      = 00B0H CONST 常量 
+            SBUF                     = 0099H CONST 常量 
+            SCON                     = 0098H CONST 常量 
+            SDELAY                   = 003CH CODE  标号 
+            SM0                      = 009FH CONST 常量 
+            SM1                      = 009EH CONST 常量 
+            SM2                      = 009DH CONST 常量 
+            SONG                     = 0016H CODE  标号 
+            SOUND                    = 0033H CODE  标号 
+            SP                       = 0081H CONST 常量 
+            SPK                      = 0090H CONST 常量 
+            START                    = 0003H CODE  标号 
+            S_PARA                   = 0046H CODE  标号 
+            T0                       = 00B4H CONST 常量 
+            T1                       = 00B5H CONST 常量 
+            T2CON                    = 00C8H CONST 常量 
+            T2IE                     = 00CDH CONST 常量 
+            T2IP                     = 00CEH CONST 常量 
+            T2RSE                    = 00CCH CONST 常量 
+            TABLE                    = 00B8H CODE  标号 
+            TB8                      = 009BH CONST 常量 
+            TCON                     = 0088H CONST 常量 
+            TF0                      = 008DH CONST 常量 
+            TF1                      = 008FH CONST 常量 
+            TF2                      = 00CFH CONST 常量 
+            TH0                      = 008CH CONST 常量 
+            TH1                      = 008DH CONST 常量 
+            TH2                      = 00CDH CONST 常量 
+            TI                       = 0099H CONST 常量 
+            TL0                      = 008AH CONST 常量 
+            TL1                      = 008BH CONST 常量 
+            TL2                      = 00CCH CONST 常量 
+            TMOD                     = 0089H CONST 常量 
+            TR0                      = 008CH CONST 常量 
+            TR1                      = 008EH CONST 常量 
+            TR2                      = 00CAH CONST 常量 
+            TXD                      = 00B1H CONST 常量 
+            WR                       = 00B6H CONST 常量 
+            XL2                      = 003EH CODE  标号 
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC1.ASM                                                  
+ 
+                                                                                        页     7
+                                                                                        03-07-13
+                                                                                        10:01:03
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+
+
+            公有符号:   92
+            私有符号:    0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC1.ASM                                                  
+ 

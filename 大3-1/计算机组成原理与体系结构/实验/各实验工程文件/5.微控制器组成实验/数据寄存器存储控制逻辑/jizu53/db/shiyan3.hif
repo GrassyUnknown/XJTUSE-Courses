@@ -1,0 +1,64 @@
+Version 9.0 Build 132 02/25/2009 SJ Full Version
+41
+2978
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+shiyan3
+# storage
+db|shiyan3.(0).cnf
+db|shiyan3.(0).cnf
+# case_insensitive
+# source_file
+shiyan3.bdf
+1dd569fc8dee47668ef7b1f8f0abca6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+74139M
+# storage
+db|shiyan3.(1).cnf
+db|shiyan3.(1).cnf
+# case_insensitive
+# source_file
+c:|altera|90|quartus|libraries|others|maxplus2|74139M.bdf
+598561d44a73c1df1398344ebbd2d3c8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74139M:inst
+74139M:inst12
+74139M:inst11
+}
+# macro_sequence
+
+# end
+# complete
+

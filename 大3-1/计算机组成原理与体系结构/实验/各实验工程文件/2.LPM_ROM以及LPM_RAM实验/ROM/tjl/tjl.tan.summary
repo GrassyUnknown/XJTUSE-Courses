@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.539 ns
+From           : a[2]
+To             : lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sf51:auto_generated|altsyncram_jv62:altsyncram1|ram_block3a23~porta_address_reg2
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.962 ns
+From           : lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sf51:auto_generated|altsyncram_jv62:altsyncram1|ram_block3a23~porta_address_reg5
+To             : q[10]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.124 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.356 ns
+From           : altera_internal_jtag~TDIUTAP
+To             : lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sf51:auto_generated|sld_mod_ram_rom:mgl_prim2|bypass_reg_out
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 134.84 MHz ( period = 7.416 ns )
+From           : lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sf51:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]
+To             : sld_hub:sld_hub_inst|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 197.01 MHz ( period = 5.076 ns )
+From           : lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sf51:auto_generated|altsyncram_jv62:altsyncram1|ram_block3a5~porta_datain_reg5
+To             : lpm_rom0:inst|altsyncram:altsyncram_component|altsyncram_sf51:auto_generated|altsyncram_jv62:altsyncram1|ram_block3a5~porta_memory_reg5
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

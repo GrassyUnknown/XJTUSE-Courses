@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.396 ns
+From           : NESW
+To             : STEP4:inst10|SCHKT:inst1|Q[0]
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 52.469 ns
+From           : lpm_latch1:inst22|lpm_latch:lpm_latch_component|latches[0]
+To             : P1_0
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 30.035 ns
+From           : IN[1]
+To             : P1_0
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.387 ns
+From           : IN[5]
+To             : pccounter:inst23|lpm_latch1:inst|lpm_latch:lpm_latch_component|latches[5]
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.29 MHz ( period = 54.682 ns )
+From           : lpm_latch1:inst22|lpm_latch:lpm_latch_component|latches[0]
+To             : lpm_ram_dq0:inst15|altsyncram:altsyncram_component|altsyncram_kpe1:auto_generated|altsyncram_n7a2:altsyncram1|ram_block3a6~porta_datain_reg5
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 117.45 MHz ( period = 8.514 ns )
+From           : sld_hub:sld_hub_inst|virtual_ir_scan_reg
+To             : sld_hub:sld_hub_inst|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'P1_1'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : dsplay:inst11|dsp:48|cnt4:212|lpm_counter2:inst|lpm_counter:lpm_counter_component|cntr_9rh:auto_generated|safe_q[1]
+To             : dsplay:inst11|dsp:48|cnt4:212|lpm_counter2:inst|lpm_counter:lpm_counter_component|cntr_9rh:auto_generated|safe_q[4]
+From Clock     : P1_1
+To Clock       : P1_1
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLK'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : lpm_counter0:inst20|lpm_counter:lpm_counter_component|cntr_pqi:auto_generated|safe_q[7]
+To             : pccounter:inst23|lpm_latch1:inst1|lpm_latch:lpm_latch_component|latches[7]
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 2190
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 2190
+
+--------------------------------------------------------------------------------------
+

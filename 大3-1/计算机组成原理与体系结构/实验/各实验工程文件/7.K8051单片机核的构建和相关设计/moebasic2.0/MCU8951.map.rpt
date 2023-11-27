@@ -1,0 +1,1352 @@
+Analysis & Synthesis report for MCU8951
+Thu Jan 02 16:03:01 2014
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|altsyncram_p982:altsyncram1
+ 13. Source assignments for ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+ 14. Source assignments for ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|altsyncram_50b2:altsyncram1
+ 15. Source assignments for ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+ 16. Source assignments for sld_hub:sld_hub_inst
+ 17. Source assignments for sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg
+ 18. Parameter Settings for User Entity Instance: pll50:inst17|altpll:altpll_component
+ 19. Parameter Settings for User Entity Instance: ram256:inst6|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2
+ 21. Parameter Settings for User Entity Instance: ROM1:inst1|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2
+ 23. Parameter Settings for Inferred Entity Instance: sld_hub:sld_hub_inst
+ 24. altpll Parameter Settings by Entity Instance
+ 25. altsyncram Parameter Settings by Entity Instance
+ 26. In-System Memory Content Editor Settings
+ 27. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Jan 02 16:03:01 2014    ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name               ; MCU8951                                  ;
+; Top-level Entity Name       ; MCU8951                                  ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 1,787                                    ;
+; Total pins                  ; 45                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 34,816                                   ;
+; Total PLLs                  ; 1                                        ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                          ; MCU8951            ; MCU8951            ;
+; Family name                                                    ; Cyclone            ; Stratix            ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation            ; 1                  ; 1                  ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                             ;
++--------------------------------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                       ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                 ;
++--------------------------------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------------------------+
+; MCU8951.bdf                                            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/MCU8951.bdf            ;
+; CPU_Core.vqm                                           ; yes             ; Auto-Found Verilog Quartus Mapping File  ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/CPU_Core.vqm           ;
+; pll50.vhd                                              ; yes             ; Auto-Found Wizard-Generated File         ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/pll50.vhd              ;
+; altpll.tdf                                             ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/altpll.tdf                                      ;
+; aglobal90.inc                                          ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/aglobal90.inc                                   ;
+; stratix_pll.inc                                        ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/stratix_pll.inc                                 ;
+; stratixii_pll.inc                                      ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/stratixii_pll.inc                               ;
+; cycloneii_pll.inc                                      ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/cycloneii_pll.inc                               ;
+; ram256.vhd                                             ; yes             ; Auto-Found Wizard-Generated File         ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/ram256.vhd             ;
+; altsyncram.tdf                                         ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/altsyncram.tdf                                  ;
+; stratix_ram_block.inc                                  ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/stratix_ram_block.inc                           ;
+; lpm_mux.inc                                            ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/lpm_mux.inc                                     ;
+; lpm_decode.inc                                         ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/lpm_decode.inc                                  ;
+; a_rdenreg.inc                                          ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/a_rdenreg.inc                                   ;
+; altrom.inc                                             ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/altrom.inc                                      ;
+; altram.inc                                             ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/altram.inc                                      ;
+; altdpram.inc                                           ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/altdpram.inc                                    ;
+; altqpram.inc                                           ; yes             ; Megafunction                             ; c:/altera/90/quartus/libraries/megafunctions/altqpram.inc                                    ;
+; db/altsyncram_it91.tdf                                 ; yes             ; Auto-Generated Megafunction              ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/db/altsyncram_it91.tdf ;
+; db/altsyncram_p982.tdf                                 ; yes             ; Auto-Generated Megafunction              ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/db/altsyncram_p982.tdf ;
+; sld_mod_ram_rom.vhd                                    ; yes             ; Encrypted Megafunction                   ; c:/altera/90/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                             ;
+; sld_rom_sr.vhd                                         ; yes             ; Encrypted Megafunction                   ; c:/altera/90/quartus/libraries/megafunctions/sld_rom_sr.vhd                                  ;
+; ROM1.vhd                                               ; yes             ; Auto-Found Wizard-Generated File         ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/ROM1.vhd               ;
+; db/altsyncram_8b91.tdf                                 ; yes             ; Auto-Generated Megafunction              ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/db/altsyncram_8b91.tdf ;
+; db/altsyncram_50b2.tdf                                 ; yes             ; Auto-Generated Megafunction              ; C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/db/altsyncram_50b2.tdf ;
+; C:/Documents and Settings/Administrator/桌面/CLOCK.HEX ; yes             ; Auto-Found Memory Initialization File    ; C:/Documents and Settings/Administrator/桌面/CLOCK.HEX                                       ;
+; sld_hub.vhd                                            ; yes             ; Encrypted Megafunction                   ; c:/altera/90/quartus/libraries/megafunctions/sld_hub.vhd                                     ;
++--------------------------------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++---------------------------------------------+--------------------------------------------+
+; Resource                                    ; Usage                                      ;
++---------------------------------------------+--------------------------------------------+
+; Total logic elements                        ; 1787                                       ;
+;     -- Combinational with no register       ; 1155                                       ;
+;     -- Register only                        ; 30                                         ;
+;     -- Combinational with a register        ; 602                                        ;
+;                                             ;                                            ;
+; Logic element usage by number of LUT inputs ;                                            ;
+;     -- 4 input functions                    ; 1011                                       ;
+;     -- 3 input functions                    ; 462                                        ;
+;     -- 2 input functions                    ; 213                                        ;
+;     -- 1 input functions                    ; 51                                         ;
+;     -- 0 input functions                    ; 3                                          ;
+;                                             ;                                            ;
+; Logic elements by mode                      ;                                            ;
+;     -- normal mode                          ; 1735                                       ;
+;     -- arithmetic mode                      ; 52                                         ;
+;     -- qfbk mode                            ; 90                                         ;
+;     -- register cascade mode                ; 0                                          ;
+;     -- synchronous clear/load mode          ; 253                                        ;
+;     -- asynchronous clear/load mode         ; 236                                        ;
+;                                             ;                                            ;
+; Total registers                             ; 632                                        ;
+; Total logic cells in carry chains           ; 61                                         ;
+; I/O pins                                    ; 45                                         ;
+; Total memory bits                           ; 34816                                      ;
+; Total PLLs                                  ; 1                                          ;
+; Maximum fan-out node                        ; pll50:inst17|altpll:altpll_component|_clk0 ;
+; Maximum fan-out                             ; 493                                        ;
+; Total fan-out                               ; 7934                                       ;
+; Average fan-out                             ; 4.28                                       ;
++---------------------------------------------+--------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                          ;
++---------------------------------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                          ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                               ; Library Name ;
++---------------------------------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |MCU8951                                                            ; 1787 (4)    ; 632          ; 34816       ; 45   ; 0            ; 1155 (4)     ; 30 (0)            ; 602 (0)          ; 61 (0)          ; 90 (0)     ; |MCU8951                                                                                                                                                          ; work         ;
+;    |CPU_Core:inst|                                                  ; 1522 (0)    ; 482          ; 0           ; 35   ; 0            ; 1040 (0)     ; 8 (0)             ; 474 (0)          ; 18 (0)          ; 90 (0)     ; |MCU8951|CPU_Core:inst                                                                                                                                            ; work         ;
+;       |MCU80512:inst3|                                              ; 1457 (37)   ; 460          ; 0           ; 0    ; 0            ; 997 (28)     ; 8 (0)             ; 452 (9)          ; 8 (0)           ; 88 (1)     ; |MCU8951|CPU_Core:inst|MCU80512:inst3                                                                                                                             ;              ;
+;          |m3s001bo:U1|                                              ; 23 (23)     ; 19           ; 0           ; 0    ; 0            ; 4 (4)        ; 2 (2)             ; 17 (17)          ; 0 (0)           ; 1 (1)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s001bo:U1                                                                                                                 ;              ;
+;          |m3s003bo:U2|                                              ; 111 (79)    ; 0            ; 0           ; 0    ; 0            ; 111 (79)     ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 5 (5)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2                                                                                                                 ;              ;
+;             |m3s002bo:U1|                                           ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U1                                                                                                     ;              ;
+;             |m3s002bo:U2|                                           ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U2                                                                                                     ;              ;
+;             |m3s002bo:U3|                                           ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U3                                                                                                     ;              ;
+;             |m3s002bo:U4|                                           ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U4                                                                                                     ;              ;
+;             |m3s002bo:U5|                                           ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U5                                                                                                     ;              ;
+;             |m3s002bo:U6|                                           ; 3 (3)       ; 0            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U6                                                                                                     ;              ;
+;             |m3s002bo:U7|                                           ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U7                                                                                                     ;              ;
+;             |m3s002bo:U8|                                           ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s002bo:U8                                                                                                     ;              ;
+;             |m3s041bo:U10|                                          ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s041bo:U10                                                                                                    ;              ;
+;             |m3s041bo:U9|                                           ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s003bo:U2|m3s041bo:U9                                                                                                     ;              ;
+;          |m3s004bo:U3|                                              ; 156 (44)    ; 0            ; 0           ; 0    ; 0            ; 156 (44)     ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s004bo:U3                                                                                                                 ;              ;
+;             |m3s022bo:U1|                                           ; 21 (21)     ; 0            ; 0           ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s004bo:U3|m3s022bo:U1                                                                                                     ;              ;
+;             |m3s024bo:U2|                                           ; 41 (41)     ; 0            ; 0           ; 0    ; 0            ; 41 (41)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s004bo:U3|m3s024bo:U2                                                                                                     ;              ;
+;             |m3s032bo:U4|                                           ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s004bo:U3|m3s032bo:U4                                                                                                     ;              ;
+;             |m3s033bo:U3|                                           ; 18 (18)     ; 0            ; 0           ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s004bo:U3|m3s033bo:U3                                                                                                     ;              ;
+;             |m3s034bo:U5|                                           ; 11 (11)     ; 0            ; 0           ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s004bo:U3|m3s034bo:U5                                                                                                     ;              ;
+;             |m3s035bo:U6|                                           ; 14 (14)     ; 0            ; 0           ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s004bo:U3|m3s035bo:U6                                                                                                     ;              ;
+;          |m3s005bo:U4|                                              ; 84 (84)     ; 26           ; 0           ; 0    ; 0            ; 58 (58)      ; 0 (0)             ; 26 (26)          ; 0 (0)           ; 1 (1)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s005bo:U4                                                                                                                 ;              ;
+;          |m3s006bo:U5|                                              ; 44 (44)     ; 8            ; 0           ; 0    ; 0            ; 36 (36)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 1 (1)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s006bo:U5                                                                                                                 ;              ;
+;          |m3s007bo:U6|                                              ; 7 (7)       ; 1            ; 0           ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s007bo:U6                                                                                                                 ;              ;
+;          |m3s008bo:U7|                                              ; 127 (84)    ; 40           ; 0           ; 0    ; 0            ; 87 (49)      ; 0 (0)             ; 40 (35)          ; 0 (0)           ; 10 (9)     ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s008bo:U7                                                                                                                 ;              ;
+;             |m3s009bo:U1|                                           ; 16 (16)     ; 5            ; 0           ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 1 (1)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s008bo:U7|m3s009bo:U1                                                                                                     ;              ;
+;             |m3s039bo:U2|                                           ; 27 (27)     ; 0            ; 0           ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s008bo:U7|m3s039bo:U2                                                                                                     ;              ;
+;          |m3s010bo:U8|                                              ; 202 (131)   ; 78           ; 0           ; 0    ; 0            ; 124 (53)     ; 0 (0)             ; 78 (78)          ; 8 (8)           ; 12 (1)     ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8                                                                                                                 ;              ;
+;             |m3s011bo:U1|                                           ; 37 (6)      ; 0            ; 0           ; 0    ; 0            ; 37 (6)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 8 (7)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|m3s011bo:U1                                                                                                     ;              ;
+;                |m3s027bo:U1|                                        ; 9 (9)       ; 0            ; 0           ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|m3s011bo:U1|m3s027bo:U1                                                                                         ;              ;
+;                |m3s027bo:U2|                                        ; 6 (6)       ; 0            ; 0           ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|m3s011bo:U1|m3s027bo:U2                                                                                         ;              ;
+;                |m3s027bo:U3|                                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|m3s011bo:U1|m3s027bo:U3                                                                                         ;              ;
+;                |m3s027bo:U4|                                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|m3s011bo:U1|m3s027bo:U4                                                                                         ;              ;
+;                |m3s040bo:U5|                                        ; 2 (2)       ; 0            ; 0           ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 1 (1)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|m3s011bo:U1|m3s040bo:U5                                                                                         ;              ;
+;             |m3s013bo:U2|                                           ; 34 (34)     ; 0            ; 0           ; 0    ; 0            ; 34 (34)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 3 (3)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|m3s013bo:U2                                                                                                     ;              ;
+;          |m3s015bo:U9|                                              ; 157 (77)    ; 58           ; 0           ; 0    ; 0            ; 99 (51)      ; 0 (0)             ; 58 (26)          ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s015bo:U9                                                                                                                 ;              ;
+;             |m3s016bo:U1|                                           ; 18 (18)     ; 8            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s015bo:U9|m3s016bo:U1                                                                                                     ;              ;
+;             |m3s016bo:U2|                                           ; 18 (18)     ; 8            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s015bo:U9|m3s016bo:U2                                                                                                     ;              ;
+;             |m3s016bo:U3|                                           ; 22 (22)     ; 8            ; 0           ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s015bo:U9|m3s016bo:U3                                                                                                     ;              ;
+;             |m3s016bo:U4|                                           ; 22 (22)     ; 8            ; 0           ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s015bo:U9|m3s016bo:U4                                                                                                     ;              ;
+;          |m3s018bo:U10|                                             ; 131 (131)   ; 70           ; 0           ; 0    ; 0            ; 61 (61)      ; 0 (0)             ; 70 (70)          ; 0 (0)           ; 32 (32)    ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s018bo:U10                                                                                                                ;              ;
+;          |m3s019bo:U11|                                             ; 52 (52)     ; 35           ; 0           ; 0    ; 0            ; 17 (17)      ; 3 (3)             ; 32 (32)          ; 0 (0)           ; 9 (9)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s019bo:U11                                                                                                                ;              ;
+;          |m3s020bo:U12|                                             ; 72 (42)     ; 33           ; 0           ; 0    ; 0            ; 39 (17)      ; 0 (0)             ; 33 (25)          ; 0 (0)           ; 1 (1)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s020bo:U12                                                                                                                ;              ;
+;             |m3s014bo:U1|                                           ; 30 (30)     ; 8            ; 0           ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s020bo:U12|m3s014bo:U1                                                                                                    ;              ;
+;          |m3s023bo:U13|                                             ; 122 (122)   ; 0            ; 0           ; 0    ; 0            ; 122 (122)    ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 6 (6)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s023bo:U13                                                                                                                ;              ;
+;          |m3s025bo:U14|                                             ; 12 (12)     ; 9            ; 0           ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s025bo:U14                                                                                                                ;              ;
+;          |m3s028bo:U15|                                             ; 120 (90)    ; 74           ; 0           ; 0    ; 0            ; 46 (40)      ; 3 (3)             ; 71 (47)          ; 0 (0)           ; 9 (9)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15                                                                                                                ;              ;
+;             |m3s029bo:U1|                                           ; 1 (1)       ; 1            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U1                                                                                                    ;              ;
+;             |m3s029bo:U2|                                           ; 2 (2)       ; 1            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U2                                                                                                    ;              ;
+;             |m3s029bo:U3|                                           ; 2 (2)       ; 1            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U3                                                                                                    ;              ;
+;             |m3s029bo:U4|                                           ; 2 (2)       ; 1            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U4                                                                                                    ;              ;
+;             |m3s029bo:U5|                                           ; 1 (1)       ; 1            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U5                                                                                                    ;              ;
+;             |m3s029bo:U6|                                           ; 2 (2)       ; 1            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U6                                                                                                    ;              ;
+;             |m3s029bo:U7|                                           ; 2 (2)       ; 1            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U7                                                                                                    ;              ;
+;             |m3s029bo:U8|                                           ; 2 (2)       ; 1            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s029bo:U8                                                                                                    ;              ;
+;             |m3s030bo:U9|                                           ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s030bo:U9                                                                                                    ;              ;
+;             |m3s031bo:U10|                                          ; 8 (8)       ; 8            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MCU80512:inst3|m3s028bo:U15|m3s031bo:U10                                                                                                   ;              ;
+;       |MUX44:inst6|                                                 ; 8 (8)       ; 0            ; 0           ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|CPU_Core:inst|MUX44:inst6                                                                                                                                ;              ;
+;       |SCHKT:inst|                                                  ; 57 (47)     ; 22           ; 0           ; 0    ; 0            ; 35 (35)      ; 0 (0)             ; 22 (12)          ; 10 (0)          ; 2 (2)      ; |MCU8951|CPU_Core:inst|SCHKT:inst                                                                                                                                 ;              ;
+;          |lpm_counter:CT8_rtl_0|                                    ; 10 (0)      ; 10           ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 10 (0)          ; 0 (0)      ; |MCU8951|CPU_Core:inst|SCHKT:inst|lpm_counter:CT8_rtl_0                                                                                                           ;              ;
+;             |cntr_pt6:auto_generated|                               ; 10 (10)     ; 10           ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (10)          ; 10 (10)         ; 0 (0)      ; |MCU8951|CPU_Core:inst|SCHKT:inst|lpm_counter:CT8_rtl_0|cntr_pt6:auto_generated                                                                                   ;              ;
+;    |ROM1:inst1|                                                     ; 65 (0)      ; 39           ; 32768       ; 0    ; 0            ; 26 (0)       ; 4 (0)             ; 35 (0)           ; 21 (0)          ; 0 (0)      ; |MCU8951|ROM1:inst1                                                                                                                                               ; work         ;
+;       |altsyncram:altsyncram_component|                             ; 65 (0)      ; 39           ; 32768       ; 0    ; 0            ; 26 (0)       ; 4 (0)             ; 35 (0)           ; 21 (0)          ; 0 (0)      ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component                                                                                                               ; work         ;
+;          |altsyncram_8b91:auto_generated|                           ; 65 (0)      ; 39           ; 32768       ; 0    ; 0            ; 26 (0)       ; 4 (0)             ; 35 (0)           ; 21 (0)          ; 0 (0)      ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated                                                                                ; work         ;
+;             |altsyncram_50b2:altsyncram1|                           ; 0 (0)       ; 0            ; 32768       ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|altsyncram_50b2:altsyncram1                                                    ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                             ; 65 (43)     ; 39           ; 0           ; 0    ; 0            ; 26 (13)      ; 4 (4)             ; 35 (26)          ; 21 (16)         ; 0 (0)      ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2                                                      ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 22 (22)     ; 9            ; 0           ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 9 (9)            ; 5 (5)           ; 0 (0)      ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr   ; work         ;
+;    |pll50:inst17|                                                   ; 0 (0)       ; 0            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|pll50:inst17                                                                                                                                             ; work         ;
+;       |altpll:altpll_component|                                     ; 0 (0)       ; 0            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|pll50:inst17|altpll:altpll_component                                                                                                                     ; work         ;
+;    |ram256:inst6|                                                   ; 64 (0)      ; 35           ; 2048        ; 0    ; 0            ; 29 (0)       ; 4 (0)             ; 31 (0)           ; 17 (0)          ; 0 (0)      ; |MCU8951|ram256:inst6                                                                                                                                             ; work         ;
+;       |altsyncram:altsyncram_component|                             ; 64 (0)      ; 35           ; 2048        ; 0    ; 0            ; 29 (0)       ; 4 (0)             ; 31 (0)           ; 17 (0)          ; 0 (0)      ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component                                                                                                             ; work         ;
+;          |altsyncram_it91:auto_generated|                           ; 64 (0)      ; 35           ; 2048        ; 0    ; 0            ; 29 (0)       ; 4 (0)             ; 31 (0)           ; 17 (0)          ; 0 (0)      ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated                                                                              ; work         ;
+;             |altsyncram_p982:altsyncram1|                           ; 0 (0)       ; 0            ; 2048        ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|altsyncram_p982:altsyncram1                                                  ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                             ; 64 (39)     ; 35           ; 0           ; 0    ; 0            ; 29 (13)      ; 4 (4)             ; 31 (22)          ; 17 (12)         ; 0 (0)      ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2                                                    ; work         ;
+;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 25 (25)     ; 9            ; 0           ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 9 (9)            ; 5 (5)           ; 0 (0)      ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ; work         ;
+;    |sld_hub:sld_hub_inst|                                           ; 132 (92)    ; 76           ; 0           ; 0    ; 0            ; 56 (44)      ; 14 (11)           ; 62 (37)          ; 5 (0)           ; 0 (0)      ; |MCU8951|sld_hub:sld_hub_inst                                                                                                                                     ; work         ;
+;       |sld_rom_sr:hub_info_reg|                                     ; 21 (21)     ; 9            ; 0           ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 9 (9)            ; 5 (5)           ; 0 (0)      ; |MCU8951|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg                                                                                                             ; work         ;
+;       |sld_shadow_jsm:shadow_jsm|                                   ; 19 (19)     ; 19           ; 0           ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |MCU8951|sld_hub:sld_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                           ; work         ;
++---------------------------------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                        ;
++--------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------------+
+; Name                                                                                                               ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                                    ;
++--------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------------+
+; ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|altsyncram_50b2:altsyncram1|ALTSYNCRAM   ; AUTO ; True Dual Port ; 4096         ; 8            ; 4096         ; 8            ; 32768 ; C:/Documents and Settings/Administrator/桌面/CLOCK.HEX ;
+; ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|altsyncram_p982:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 256          ; 8            ; 256          ; 8            ; 2048  ; None                                                   ;
++--------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                 ;
++-----------------------------------------------------------+----------------------------------------+
+; Register name                                             ; Reason for Removal                     ;
++-----------------------------------------------------------+----------------------------------------+
+; CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|IDLE            ; Lost fanout                            ;
+; CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[0..7] ; Lost fanout                            ;
+; CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT3_DEL[2..5] ; Lost fanout                            ;
+; CPU_Core:inst|MCU80512:inst3|LDLM                         ; Stuck at GND due to stuck port reg_out ;
+; CPU_Core:inst|MCU80512:inst3|DLMSTQ[1]                    ; Lost fanout                            ;
+; Total Number of Removed Registers = 15                    ;                                        ;
++-----------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 632   ;
+; Number of registers using Synchronous Clear  ; 120   ;
+; Number of registers using Synchronous Load   ; 125   ;
+; Number of registers using Asynchronous Clear ; 236   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 333   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; sld_hub:sld_hub_inst|tdo               ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]                                                  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[2]                                                ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |MCU8951|sld_hub:sld_hub_inst|irf_reg[2][3]                                                                                                                                       ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |MCU8951|sld_hub:sld_hub_inst|irf_reg[1][0]                                                                                                                                       ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |MCU8951|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg|word_counter[0]                                                                                                             ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1]   ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |MCU8951|sld_hub:sld_hub_inst|shadow_irf_reg[2][0]                                                                                                                                ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |MCU8951|sld_hub:sld_hub_inst|shadow_irf_reg[1][2]                                                                                                                                ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |MCU8951|sld_hub:sld_hub_inst|irsr_reg[4]                                                                                                                                         ;
+; 28:1               ; 4 bits    ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |MCU8951|sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[2]                                                                                                                  ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 40 LEs               ; 24 LEs                 ; Yes        ; |MCU8951|ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]        ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 52 LEs               ; 12 LEs                 ; Yes        ; |MCU8951|ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|altsyncram_p982:altsyncram1 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                               ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
++---------------------------------+--------------------+------+------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ;
++----------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment           ; Value ; From ; To                                                                                                                                        ;
++----------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_ROM_RECOGNITION ; OFF   ; -    ; -                                                                                                                                         ;
++----------------------+-------+------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|altsyncram_50b2:altsyncram1 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                             ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                              ;
++---------------------------------+--------------------+------+----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ;
++----------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment           ; Value ; From ; To                                                                                                                                      ;
++----------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_ROM_RECOGNITION ; OFF   ; -    ; -                                                                                                                                       ;
++----------------------+-------+------+-----------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Source assignments for sld_hub:sld_hub_inst           ;
++------------------------------+-------+------+---------+
+; Assignment                   ; Value ; From ; To      ;
++------------------------------+-------+------+---------+
+; IGNORE_LCELL_BUFFERS         ; OFF   ; -    ; -       ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; OFF   ; -    ; -       ;
+; NOT_GATE_PUSH_BACK           ; OFF   ; -    ; clr_reg ;
+; POWER_UP_LEVEL               ; LOW   ; -    ; clr_reg ;
++------------------------------+-------+------+---------+
+
+
++---------------------------------------------------------------------+
+; Source assignments for sld_hub:sld_hub_inst|sld_rom_sr:hub_info_reg ;
++----------------------+-------+------+-------------------------------+
+; Assignment           ; Value ; From ; To                            ;
++----------------------+-------+------+-------------------------------+
+; AUTO_ROM_RECOGNITION ; OFF   ; -    ; -                             ;
++----------------------+-------+------+-------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pll50:inst17|altpll:altpll_component ;
++-------------------------------+-------------------+-------------------------------+
+; Parameter Name                ; Value             ; Type                          ;
++-------------------------------+-------------------+-------------------------------+
+; OPERATION_MODE                ; NORMAL            ; Untyped                       ;
+; PLL_TYPE                      ; AUTO              ; Untyped                       ;
+; QUALIFY_CONF_DONE             ; OFF               ; Untyped                       ;
+; COMPENSATE_CLOCK              ; CLK0              ; Untyped                       ;
+; SCAN_CHAIN                    ; LONG              ; Untyped                       ;
+; PRIMARY_CLOCK                 ; INCLK0            ; Untyped                       ;
+; INCLK0_INPUT_FREQUENCY        ; 50000             ; Signed Integer                ;
+; INCLK1_INPUT_FREQUENCY        ; 0                 ; Untyped                       ;
+; GATE_LOCK_SIGNAL              ; NO                ; Untyped                       ;
+; GATE_LOCK_COUNTER             ; 0                 ; Untyped                       ;
+; LOCK_HIGH                     ; 1                 ; Untyped                       ;
+; LOCK_LOW                      ; 1                 ; Untyped                       ;
+; VALID_LOCK_MULTIPLIER         ; 1                 ; Untyped                       ;
+; INVALID_LOCK_MULTIPLIER       ; 5                 ; Untyped                       ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF               ; Untyped                       ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF               ; Untyped                       ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF               ; Untyped                       ;
+; SKIP_VCO                      ; OFF               ; Untyped                       ;
+; SWITCH_OVER_COUNTER           ; 0                 ; Untyped                       ;
+; SWITCH_OVER_TYPE              ; AUTO              ; Untyped                       ;
+; FEEDBACK_SOURCE               ; EXTCLK0           ; Untyped                       ;
+; BANDWIDTH                     ; 0                 ; Untyped                       ;
+; BANDWIDTH_TYPE                ; AUTO              ; Untyped                       ;
+; SPREAD_FREQUENCY              ; 0                 ; Untyped                       ;
+; DOWN_SPREAD                   ; 0                 ; Untyped                       ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF               ; Untyped                       ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF               ; Untyped                       ;
+; CLK9_MULTIPLY_BY              ; 0                 ; Untyped                       ;
+; CLK8_MULTIPLY_BY              ; 0                 ; Untyped                       ;
+; CLK7_MULTIPLY_BY              ; 0                 ; Untyped                       ;
+; CLK6_MULTIPLY_BY              ; 0                 ; Untyped                       ;
+; CLK5_MULTIPLY_BY              ; 1                 ; Untyped                       ;
+; CLK4_MULTIPLY_BY              ; 1                 ; Untyped                       ;
+; CLK3_MULTIPLY_BY              ; 1                 ; Untyped                       ;
+; CLK2_MULTIPLY_BY              ; 1                 ; Untyped                       ;
+; CLK1_MULTIPLY_BY              ; 1                 ; Untyped                       ;
+; CLK0_MULTIPLY_BY              ; 1                 ; Signed Integer                ;
+; CLK9_DIVIDE_BY                ; 0                 ; Untyped                       ;
+; CLK8_DIVIDE_BY                ; 0                 ; Untyped                       ;
+; CLK7_DIVIDE_BY                ; 0                 ; Untyped                       ;
+; CLK6_DIVIDE_BY                ; 0                 ; Untyped                       ;
+; CLK5_DIVIDE_BY                ; 1                 ; Untyped                       ;
+; CLK4_DIVIDE_BY                ; 1                 ; Untyped                       ;
+; CLK3_DIVIDE_BY                ; 1                 ; Untyped                       ;
+; CLK2_DIVIDE_BY                ; 1                 ; Untyped                       ;
+; CLK1_DIVIDE_BY                ; 1                 ; Untyped                       ;
+; CLK0_DIVIDE_BY                ; 1                 ; Signed Integer                ;
+; CLK9_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK8_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK7_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK6_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK5_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK4_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK3_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK2_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK1_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK0_PHASE_SHIFT              ; 0                 ; Untyped                       ;
+; CLK5_TIME_DELAY               ; 0                 ; Untyped                       ;
+; CLK4_TIME_DELAY               ; 0                 ; Untyped                       ;
+; CLK3_TIME_DELAY               ; 0                 ; Untyped                       ;
+; CLK2_TIME_DELAY               ; 0                 ; Untyped                       ;
+; CLK1_TIME_DELAY               ; 0                 ; Untyped                       ;
+; CLK0_TIME_DELAY               ; 0                 ; Untyped                       ;
+; CLK9_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK8_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK7_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK6_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK5_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK4_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK3_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK2_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK1_DUTY_CYCLE               ; 50                ; Untyped                       ;
+; CLK0_DUTY_CYCLE               ; 50                ; Signed Integer                ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                       ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                       ;
+; LOCK_WINDOW_UI                ;  0.05             ; Untyped                       ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED            ; Untyped                       ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED            ; Untyped                       ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED            ; Untyped                       ;
+; DPA_MULTIPLY_BY               ; 0                 ; Untyped                       ;
+; DPA_DIVIDE_BY                 ; 1                 ; Untyped                       ;
+; DPA_DIVIDER                   ; 0                 ; Untyped                       ;
+; EXTCLK3_MULTIPLY_BY           ; 1                 ; Untyped                       ;
+; EXTCLK2_MULTIPLY_BY           ; 1                 ; Untyped                       ;
+; EXTCLK1_MULTIPLY_BY           ; 1                 ; Untyped                       ;
+; EXTCLK0_MULTIPLY_BY           ; 1                 ; Untyped                       ;
+; EXTCLK3_DIVIDE_BY             ; 1                 ; Untyped                       ;
+; EXTCLK2_DIVIDE_BY             ; 1                 ; Untyped                       ;
+; EXTCLK1_DIVIDE_BY             ; 1                 ; Untyped                       ;
+; EXTCLK0_DIVIDE_BY             ; 1                 ; Untyped                       ;
+; EXTCLK3_PHASE_SHIFT           ; 0                 ; Untyped                       ;
+; EXTCLK2_PHASE_SHIFT           ; 0                 ; Untyped                       ;
+; EXTCLK1_PHASE_SHIFT           ; 0                 ; Untyped                       ;
+; EXTCLK0_PHASE_SHIFT           ; 0                 ; Untyped                       ;
+; EXTCLK3_TIME_DELAY            ; 0                 ; Untyped                       ;
+; EXTCLK2_TIME_DELAY            ; 0                 ; Untyped                       ;
+; EXTCLK1_TIME_DELAY            ; 0                 ; Untyped                       ;
+; EXTCLK0_TIME_DELAY            ; 0                 ; Untyped                       ;
+; EXTCLK3_DUTY_CYCLE            ; 50                ; Untyped                       ;
+; EXTCLK2_DUTY_CYCLE            ; 50                ; Untyped                       ;
+; EXTCLK1_DUTY_CYCLE            ; 50                ; Untyped                       ;
+; EXTCLK0_DUTY_CYCLE            ; 50                ; Untyped                       ;
+; VCO_MULTIPLY_BY               ; 0                 ; Untyped                       ;
+; VCO_DIVIDE_BY                 ; 0                 ; Untyped                       ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                 ; Untyped                       ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                 ; Untyped                       ;
+; VCO_MIN                       ; 0                 ; Untyped                       ;
+; VCO_MAX                       ; 0                 ; Untyped                       ;
+; VCO_CENTER                    ; 0                 ; Untyped                       ;
+; PFD_MIN                       ; 0                 ; Untyped                       ;
+; PFD_MAX                       ; 0                 ; Untyped                       ;
+; M_INITIAL                     ; 0                 ; Untyped                       ;
+; M                             ; 0                 ; Untyped                       ;
+; N                             ; 1                 ; Untyped                       ;
+; M2                            ; 1                 ; Untyped                       ;
+; N2                            ; 1                 ; Untyped                       ;
+; SS                            ; 1                 ; Untyped                       ;
+; C0_HIGH                       ; 0                 ; Untyped                       ;
+; C1_HIGH                       ; 0                 ; Untyped                       ;
+; C2_HIGH                       ; 0                 ; Untyped                       ;
+; C3_HIGH                       ; 0                 ; Untyped                       ;
+; C4_HIGH                       ; 0                 ; Untyped                       ;
+; C5_HIGH                       ; 0                 ; Untyped                       ;
+; C6_HIGH                       ; 0                 ; Untyped                       ;
+; C7_HIGH                       ; 0                 ; Untyped                       ;
+; C8_HIGH                       ; 0                 ; Untyped                       ;
+; C9_HIGH                       ; 0                 ; Untyped                       ;
+; C0_LOW                        ; 0                 ; Untyped                       ;
+; C1_LOW                        ; 0                 ; Untyped                       ;
+; C2_LOW                        ; 0                 ; Untyped                       ;
+; C3_LOW                        ; 0                 ; Untyped                       ;
+; C4_LOW                        ; 0                 ; Untyped                       ;
+; C5_LOW                        ; 0                 ; Untyped                       ;
+; C6_LOW                        ; 0                 ; Untyped                       ;
+; C7_LOW                        ; 0                 ; Untyped                       ;
+; C8_LOW                        ; 0                 ; Untyped                       ;
+; C9_LOW                        ; 0                 ; Untyped                       ;
+; C0_INITIAL                    ; 0                 ; Untyped                       ;
+; C1_INITIAL                    ; 0                 ; Untyped                       ;
+; C2_INITIAL                    ; 0                 ; Untyped                       ;
+; C3_INITIAL                    ; 0                 ; Untyped                       ;
+; C4_INITIAL                    ; 0                 ; Untyped                       ;
+; C5_INITIAL                    ; 0                 ; Untyped                       ;
+; C6_INITIAL                    ; 0                 ; Untyped                       ;
+; C7_INITIAL                    ; 0                 ; Untyped                       ;
+; C8_INITIAL                    ; 0                 ; Untyped                       ;
+; C9_INITIAL                    ; 0                 ; Untyped                       ;
+; C0_MODE                       ; BYPASS            ; Untyped                       ;
+; C1_MODE                       ; BYPASS            ; Untyped                       ;
+; C2_MODE                       ; BYPASS            ; Untyped                       ;
+; C3_MODE                       ; BYPASS            ; Untyped                       ;
+; C4_MODE                       ; BYPASS            ; Untyped                       ;
+; C5_MODE                       ; BYPASS            ; Untyped                       ;
+; C6_MODE                       ; BYPASS            ; Untyped                       ;
+; C7_MODE                       ; BYPASS            ; Untyped                       ;
+; C8_MODE                       ; BYPASS            ; Untyped                       ;
+; C9_MODE                       ; BYPASS            ; Untyped                       ;
+; C0_PH                         ; 0                 ; Untyped                       ;
+; C1_PH                         ; 0                 ; Untyped                       ;
+; C2_PH                         ; 0                 ; Untyped                       ;
+; C3_PH                         ; 0                 ; Untyped                       ;
+; C4_PH                         ; 0                 ; Untyped                       ;
+; C5_PH                         ; 0                 ; Untyped                       ;
+; C6_PH                         ; 0                 ; Untyped                       ;
+; C7_PH                         ; 0                 ; Untyped                       ;
+; C8_PH                         ; 0                 ; Untyped                       ;
+; C9_PH                         ; 0                 ; Untyped                       ;
+; L0_HIGH                       ; 1                 ; Untyped                       ;
+; L1_HIGH                       ; 1                 ; Untyped                       ;
+; G0_HIGH                       ; 1                 ; Untyped                       ;
+; G1_HIGH                       ; 1                 ; Untyped                       ;
+; G2_HIGH                       ; 1                 ; Untyped                       ;
+; G3_HIGH                       ; 1                 ; Untyped                       ;
+; E0_HIGH                       ; 1                 ; Untyped                       ;
+; E1_HIGH                       ; 1                 ; Untyped                       ;
+; E2_HIGH                       ; 1                 ; Untyped                       ;
+; E3_HIGH                       ; 1                 ; Untyped                       ;
+; L0_LOW                        ; 1                 ; Untyped                       ;
+; L1_LOW                        ; 1                 ; Untyped                       ;
+; G0_LOW                        ; 1                 ; Untyped                       ;
+; G1_LOW                        ; 1                 ; Untyped                       ;
+; G2_LOW                        ; 1                 ; Untyped                       ;
+; G3_LOW                        ; 1                 ; Untyped                       ;
+; E0_LOW                        ; 1                 ; Untyped                       ;
+; E1_LOW                        ; 1                 ; Untyped                       ;
+; E2_LOW                        ; 1                 ; Untyped                       ;
+; E3_LOW                        ; 1                 ; Untyped                       ;
+; L0_INITIAL                    ; 1                 ; Untyped                       ;
+; L1_INITIAL                    ; 1                 ; Untyped                       ;
+; G0_INITIAL                    ; 1                 ; Untyped                       ;
+; G1_INITIAL                    ; 1                 ; Untyped                       ;
+; G2_INITIAL                    ; 1                 ; Untyped                       ;
+; G3_INITIAL                    ; 1                 ; Untyped                       ;
+; E0_INITIAL                    ; 1                 ; Untyped                       ;
+; E1_INITIAL                    ; 1                 ; Untyped                       ;
+; E2_INITIAL                    ; 1                 ; Untyped                       ;
+; E3_INITIAL                    ; 1                 ; Untyped                       ;
+; L0_MODE                       ; BYPASS            ; Untyped                       ;
+; L1_MODE                       ; BYPASS            ; Untyped                       ;
+; G0_MODE                       ; BYPASS            ; Untyped                       ;
+; G1_MODE                       ; BYPASS            ; Untyped                       ;
+; G2_MODE                       ; BYPASS            ; Untyped                       ;
+; G3_MODE                       ; BYPASS            ; Untyped                       ;
+; E0_MODE                       ; BYPASS            ; Untyped                       ;
+; E1_MODE                       ; BYPASS            ; Untyped                       ;
+; E2_MODE                       ; BYPASS            ; Untyped                       ;
+; E3_MODE                       ; BYPASS            ; Untyped                       ;
+; L0_PH                         ; 0                 ; Untyped                       ;
+; L1_PH                         ; 0                 ; Untyped                       ;
+; G0_PH                         ; 0                 ; Untyped                       ;
+; G1_PH                         ; 0                 ; Untyped                       ;
+; G2_PH                         ; 0                 ; Untyped                       ;
+; G3_PH                         ; 0                 ; Untyped                       ;
+; E0_PH                         ; 0                 ; Untyped                       ;
+; E1_PH                         ; 0                 ; Untyped                       ;
+; E2_PH                         ; 0                 ; Untyped                       ;
+; E3_PH                         ; 0                 ; Untyped                       ;
+; M_PH                          ; 0                 ; Untyped                       ;
+; C1_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C2_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C3_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C4_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C5_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C6_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C7_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C8_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; C9_USE_CASC_IN                ; OFF               ; Untyped                       ;
+; CLK0_COUNTER                  ; G0                ; Untyped                       ;
+; CLK1_COUNTER                  ; G0                ; Untyped                       ;
+; CLK2_COUNTER                  ; G0                ; Untyped                       ;
+; CLK3_COUNTER                  ; G0                ; Untyped                       ;
+; CLK4_COUNTER                  ; G0                ; Untyped                       ;
+; CLK5_COUNTER                  ; G0                ; Untyped                       ;
+; CLK6_COUNTER                  ; E0                ; Untyped                       ;
+; CLK7_COUNTER                  ; E1                ; Untyped                       ;
+; CLK8_COUNTER                  ; E2                ; Untyped                       ;
+; CLK9_COUNTER                  ; E3                ; Untyped                       ;
+; L0_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; L1_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; G0_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; G1_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; G2_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; G3_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; E0_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; E1_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; E2_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; E3_TIME_DELAY                 ; 0                 ; Untyped                       ;
+; M_TIME_DELAY                  ; 0                 ; Untyped                       ;
+; N_TIME_DELAY                  ; 0                 ; Untyped                       ;
+; EXTCLK3_COUNTER               ; E3                ; Untyped                       ;
+; EXTCLK2_COUNTER               ; E2                ; Untyped                       ;
+; EXTCLK1_COUNTER               ; E1                ; Untyped                       ;
+; EXTCLK0_COUNTER               ; E0                ; Untyped                       ;
+; ENABLE0_COUNTER               ; L0                ; Untyped                       ;
+; ENABLE1_COUNTER               ; L0                ; Untyped                       ;
+; CHARGE_PUMP_CURRENT           ; 2                 ; Untyped                       ;
+; LOOP_FILTER_R                 ;  1.000000         ; Untyped                       ;
+; LOOP_FILTER_C                 ; 5                 ; Untyped                       ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999              ; Untyped                       ;
+; LOOP_FILTER_R_BITS            ; 9999              ; Untyped                       ;
+; LOOP_FILTER_C_BITS            ; 9999              ; Untyped                       ;
+; VCO_POST_SCALE                ; 0                 ; Untyped                       ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                 ; Untyped                       ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                 ; Untyped                       ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                 ; Untyped                       ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone           ; Untyped                       ;
+; PORT_CLKENA0                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKENA1                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKENA2                  ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_CLKENA3                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKENA4                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKENA5                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_EXTCLK0                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_EXTCLK1                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_EXTCLK2                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_EXTCLK3                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKBAD0                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKBAD1                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK0                     ; PORT_USED         ; Untyped                       ;
+; PORT_CLK1                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK2                     ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_CLK3                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK4                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK5                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK6                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK7                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK8                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLK9                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANDATA                 ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANDONE                 ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKLOSS                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_INCLK1                   ; PORT_UNUSED       ; Untyped                       ;
+; PORT_INCLK0                   ; PORT_USED         ; Untyped                       ;
+; PORT_FBIN                     ; PORT_UNUSED       ; Untyped                       ;
+; PORT_PLLENA                   ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CLKSWITCH                ; PORT_UNUSED       ; Untyped                       ;
+; PORT_ARESET                   ; PORT_UNUSED       ; Untyped                       ;
+; PORT_PFDENA                   ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANCLK                  ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANACLR                 ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANREAD                 ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANWRITE                ; PORT_UNUSED       ; Untyped                       ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_LOCKED                   ; PORT_UNUSED       ; Untyped                       ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED       ; Untyped                       ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_PHASEDONE                ; PORT_UNUSED       ; Untyped                       ;
+; PORT_PHASESTEP                ; PORT_UNUSED       ; Untyped                       ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED       ; Untyped                       ;
+; PORT_SCANCLKENA               ; PORT_UNUSED       ; Untyped                       ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED       ; Untyped                       ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY ; Untyped                       ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY ; Untyped                       ;
+; M_TEST_SOURCE                 ; 5                 ; Untyped                       ;
+; C0_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C1_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C2_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C3_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C4_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C5_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C6_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C7_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C8_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; C9_TEST_SOURCE                ; 5                 ; Untyped                       ;
+; CBXI_PARAMETER                ; NOTHING           ; Untyped                       ;
+; VCO_FREQUENCY_CONTROL         ; AUTO              ; Untyped                       ;
+; VCO_PHASE_SHIFT_STEP          ; 0                 ; Untyped                       ;
+; WIDTH_CLOCK                   ; 6                 ; Untyped                       ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                 ; Untyped                       ;
+; USING_FBMIMICBIDIR_PORT       ; OFF               ; Untyped                       ;
+; DEVICE_FAMILY                 ; Cyclone           ; Untyped                       ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED            ; Untyped                       ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF               ; Untyped                       ;
+; AUTO_CARRY_CHAINS             ; ON                ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS          ; OFF               ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS           ; ON                ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS        ; OFF               ; IGNORE_CASCADE                ;
++-------------------------------+-------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram256:inst6|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                       ;
+; WIDTH_A                            ; 8                    ; Signed Integer                ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 1                    ; Untyped                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; UNUSED               ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone              ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_it91      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2 ;
++-------------------------+------------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value      ; Type                                                                                                        ;
++-------------------------+------------+-------------------------------------------------------------------------------------------------------------+
+; SLD_NODE_INFO           ; 135818752  ; Signed Integer                                                                                              ;
+; SLD_AUTO_INSTANCE_INDEX ; yes        ; String                                                                                                      ;
+; SLD_IP_VERSION          ; 1          ; Signed Integer                                                                                              ;
+; SLD_IP_MINOR_VERSION    ; 3          ; Signed Integer                                                                                              ;
+; SLD_COMMON_IP_VERSION   ; 0          ; Signed Integer                                                                                              ;
+; width_word              ; 8          ; Untyped                                                                                                     ;
+; numwords                ; 256        ; Untyped                                                                                                     ;
+; widthad                 ; 8          ; Untyped                                                                                                     ;
+; shift_count_bits        ; 4          ; Untyped                                                                                                     ;
+; cvalue                  ; 00000000   ; Untyped                                                                                                     ;
+; is_data_in_ram          ; 1          ; Untyped                                                                                                     ;
+; is_readable             ; 1          ; Untyped                                                                                                     ;
+; node_name               ; 1918987569 ; Untyped                                                                                                     ;
++-------------------------+------------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM1:inst1|altsyncram:altsyncram_component                      ;
++------------------------------------+--------------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                                  ; Type           ;
++------------------------------------+--------------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                      ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                                     ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                    ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                                     ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                    ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                      ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                                    ; Untyped        ;
+; WIDTH_A                            ; 8                                                      ; Signed Integer ;
+; WIDTHAD_A                          ; 12                                                     ; Signed Integer ;
+; NUMWORDS_A                         ; 4096                                                   ; Signed Integer ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                           ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                                   ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                                   ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                                   ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                                   ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                                   ; Untyped        ;
+; WIDTH_B                            ; 1                                                      ; Untyped        ;
+; WIDTHAD_B                          ; 1                                                      ; Untyped        ;
+; NUMWORDS_B                         ; 1                                                      ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                                                 ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                 ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                 ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                                 ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                           ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                                 ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                                   ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                                   ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                                   ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                                   ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                                   ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                                   ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                      ; Signed Integer ;
+; WIDTH_BYTEENA_B                    ; 1                                                      ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                   ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                      ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                   ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                   ; Untyped        ;
+; INIT_FILE                          ; C:/Documents and Settings/Administrator/桌面/CLOCK.HEX ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                 ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                      ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                                 ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                 ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                                 ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                 ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                        ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                        ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                                  ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone                                                ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_8b91                                        ; Untyped        ;
++------------------------------------+--------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2 ;
++-------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value      ; Type                                                                                                      ;
++-------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; SLD_NODE_INFO           ; 135818752  ; Signed Integer                                                                                            ;
+; SLD_AUTO_INSTANCE_INDEX ; yes        ; String                                                                                                    ;
+; SLD_IP_VERSION          ; 1          ; Signed Integer                                                                                            ;
+; SLD_IP_MINOR_VERSION    ; 3          ; Signed Integer                                                                                            ;
+; SLD_COMMON_IP_VERSION   ; 0          ; Signed Integer                                                                                            ;
+; width_word              ; 8          ; Untyped                                                                                                   ;
+; numwords                ; 4096       ; Untyped                                                                                                   ;
+; widthad                 ; 12         ; Untyped                                                                                                   ;
+; shift_count_bits        ; 4          ; Untyped                                                                                                   ;
+; cvalue                  ; 00000000   ; Untyped                                                                                                   ;
+; is_data_in_ram          ; 1          ; Untyped                                                                                                   ;
+; is_readable             ; 1          ; Untyped                                                                                                   ;
+; node_name               ; 1919758592 ; Untyped                                                                                                   ;
++-------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_hub:sld_hub_inst                                         ;
++--------------------------+------------------------------------------------------------------+-----------------+
+; Parameter Name           ; Value                                                            ; Type            ;
++--------------------------+------------------------------------------------------------------+-----------------+
+; sld_hub_ip_version       ; 1                                                                ; Untyped         ;
+; sld_hub_ip_minor_version ; 4                                                                ; Untyped         ;
+; sld_common_ip_version    ; 0                                                                ; Untyped         ;
+; device_family            ; Cyclone                                                          ; Untyped         ;
+; n_nodes                  ; 2                                                                ; Untyped         ;
+; n_sel_bits               ; 2                                                                ; Untyped         ;
+; n_node_ir_bits           ; 5                                                                ; Untyped         ;
+; node_info                ; 0000100000011000011011100000000100001000000110000110111000000000 ; Unsigned Binary ;
+; compilation_mode         ; 0                                                                ; Untyped         ;
+; BROADCAST_FEATURE        ; 1                                                                ; Signed Integer  ;
+; FORCE_IR_CAPTURE_FEATURE ; 1                                                                ; Signed Integer  ;
++--------------------------+------------------------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                         ;
++-------------------------------+--------------------------------------+
+; Name                          ; Value                                ;
++-------------------------------+--------------------------------------+
+; Number of entity instances    ; 1                                    ;
+; Entity Instance               ; pll50:inst17|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                               ;
+;     -- PLL_TYPE               ; AUTO                                 ;
+;     -- PRIMARY_CLOCK          ; INCLK0                               ;
+;     -- INCLK0_INPUT_FREQUENCY ; 50000                                ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                    ;
+;     -- VCO_MULTIPLY_BY        ; 0                                    ;
+;     -- VCO_DIVIDE_BY          ; 0                                    ;
++-------------------------------+--------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                         ;
++-------------------------------------------+----------------------------------------------+
+; Name                                      ; Value                                        ;
++-------------------------------------------+----------------------------------------------+
+; Number of entity instances                ; 2                                            ;
+; Entity Instance                           ; ram256:inst6|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                  ;
+;     -- WIDTH_A                            ; 8                                            ;
+;     -- NUMWORDS_A                         ; 256                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                 ;
+;     -- WIDTH_B                            ; 1                                            ;
+;     -- NUMWORDS_B                         ; 1                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
+; Entity Instance                           ; ROM1:inst1|altsyncram:altsyncram_component   ;
+;     -- OPERATION_MODE                     ; ROM                                          ;
+;     -- WIDTH_A                            ; 8                                            ;
+;     -- NUMWORDS_A                         ; 4096                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                 ;
+;     -- WIDTH_B                            ; 1                                            ;
+;     -- NUMWORDS_B                         ; 1                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
++-------------------------------------------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; In-System Memory Content Editor Settings                                                                                                ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------+
+; Instance Index ; Instance ID ; Width ; Depth ; Mode       ; Hierarchy Location                                                          ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------+
+; 0              ; ram1        ; 8     ; 256   ; Read/Write ; ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated ;
+; 1              ; rm1         ; 8     ; 4096  ; Read/Write ; ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated   ;
++----------------+-------------+-------+-------+------------+-----------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Jan 02 16:02:51 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MCU8951 -c MCU8951
+Warning: Can't analyze file -- file C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/IRAM.VHD is missing
+Warning: Can't analyze file -- file C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/ROM4K.VHD is missing
+Warning: Can't analyze file -- file C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/reg8b.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file ETESTER.VHD
+    Info: Found design unit 1: etester-behav
+    Info: Found entity 1: etester
+Warning: Can't analyze file -- file C:/Documents and Settings/Administrator/桌面/8051Terminal/moebasic2.0/reg4b.vhd is missing
+Warning: Using design file MCU8951.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: MCU8951
+Info: Elaborating entity "MCU8951" for the top level hierarchy
+Warning: Using design file CPU_Core.vqm, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: CPU_Core
+Info: Elaborating entity "CPU_Core" for hierarchy "CPU_Core:inst"
+Warning: Using design file pll50.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: pll50-SYN
+    Info: Found entity 1: pll50
+Info: Elaborating entity "pll50" for hierarchy "pll50:inst17"
+Info: Elaborating entity "altpll" for hierarchy "pll50:inst17|altpll:altpll_component"
+Info: Elaborated megafunction instantiation "pll50:inst17|altpll:altpll_component"
+Info: Instantiated megafunction "pll50:inst17|altpll:altpll_component" with the following parameter:
+    Info: Parameter "clk0_divide_by" = "1"
+    Info: Parameter "clk0_duty_cycle" = "50"
+    Info: Parameter "clk0_multiply_by" = "1"
+    Info: Parameter "clk0_phase_shift" = "0"
+    Info: Parameter "compensate_clock" = "CLK0"
+    Info: Parameter "inclk0_input_frequency" = "50000"
+    Info: Parameter "intended_device_family" = "Cyclone"
+    Info: Parameter "lpm_type" = "altpll"
+    Info: Parameter "operation_mode" = "NORMAL"
+    Info: Parameter "pll_type" = "AUTO"
+    Info: Parameter "port_activeclock" = "PORT_UNUSED"
+    Info: Parameter "port_areset" = "PORT_UNUSED"
+    Info: Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info: Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info: Parameter "port_clkloss" = "PORT_UNUSED"
+    Info: Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info: Parameter "port_configupdate" = "PORT_UNUSED"
+    Info: Parameter "port_fbin" = "PORT_UNUSED"
+    Info: Parameter "port_inclk0" = "PORT_USED"
+    Info: Parameter "port_inclk1" = "PORT_UNUSED"
+    Info: Parameter "port_locked" = "PORT_UNUSED"
+    Info: Parameter "port_pfdena" = "PORT_UNUSED"
+    Info: Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info: Parameter "port_phasedone" = "PORT_UNUSED"
+    Info: Parameter "port_phasestep" = "PORT_UNUSED"
+    Info: Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info: Parameter "port_pllena" = "PORT_UNUSED"
+    Info: Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info: Parameter "port_scanclk" = "PORT_UNUSED"
+    Info: Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info: Parameter "port_scandata" = "PORT_UNUSED"
+    Info: Parameter "port_scandataout" = "PORT_UNUSED"
+    Info: Parameter "port_scandone" = "PORT_UNUSED"
+    Info: Parameter "port_scanread" = "PORT_UNUSED"
+    Info: Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info: Parameter "port_clk0" = "PORT_USED"
+    Info: Parameter "port_clk1" = "PORT_UNUSED"
+    Info: Parameter "port_clk3" = "PORT_UNUSED"
+    Info: Parameter "port_clk4" = "PORT_UNUSED"
+    Info: Parameter "port_clk5" = "PORT_UNUSED"
+    Info: Parameter "port_clkena0" = "PORT_UNUSED"
+    Info: Parameter "port_clkena1" = "PORT_UNUSED"
+    Info: Parameter "port_clkena3" = "PORT_UNUSED"
+    Info: Parameter "port_clkena4" = "PORT_UNUSED"
+    Info: Parameter "port_clkena5" = "PORT_UNUSED"
+    Info: Parameter "port_extclk0" = "PORT_UNUSED"
+    Info: Parameter "port_extclk1" = "PORT_UNUSED"
+    Info: Parameter "port_extclk2" = "PORT_UNUSED"
+    Info: Parameter "port_extclk3" = "PORT_UNUSED"
+Warning: Using design file ram256.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: ram256-SYN
+    Info: Found entity 1: ram256
+Info: Elaborating entity "ram256" for hierarchy "ram256:inst6"
+Info: Elaborating entity "altsyncram" for hierarchy "ram256:inst6|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "ram256:inst6|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "ram256:inst6|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "intended_device_family" = "Cyclone"
+    Info: Parameter "width_a" = "8"
+    Info: Parameter "widthad_a" = "8"
+    Info: Parameter "numwords_a" = "256"
+    Info: Parameter "operation_mode" = "SINGLE_PORT"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "indata_aclr_a" = "NONE"
+    Info: Parameter "wrcontrol_aclr_a" = "NONE"
+    Info: Parameter "address_aclr_a" = "NONE"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "width_byteena_a" = "1"
+    Info: Parameter "use_eab" = "ON"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES, INSTANCE_NAME=ram1"
+    Info: Parameter "lpm_type" = "altsyncram"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_it91.tdf
+    Info: Found entity 1: altsyncram_it91
+Info: Elaborating entity "altsyncram_it91" for hierarchy "ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_p982.tdf
+    Info: Found entity 1: altsyncram_p982
+Info: Elaborating entity "altsyncram_p982" for hierarchy "ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|altsyncram_p982:altsyncram1"
+Info: Elaborating entity "sld_mod_ram_rom" for hierarchy "ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info: Elaborated megafunction instantiation "ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info: Instantiated megafunction "ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
+    Info: Parameter "CVALUE" = "00000000"
+    Info: Parameter "IS_DATA_IN_RAM" = "1"
+    Info: Parameter "IS_READABLE" = "1"
+    Info: Parameter "NODE_NAME" = "1918987569"
+    Info: Parameter "NUMWORDS" = "256"
+    Info: Parameter "SHIFT_COUNT_BITS" = "4"
+    Info: Parameter "WIDTH_WORD" = "8"
+    Info: Parameter "WIDTHAD" = "8"
+Info: Elaborating entity "sld_rom_sr" for hierarchy "ram256:inst6|altsyncram:altsyncram_component|altsyncram_it91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr"
+Warning: Using design file ROM1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: rom1-SYN
+    Info: Found entity 1: ROM1
+Info: Elaborating entity "ROM1" for hierarchy "ROM1:inst1"
+Info: Elaborating entity "altsyncram" for hierarchy "ROM1:inst1|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "ROM1:inst1|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "ROM1:inst1|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "address_aclr_a" = "NONE"
+    Info: Parameter "init_file" = "C:/Documents and Settings/Administrator/桌面/CLOCK.HEX"
+    Info: Parameter "intended_device_family" = "Cyclone"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=rm1"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "4096"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "widthad_a" = "12"
+    Info: Parameter "width_a" = "8"
+    Info: Parameter "width_byteena_a" = "1"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_8b91.tdf
+    Info: Found entity 1: altsyncram_8b91
+Info: Elaborating entity "altsyncram_8b91" for hierarchy "ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_50b2.tdf
+    Info: Found entity 1: altsyncram_50b2
+Info: Elaborating entity "altsyncram_50b2" for hierarchy "ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|altsyncram_50b2:altsyncram1"
+Warning: Byte addressed memory initialization file "CLOCK.HEX" was read in the word-addressed format
+Warning: Width of data items in "CLOCK.HEX" is greater than the memory width. Wrapping data items to subsequent addresses. Found 18 warnings, reporting 10
+    Warning: Data at line (1) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (2) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (3) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (4) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (5) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (6) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (7) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (8) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (9) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+    Warning: Data at line (10) of memory initialization file "CLOCK.HEX" is too wide to fit in one memory word. Wrapping data to subsequent addresses.
+Critical Warning: Memory depth (4096) in the design file differs from memory depth (556) in the Memory Initialization File "CLOCK.HEX" -- setting initial value for remaining addresses to 0
+Info: Elaborating entity "sld_mod_ram_rom" for hierarchy "ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info: Elaborated megafunction instantiation "ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info: Instantiated megafunction "ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
+    Info: Parameter "CVALUE" = "00000000"
+    Info: Parameter "IS_DATA_IN_RAM" = "1"
+    Info: Parameter "IS_READABLE" = "1"
+    Info: Parameter "NODE_NAME" = "1919758592"
+    Info: Parameter "NUMWORDS" = "4096"
+    Info: Parameter "SHIFT_COUNT_BITS" = "4"
+    Info: Parameter "WIDTH_WORD" = "8"
+    Info: Parameter "WIDTHAD" = "12"
+Info: Elaborating entity "sld_rom_sr" for hierarchy "ROM1:inst1|altsyncram:altsyncram_component|altsyncram_8b91:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr"
+Info: WYSIWYG I/O primitives converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[7]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[6]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[5]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[4]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[3]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[2]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[1]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0O[0]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RESET~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|X1~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|X2~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|PSEI~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ALEI~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0I[7]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|PSED~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[7]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0I[6]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[6]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0I[5]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[5]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0I[4]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[4]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0I[3]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[3]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[2]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P0I[2]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[1]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMdaO[0]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|NESFR~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|FWE" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[0]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[0]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[1]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[2]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[3]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[4]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[5]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[6]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMadr[7]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[0]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[1]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[2]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[3]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[4]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[5]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[6]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[7]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[8]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[9]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[10]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|ROMadr[11]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[7]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[5]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|NEA~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[1]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[6]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[4]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[0]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[2]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[3]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[2]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[1]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaO[0]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[7]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[5]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[3]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[7]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[6]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[7]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[6]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[5]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|RAMdaI[4]" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[7]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[6]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[6]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[5]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[5]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[4]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[4]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[4]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[3]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[2]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[2]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[2]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[1]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[0]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P1I[0]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[3]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[3]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P3I[1]~I" converted to equivalent logic
+    Info: WYSIWYG I/O primitive "CPU_Core:inst|P2I[1]~I" converted to equivalent logic
+Info: Registers with preset signals will power-up high
+Info: 14 registers lost all their fanouts during netlist optimizations. The first 14 are displayed below.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|IDLE" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT1_DEL[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT3_DEL[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT3_DEL[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT3_DEL[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|m3s018bo:U10|PORT3_DEL[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "CPU_Core:inst|MCU80512:inst3|DLMSTQ[1]" lost all its fanouts during netlist optimizations.
+Info: Found the following redundant logic cells in design
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[7]~917"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[6]~918"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[5]~919"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[4]~920"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[3]~921"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[2]~922"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[1]~923"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|OA[0]~924"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|update_program_counter~560"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|EXT_PROG_EN~165"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[0]~71"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[1]~70"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[7]~64"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[5]~66"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[2]~69"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[3]~68"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[6]~65"
+    Info (17048): Logic cell "CPU_Core:inst|MCU80512:inst3|FO[4]~67"
+Info: Implemented 1854 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
+    Info: Implemented 42 output pins
+    Info: Implemented 1787 logic cells
+    Info: Implemented 16 RAM segments
+    Info: Implemented 1 ClockLock PLLs
+Warning: Output port clk0 of PLL "pll50:inst17|altpll:altpll_component|pll" feeds an output pin via global clocks -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 209 megabytes
+    Info: Processing ended: Thu Jan 02 16:03:01 2014
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:10
+
+

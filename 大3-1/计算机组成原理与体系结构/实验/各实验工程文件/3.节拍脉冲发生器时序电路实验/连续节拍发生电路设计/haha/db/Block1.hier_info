@@ -1,0 +1,15 @@
+|Block1
+T1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK1 => inst.CLK
+CLK1 => inst3.CLK
+CLK1 => inst2.CLK
+CLK1 => inst1.CLK
+RST1 => inst3.ACLR
+RST1 => inst2.ACLR
+RST1 => inst1.ACLR
+RST1 => inst.PRESET
+T2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+T3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+T4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+

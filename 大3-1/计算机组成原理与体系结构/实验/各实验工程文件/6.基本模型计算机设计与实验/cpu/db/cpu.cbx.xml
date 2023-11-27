@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="cpu">
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|dsplay:inst11|dsp:48|LPM_MUX:127" CBX_FILE_NAME="mux_4hc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|dsplay:inst11|dsp:48|cnt3:216|lpm_counter1:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_2ai.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|dsplay:inst11|dsp:48|cnt4:212|lpm_counter2:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_9rh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|lpm_counter0:inst20|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_pqi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|lpm_ram_dq0:inst15|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kpe1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|dsplay:inst11|dsp:48|LPM_MUX:131" CBX_FILE_NAME="mux_bfc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|lpm_rom0:inst43|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_7j51.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,122 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 132 02/25/2009 SJ Full Version
+# Date created = 13:55:54  December 16, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		cpu_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY cpu
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:55:54  DECEMBER 16, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name VHDL_FILE ALU181.vhd
+set_global_assignment -name BDF_FILE alu.bdf
+set_global_assignment -name SOURCE_FILE lpm_bustri0.cmp
+set_global_assignment -name SOURCE_FILE lpm_bustri1.cmp
+set_global_assignment -name SOURCE_FILE lpm_counter0.cmp
+set_global_assignment -name SOURCE_FILE lpm_latch0.cmp
+set_global_assignment -name SOURCE_FILE lpm_latch1.cmp
+set_global_assignment -name SOURCE_FILE lpm_ram_dq0.cmp
+set_global_assignment -name BDF_FILE rom.bdf
+set_global_assignment -name VQM_FILE STEP4.vqm
+set_global_assignment -name BDF_FILE dsplay.bdf
+set_global_assignment -name BDF_FILE dsp.bdf
+set_global_assignment -name BDF_FILE decoder_C.bdf
+set_global_assignment -name BDF_FILE decoder_B.bdf
+set_global_assignment -name BDF_FILE decoder_A.bdf
+set_global_assignment -name BDF_FILE decoder2_4.bdf
+set_global_assignment -name BDF_FILE prj041.bdf
+set_global_assignment -name BDF_FILE address.bdf
+set_global_assignment -name BDF_FILE control.bdf
+set_global_assignment -name BDF_FILE counter.bdf
+set_global_assignment -name BDF_FILE data.bdf
+set_global_assignment -name BDF_FILE pc_ar.bdf
+set_global_assignment -name BDF_FILE PCAR.bdf
+set_global_assignment -name BDF_FILE prj03.bdf
+set_global_assignment -name BDF_FILE prj04.bdf
+set_global_assignment -name BDF_FILE prj05.bdf
+set_global_assignment -name BDF_FILE cpu.bdf
+set_global_assignment -name QIP_FILE lpm_latch0.qip
+set_global_assignment -name QIP_FILE lpm_ram_dq0.qip
+set_global_assignment -name QIP_FILE lpm_counter0.qip
+set_global_assignment -name QIP_FILE lpm_latch1.qip
+set_global_assignment -name BDF_FILE pccounter.bdf
+set_global_assignment -name QIP_FILE lpm_bustri0.qip
+set_global_assignment -name QIP_FILE lpm_bustri1.qip
+set_global_assignment -name QIP_FILE lpm_counter1.qip
+set_global_assignment -name BDF_FILE cnt3.bdf
+set_global_assignment -name QIP_FILE lpm_counter2.qip
+set_global_assignment -name BDF_FILE cnt4.bdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_12 -to IN[7]
+set_location_assignment PIN_8 -to IN[6]
+set_location_assignment PIN_7 -to IN[5]
+set_location_assignment PIN_6 -to IN[4]
+set_location_assignment PIN_4 -to IN[3]
+set_location_assignment PIN_3 -to IN[2]
+set_location_assignment PIN_2 -to IN[1]
+set_location_assignment PIN_1 -to IN[0]
+set_location_assignment PIN_235 -to SWA
+set_location_assignment PIN_236 -to SWB
+set_location_assignment PIN_239 -to STEP
+set_location_assignment PIN_240 -to RST
+set_location_assignment PIN_180 -to P1_1
+set_location_assignment PIN_182 -to P1_2
+set_location_assignment PIN_28 -to CLK
+set_location_assignment PIN_5 -to NESW
+set_location_assignment PIN_187 -to P36
+set_location_assignment PIN_215 -to P35
+set_location_assignment PIN_185 -to P37
+set_location_assignment PIN_218 -to P1_0
+set_location_assignment PIN_224 -to POE[5]
+set_location_assignment PIN_55 -to POE[4]
+set_location_assignment PIN_223 -to POE[3]
+set_location_assignment PIN_226 -to POE[2]
+set_location_assignment PIN_219 -to POE[1]
+set_location_assignment PIN_222 -to POE[0]
+set_global_assignment -name MISC_FILE "D:/yu-wu08/cpu.dpf"
+set_global_assignment -name MISC_FILE "C:/altera/90/quartus/cpu/cpu.dpf"

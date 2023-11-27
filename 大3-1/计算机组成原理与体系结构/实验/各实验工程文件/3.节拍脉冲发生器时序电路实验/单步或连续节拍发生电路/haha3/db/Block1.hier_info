@@ -1,0 +1,31 @@
+|Block1
+T1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+RST1 => inst.ACLR
+RST1 => inst4.ACLR
+RST1 => inst3.ACLR
+RST1 => inst2.ACLR
+RST1 => inst1.ACLR
+CLK1 => inst5.IN0
+S0 => 21mux:inst8.S
+S0 => 21mux:inst6.S
+T2 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+T3 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+T4 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Block1|21mux:inst8
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|Block1|21mux:inst6
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+

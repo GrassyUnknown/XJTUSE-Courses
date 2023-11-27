@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="tjl">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Block1|lpm_rom0:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_sf51.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

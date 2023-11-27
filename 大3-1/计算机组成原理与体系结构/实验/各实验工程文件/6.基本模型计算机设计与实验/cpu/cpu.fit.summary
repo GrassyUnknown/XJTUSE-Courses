@@ -1,0 +1,12 @@
+Fitter Status : Successful - Sun Dec 15 14:37:22 2013
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : cpu
+Top-level Entity Name : cpu
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 969 / 5,980 ( 16 % )
+Total pins : 129 / 185 ( 70 % )
+Total virtual pins : 0
+Total memory bits : 3,584 / 92,160 ( 4 % )
+Total PLLs : 0 / 2 ( 0 % )
