@@ -1,0 +1,16 @@
+NET "clk" LOC = W17;
+NET "reset" LOC = U19;
+
+NET "lt1[0]" LOC = M17;
+NET "lt1[1]" LOC = N17;
+NET "lt1[2]" LOC = P18;
+NET "lt2[0]" LOC = P19;
+NET "lt2[1]" LOC = N19;
+NET "lt2[2]" LOC = N18;
+
+
+NET "clk" TNM_NET=clk;
+TIMESPEC TS_clk = PERIOD "clk" 10 ns HIGH 50%;
+
+
+

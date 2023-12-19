@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>大纲效果之锚点应用</title>
+		<link rel="stylesheet" href="">
+		<style>
+			html,body{
+				height: 100%;
+			}
+			#left{
+				display: inline-block;
+				position: fixed;
+				top:10px;
+				width: 20%;
+				height: 100%;
+				margin-right: 20px;
+				background-color: aqua;
+			}
+			#content{
+				display: inline-block;
+				position: relative;
+				left: 25%;
+				width: 70%;
+				background-color: pink;
+			}
+			#content>p{
+				height: 300px;
+			}
+			#left>p{
+				text-align: center;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+				padding: 10px 20px;
+				text-align: center;
+				
+				font-size: 20px;
+				font-weight: 500;
+			}
+			a:hover{
+				background-color: aliceblue;
+			}
+			a:active{
+				background-color: darkblue;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left">
+			<label style="font-size: 36px;">Java学习日程</label>
+			<h2 style="text-align: center;">
+				<p><a href="#title1">Kava基础</a></p>
+				<p><a href="#title2">Java面向对象</a></p>
+				<p><a href="#title3">Io流</a></p>
+				<p><a href="#title4">web</a></p>
+			</h2>
+		</div>
+		<div id="content">
+			<h3 id="title1">Kava基础</h3>
+			<p>Java基础</p>
+			<h3 id="title2">Java面向对象</h3>
+			<p>
+				Java面向对象把，面向独享把。。。。
+				Java面向对象把，面向独享把。。。。
+				Java面向对象把，面向独享把。。。。
+				Java面向对象把，面向独享把。。。。
+			</p>
+			<h3 id="title3">Io流</h3>
+			<p>
+				Java的流流
+				Java的流流
+				Java的流流Java的流流
+			</p>
+			<h3 id="title4">web</h3>
+			<p>
+				Java的web
+				Java的web
+				Java的webwebwebwebwebw
+			</p>
+			<a href="#title1">返回顶部</a>
+		</div>
+	</body>
+</html>

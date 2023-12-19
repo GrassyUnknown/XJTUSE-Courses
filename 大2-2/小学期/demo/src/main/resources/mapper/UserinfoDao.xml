@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zijie.dao.UserinfoDao">
+
+    <resultMap type="com.zijie.entity.Userinfo" id="UserinfoMap">
+        <result property="uname" column="uname" jdbcType="VARCHAR"/>
+        <result property="upass" column="upass" jdbcType="VARCHAR"/>
+        <result property="uid" column="uid" jdbcType="INTEGER"/>
+        <result property="uroot" column="uroot" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="UserinfoMap">
+        select
+          uname, upass, uid, uroot
+        from userinfo
+        where uid = #{uid}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="UserinfoMap">
+        select
+          uname, upass, uid, uroot
+        from userinfo
+        <where>
+            <if test="uname != null and uname != ''">
+                and uname = #{uname}
+            </if>
+            <if test="upass != null and upass != ''">
+                and upass = #{upass}
+            </if>
+            <if test="uid != null">
+                and uid = #{uid}
+            </if>
+            <if test="uroot != null">
+                and uroot = #{uroot}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from userinfo
+        <where>
+            <if test="uname != null and uname != ''">
+                and uname = #{uname}
+            </if>
+            <if test="upass != null and upass != ''">
+                and upass = #{upass}
+            </if>
+            <if test="uid != null">
+                and uid = #{uid}
+            </if>
+            <if test="uroot != null">
+                and uroot = #{uroot}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="uid" useGeneratedKeys="true">
+        insert into userinfo(uname, upass, uroot)
+        values (#{uname}, #{upass}, #{uroot})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="uid" useGeneratedKeys="true">
+        insert into userinfo(uname, upass, uroot)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.uname}, #{entity.upass}, #{entity.uroot})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="uid" useGeneratedKeys="true">
+        insert into userinfo(uname, upass, uroot)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.uname}, #{entity.upass}, #{entity.uroot})
+        </foreach>
+        on duplicate key update
+        uname = values(uname),
+        upass = values(upass),
+        uroot = values(uroot)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update userinfo
+        <set>
+            <if test="uname != null and uname != ''">
+                uname = #{uname},
+            </if>
+            <if test="upass != null and upass != ''">
+                upass = #{upass},
+            </if>
+            <if test="uroot != null">
+                uroot = #{uroot},
+            </if>
+        </set>
+        where uid = #{uid}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from userinfo where uid = #{uid}
+    </delete>
+
+</mapper>
+

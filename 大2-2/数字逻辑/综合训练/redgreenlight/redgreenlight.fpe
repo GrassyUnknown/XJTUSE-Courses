@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project Version="1.02" Minor="0" Name="redgreenlight">
+    <Configuration>
+        <Option Name="Stage" Value="Post-Bitgen"/>
+        <Option Name="Description" Value=""/>
+        <Option Name="Family" Value="fmk"/>
+        <Option Name="Device" Value="fmk50t4"/>
+        <Option Name="Package" Value="fcfbga484"/>
+        <Option Name="Speed" Value="-2"/>
+    </Configuration>
+    <FileSets Version="1" Minor="0">
+        <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="sources">
+            <File Path="rundir/.dec009b63c4e8681edbf28a3ba6a217f.phy">
+                <FileInfo Type="PHY"/>
+            </File>
+            <File Path="rundir/main_elaborate.edif">
+                <FileInfo Type="EDIF_ELABORATE"/>
+            </File>
+            <File Path="rundir/main.edif">
+                <FileInfo Type="EDIF_SYN"/>
+            </File>
+            <File Path="sources/main.v">
+                <FileInfo Type="Verilog" Library="work"/>
+            </File>
+            <Config>
+                <Option Name="TopModule" Value="main"/>
+                <Option Name="TopInstPath" Value="main"/>
+            </Config>
+        </FileSet>
+        <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="constraints/constrs_1">
+            <File Path="constraints/constrs_1/main.ucf">
+                <FileInfo Type="Constraint"/>
+            </File>
+            <File Path="rundir/main_synthesized.fdc">
+                <FileInfo Type="kFDC_PLACED"/>
+            </File>
+            <File Path="rundir/main_placed.fdc">
+                <FileInfo Type="kFDC_PLACED"/>
+            </File>
+            <Config>
+                <Option Name="ActiveConstraint" Value=""/>
+            </Config>
+        </FileSet>
+    </FileSets>
+    <DesignHierarchy>
+        <Module Name="main" File="main.v" LineNum="3"/>
+        <Automatic_includes/>
+    </DesignHierarchy>
+    <BspRepositories>
+        <Local folder="C:/Program Files/Fudan Micro/Procise/data/devicetree_rep"/>
+    </BspRepositories>
+</Project>

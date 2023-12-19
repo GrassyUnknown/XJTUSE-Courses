@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>样式选择器权重</title>
+		<style>
+			/* 选择器的权重，行内 1000>#id 100>.class 10 */
+			div{
+				color:blue;
+			}
+			#d1,#d2{
+				color: green;
+			}
+			.cls1{
+				color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1" style="color: red;">A</div>
+		<div id="d2" class="cls1">B</div>
+		<div class="cls1">C</div>
+		<div>D</div>
+	</body>
+</html>

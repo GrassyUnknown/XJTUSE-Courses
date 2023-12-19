@@ -1,0 +1,1 @@
+-- Analyzing Verilog file 'C:/Users/ZiJie/Desktop/redgreenlight/sources/main.v' (VERI-1482)

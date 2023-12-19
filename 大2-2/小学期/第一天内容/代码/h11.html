@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- form表单 手机用户的信息
+			action 制定表单数据提交的位置（动态资源）
+			method 请求方法，只能选择get和post
+			enctype 制定表单数据的编码类型
+				默认 application\x-www-form-urlencoded
+				还可以是multipart\form-data 用于上传文件使用时，要求method必须是post
+		-->
+		<form action="get" action="login" enctype="">
+			<!-- form表单的子表签一般都是字段标签，或者是域标签：input，select，taxtarea 
+				字段标签共同属性，name制定字段名称，value字段的值（数据）
+				-->
+			<input type="text" name="name" value="张三" placeholder="请输入您的真实姓名"/><br>
+			<input type="password" name="pwd" value="123" placeholder="请输入您的密码"/><br>
+			<input type="radio" name="sex" id="sexid" value="男"/>男
+			<input type="radio" name="sex" id="sexid" value="女"/>女<br>
+			<input type="date" name="birthday" value="1990-01-01"/><br>
+			<input type="number" name="sn" placeholder="请输入您的身份证号"/><br>
+			<input type="checkbox" name="lovejob" value="java开发工程师" checked/>java开发工程师<br>
+			<input type="checkbox" name="lovejob" value="java测试工程师"/>java测试工程师<br>
+			<input type="checkbox" name="lovejob" value="java运维工程师"/>java运维工程师<br>
+			<input type="checkbox" name="lovejob" value="java架构工程师"/>java架构工程师<br>
+			<!-- 表示隐藏的不显示在页面上，但是会提交到action位置上 -->
+			<input type="hidden" name="action_code" value="1"/><br>
+			<input type="color" name="color1"/><br>
+			<input type="submit" value="提交"><br>
+			<button>提交按钮</button><br>
+			<input type="reset" value="重置数据"><br>
+			<input type="button" value="普通按钮"><br>
+			<!-- 可以通过表单去选择文件的类型 -->
+			<input type="file" accept="image/*,text/*"><br>
+			<select name="city" id="">
+				<option value="0">北京</option>
+				<option value="1">上海</option>
+				<option value="2" selected>西安</option>
+				<option value="3">深圳</option>
+			</select><br>
+			<textarea name="info" id="" cols="30" rows="10">个人专长简介</textarea>
+		</form>
+	</body>
+</html>

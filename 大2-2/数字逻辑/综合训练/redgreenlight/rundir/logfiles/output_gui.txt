@@ -1,0 +1,11 @@
+2023-07-19 13:46:33 [Debug]: running thread:1
+ [Context]: ((null):0, (null))
+2023-07-19 13:46:37 [Debug]: running thread:-1
+ [Context]: ((null):0, (null))
+2023-07-19 13:46:37 [Debug]: running thread:1
+ [Context]: ((null):0, (null))
+2023-07-19 13:46:38 [Debug]: running thread:-1
+ [Context]: ((null):0, (null))
+2023-07-19 13:47:23 [Debug]: setFontPx:  0 [Context]: ((null):0, (null))
+2023-07-19 13:47:23 [Debug]: setFontPx:  0 [Context]: ((null):0, (null))
+2023-07-19 13:47:23 [Debug]: editor set mode:  0 [Context]: ((null):0, (null))

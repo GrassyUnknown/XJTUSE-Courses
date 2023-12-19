@@ -1,0 +1,250 @@
+Simulator report for revision
+Thu Jul 20 23:41:36 2023
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 69 nodes     ;
+; Simulation Coverage         ;      90.79 % ;
+; Total Number of Transitions ; 706          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++------------------------------------------------------------------------------------------+
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------+
+Memory report data cannot be output to ASCII.
+Please use Quartus II to view the memory report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      90.79 % ;
+; Total nodes checked                                 ; 69           ;
+; Total output ports checked                          ; 76           ;
+; Total output ports with complete 1/0-value coverage ; 69           ;
+; Total output ports with no 1/0-value coverage       ; 5            ;
+; Total output ports with no 1-value coverage         ; 5            ;
+; Total output ports with no 0-value coverage         ; 7            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                  ; Output Port Name                                                                           ; Output Port Type ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a1 ; portbdataout1    ;
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a2 ; portbdataout2    ;
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a3 ; portbdataout3    ;
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a4 ; portbdataout4    ;
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a6 ; portbdataout6    ;
+; |fifo|Add2~3                                                                               ; |fifo|Add2~3                                                                               ; cout             ;
+; |fifo|Add2~6                                                                               ; |fifo|Add2~6                                                                               ; sumout           ;
+; |fifo|Add2~6                                                                               ; |fifo|Add2~7                                                                               ; cout             ;
+; |fifo|Add2~10                                                                              ; |fifo|Add2~10                                                                              ; sumout           ;
+; |fifo|Add2~10                                                                              ; |fifo|Add2~11                                                                              ; cout             ;
+; |fifo|Add2~14                                                                              ; |fifo|Add2~14                                                                              ; sumout           ;
+; |fifo|data_avail[0]~reg0                                                                   ; |fifo|data_avail[0]~reg0                                                                   ; regout           ;
+; |fifo|data_avail[3]~reg0                                                                   ; |fifo|data_avail[3]~reg0                                                                   ; regout           ;
+; |fifo|data_avail[2]~reg0                                                                   ; |fifo|data_avail[2]~reg0                                                                   ; regout           ;
+; |fifo|data_avail[1]~reg0                                                                   ; |fifo|data_avail[1]~reg0                                                                   ; regout           ;
+; |fifo|Equal0~0                                                                             ; |fifo|Equal0~0                                                                             ; combout          ;
+; |fifo|empty~1                                                                              ; |fifo|empty~1                                                                              ; combout          ;
+; |fifo|Add4~0                                                                               ; |fifo|Add4~0                                                                               ; combout          ;
+; |fifo|Add4~1                                                                               ; |fifo|Add4~1                                                                               ; combout          ;
+; |fifo|Add4~2                                                                               ; |fifo|Add4~2                                                                               ; combout          ;
+; |fifo|data_avail[0]~8                                                                      ; |fifo|data_avail[0]~8                                                                      ; combout          ;
+; |fifo|data_avail[0]~9                                                                      ; |fifo|data_avail[0]~9                                                                      ; combout          ;
+; |fifo|wen_con                                                                              ; |fifo|wen_con                                                                              ; combout          ;
+; |fifo|ren_con                                                                              ; |fifo|ren_con                                                                              ; combout          ;
+; |fifo|wt_pt[0]                                                                             ; |fifo|wt_pt[0]                                                                             ; regout           ;
+; |fifo|wt_pt[1]                                                                             ; |fifo|wt_pt[1]                                                                             ; regout           ;
+; |fifo|wt_pt[2]                                                                             ; |fifo|wt_pt[2]                                                                             ; regout           ;
+; |fifo|rd_pt[0]                                                                             ; |fifo|rd_pt[0]                                                                             ; regout           ;
+; |fifo|rd_pt[1]                                                                             ; |fifo|rd_pt[1]                                                                             ; regout           ;
+; |fifo|rd_pt[2]                                                                             ; |fifo|rd_pt[2]                                                                             ; regout           ;
+; |fifo|Equal3~0                                                                             ; |fifo|Equal3~0                                                                             ; combout          ;
+; |fifo|Equal2~0                                                                             ; |fifo|Equal2~0                                                                             ; combout          ;
+; |fifo|comb~0                                                                               ; |fifo|comb~0                                                                               ; combout          ;
+; |fifo|wt_pt[0]~6                                                                           ; |fifo|wt_pt[0]~6                                                                           ; combout          ;
+; |fifo|wt_pt[1]~7                                                                           ; |fifo|wt_pt[1]~7                                                                           ; combout          ;
+; |fifo|wt_pt[2]~8                                                                           ; |fifo|wt_pt[2]~8                                                                           ; combout          ;
+; |fifo|rd_pt[0]~9                                                                           ; |fifo|rd_pt[0]~9                                                                           ; combout          ;
+; |fifo|rd_pt[1]~10                                                                          ; |fifo|rd_pt[1]~10                                                                          ; combout          ;
+; |fifo|rd_pt[2]~11                                                                          ; |fifo|rd_pt[2]~11                                                                          ; combout          ;
+; |fifo|full                                                                                 ; |fifo|full                                                                                 ; padio            ;
+; |fifo|empty                                                                                ; |fifo|empty                                                                                ; padio            ;
+; |fifo|rddata[1]                                                                            ; |fifo|rddata[1]                                                                            ; padio            ;
+; |fifo|rddata[2]                                                                            ; |fifo|rddata[2]                                                                            ; padio            ;
+; |fifo|rddata[3]                                                                            ; |fifo|rddata[3]                                                                            ; padio            ;
+; |fifo|rddata[4]                                                                            ; |fifo|rddata[4]                                                                            ; padio            ;
+; |fifo|rddata[6]                                                                            ; |fifo|rddata[6]                                                                            ; padio            ;
+; |fifo|data_avail[0]                                                                        ; |fifo|data_avail[0]                                                                        ; padio            ;
+; |fifo|data_avail[1]                                                                        ; |fifo|data_avail[1]                                                                        ; padio            ;
+; |fifo|data_avail[2]                                                                        ; |fifo|data_avail[2]                                                                        ; padio            ;
+; |fifo|data_avail[3]                                                                        ; |fifo|data_avail[3]                                                                        ; padio            ;
+; |fifo|room_avail[0]                                                                        ; |fifo|room_avail[0]                                                                        ; padio            ;
+; |fifo|room_avail[1]                                                                        ; |fifo|room_avail[1]                                                                        ; padio            ;
+; |fifo|room_avail[2]                                                                        ; |fifo|room_avail[2]                                                                        ; padio            ;
+; |fifo|room_avail[3]                                                                        ; |fifo|room_avail[3]                                                                        ; padio            ;
+; |fifo|almost_full                                                                          ; |fifo|almost_full                                                                          ; padio            ;
+; |fifo|almost_empty                                                                         ; |fifo|almost_empty                                                                         ; padio            ;
+; |fifo|wren                                                                                 ; |fifo|wren~corein                                                                          ; combout          ;
+; |fifo|rden                                                                                 ; |fifo|rden~corein                                                                          ; combout          ;
+; |fifo|clk                                                                                  ; |fifo|clk~corein                                                                           ; combout          ;
+; |fifo|rst                                                                                  ; |fifo|rst~corein                                                                           ; combout          ;
+; |fifo|wrdata[0]                                                                            ; |fifo|wrdata[0]~corein                                                                     ; combout          ;
+; |fifo|wrdata[1]                                                                            ; |fifo|wrdata[1]~corein                                                                     ; combout          ;
+; |fifo|wrdata[2]                                                                            ; |fifo|wrdata[2]~corein                                                                     ; combout          ;
+; |fifo|wrdata[3]                                                                            ; |fifo|wrdata[3]~corein                                                                     ; combout          ;
+; |fifo|wrdata[4]                                                                            ; |fifo|wrdata[4]~corein                                                                     ; combout          ;
+; |fifo|wrdata[6]                                                                            ; |fifo|wrdata[6]~corein                                                                     ; combout          ;
+; |fifo|wrdata[7]                                                                            ; |fifo|wrdata[7]~corein                                                                     ; combout          ;
+; |fifo|clk~clkctrl                                                                          ; |fifo|clk~clkctrl                                                                          ; outclk           ;
+; |fifo|rst~clkctrl                                                                          ; |fifo|rst~clkctrl                                                                          ; outclk           ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                   ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                  ; Output Port Name                                                                           ; Output Port Type ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; portbdataout0    ;
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a5 ; portbdataout5    ;
+; |fifo|rddata[0]                                                                            ; |fifo|rddata[0]                                                                            ; padio            ;
+; |fifo|rddata[5]                                                                            ; |fifo|rddata[5]                                                                            ; padio            ;
+; |fifo|wrdata[5]                                                                            ; |fifo|wrdata[5]~corein                                                                     ; combout          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                   ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                  ; Output Port Name                                                                           ; Output Port Type ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; portbdataout0    ;
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a5 ; portbdataout5    ;
+; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0 ; |fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a7 ; portbdataout7    ;
+; |fifo|rddata[0]                                                                            ; |fifo|rddata[0]                                                                            ; padio            ;
+; |fifo|rddata[5]                                                                            ; |fifo|rddata[5]                                                                            ; padio            ;
+; |fifo|rddata[7]                                                                            ; |fifo|rddata[7]                                                                            ; padio            ;
+; |fifo|wrdata[5]                                                                            ; |fifo|wrdata[5]~corein                                                                     ; combout          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Jul 20 23:41:35 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off project -c revision
+Info: Using vector source file "E:/学/大2-2/数字逻辑/综合训练/fifo/revision.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      90.79 %
+Info: Number of transitions in simulation is 706
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Thu Jul 20 23:41:36 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

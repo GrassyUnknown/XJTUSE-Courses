@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>relative相对位置</title>
+		<!-- 不脱离文本流 -->
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: #00ffff;
+			}
+			p{
+				display: inline-block;
+				/* 绝对定位，相对于自己本身进行左右显示调整 */
+				position: relative;
+				left: 70px;
+				top:70px;
+				background-color: #ffaaff;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>ABC</p>
+		</div>
+	</body>
+</html>

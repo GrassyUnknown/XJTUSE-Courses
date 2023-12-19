@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格相关的标签</title>
+	</head>
+	<body>
+		<!-- 生成四行三列的表格
+			cellspacing 制定列之间的间隔
+			cellpadding 制定列边框之间的间隔
+		 -->
+		<table border="1" 
+			cellspacing="0"
+			cellpadding="10px"
+			style="width: 100%; height: 300px;">
+			<caption>会员列表</caption>
+			<!-- tr是表示行，指定行高height属性 -->
+			<tr height="40px">
+				<!-- th一般在第一行使用，用于表示标题，加粗且剧中 
+					th和td都表示为列（单元格）可以指定它的宽度
+				-->
+				<th width="30px">编号</th>
+				<th width="40px">名称</th>
+				<th >密码</th>
+			</tr>
+			<!-- align是表示水平方向的方式
+				calign是表示垂直方向上的对齐方式top\bobottom\middle
+				-->
+			<tr align="center" valign="middle">
+				<td>1</td>
+				<td>ctt</td>
+				<td>ctt123</td>
+			</tr>
+			<tr align="center">
+				<td>2</td>
+				<td align="left">ll</td>
+				<td>123</td>
+			</tr>
+			<tr align="center">
+				<td>3</td>
+				<td>cuihua</td>
+				<td>12345667</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

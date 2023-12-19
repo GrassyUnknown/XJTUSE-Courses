@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>属性动画</title>
+		<!--属性动画使用transition 
+			transition：property属性名，执行时间，切换效果时间方式，延迟时间；
+		-->
+		<style>
+			div{
+				height: 100px;
+				width: 100px;
+				line-height: 100px;
+				text-align: center;
+				border: 1px solid red;
+			}
+			div:hover{
+				height: 110px;
+				width: 110px;
+				background-color: red;
+				border-color: yellow;
+				color: white;
+				transform: rotate(45deg);
+				/* 多个属性使用，来分割；【注意】最后一个属性必须要加，eg下方transform的最后一个， */
+				transition: color, background-color,transform,  5s ease 0.5s;
+			}
+		</style>
+	</head>
+	<body>
+		<div>ABC</div>
+	</body>
+</html>

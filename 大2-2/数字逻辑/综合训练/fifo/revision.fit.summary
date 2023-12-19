@@ -1,0 +1,17 @@
+Fitter Status : Successful - Thu Jul 06 21:09:28 2023
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : revision
+Top-level Entity Name : fifo
+Family : Stratix II
+Device : EP2S15F484C3
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 24 / 12,480 ( < 1 % )
+    Dedicated logic registers : 10 / 12,480 ( < 1 % )
+Total registers : 10
+Total pins : 32 / 343 ( 9 % )
+Total virtual pins : 0
+Total block memory bits : 64 / 419,328 ( < 1 % )
+DSP block 9-bit elements : 0 / 96 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,69 @@
+|full_adder
+A[0] => A[0]~3.IN1
+A[1] => A[1]~2.IN1
+A[2] => A[2]~1.IN1
+A[3] => A[3]~0.IN1
+B[0] => B[0]~3.IN1
+B[1] => B[1]~2.IN1
+B[2] => B[2]~1.IN1
+B[3] => B[3]~0.IN1
+cin => cin~0.IN1
+sum[0] <= full_adder_1:add1.sum
+sum[1] <= full_adder_1:add2.sum
+sum[2] <= full_adder_1:add3.sum
+sum[3] <= full_adder_1:add4.sum
+co <= full_adder_1:add4.cout
+
+
+|full_adder|full_adder_1:add1
+A => cout~1.IN0
+A => cout~0.IN0
+A => sum~0.IN0
+B => cout~1.IN1
+B => cout~0.IN1
+B => sum~1.IN1
+cin => cout~2.IN0
+cin => sum~0.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|full_adder_1:add2
+A => cout~1.IN0
+A => cout~0.IN0
+A => sum~0.IN0
+B => cout~1.IN1
+B => cout~0.IN1
+B => sum~1.IN1
+cin => cout~2.IN0
+cin => sum~0.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|full_adder_1:add3
+A => cout~1.IN0
+A => cout~0.IN0
+A => sum~0.IN0
+B => cout~1.IN1
+B => cout~0.IN1
+B => sum~1.IN1
+cin => cout~2.IN0
+cin => sum~0.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|full_adder_1:add4
+A => cout~1.IN0
+A => cout~0.IN0
+A => sum~0.IN0
+B => cout~1.IN1
+B => cout~0.IN1
+B => sum~1.IN1
+cin => cout~2.IN0
+cin => sum~0.IN1
+sum <= sum~1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~3.DB_MAX_OUTPUT_PORT_TYPE
+
+

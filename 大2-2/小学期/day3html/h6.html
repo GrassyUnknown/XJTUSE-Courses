@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>盒子模型</title>
+		<style>
+			div{
+				height: 100px;
+				width: 200px;
+				/* scroll滚动，
+				hidden隐藏 ，
+				outo依据内容大小自动添加滚动条自动选择滚动
+				visible超出父标签的大小时，也会显示，默认的
+				*/
+				/* overflow: auto;*/
+				/* 可以设置滚动条的显示 */
+				overflow-y: scroll;
+				overflow-x: hidden;
+			}
+			span{
+				display: inline-block;
+				width: 100px;
+				height: 20px;
+				/* 文本的 */
+				overflow: hidden;
+				/* text-overflow clip剪切，ellipsis省略号，inherit遵循父标签，initial初始化*/
+				/* 空白处理，nowrap不换行，不处理 */
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				
+				
+				background-color: aqua;
+			}
+		</style>
+	</head>
+	<body>
+		<div><img src="../imgs/微信图片_20230131205646.png" alt=""></div>
+		<span>JavaSE包含了基础语法、面向对象、IO流、文件、网络、多线程、接口</span>
+	</body>
+</html>

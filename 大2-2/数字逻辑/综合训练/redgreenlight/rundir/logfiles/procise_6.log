@@ -1,0 +1,329 @@
+Procise 2023.1 beta
+SVN Version : 28586
+Build  time : 2023/05/05 09:08:23
+Start  time : 2023-07-16 10:49:41
+>>set_device fmk50t4
+  set_device elapsed_time 2.71 seconds, cpu_time 2.64 seconds
+  set_device used memory 521MB, procise used peak memory 598MB, current used memory 470MB
+>>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86199/Desktop/redgreenlight/redgreenlight/sources/main.v' (VERI-1482)
+  load_design elapsed_time 0.25 seconds, cpu_time 0.28 seconds
+  load_design used memory 9MB, procise used peak memory 598MB, current used memory 499MB
+add_design_file -file C:/Users/86199/Desktop/redgreenlight/redgreenlight/constraints/constrs_1/main.ucf 
+>>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86199/Desktop/redgreenlight/redgreenlight/sources/main.v' (VERI-1482)
+  load_design elapsed_time 0.50 seconds, cpu_time 0.52 seconds
+  load_design used memory 3MB, procise used peak memory 1735MB, current used memory 256MB
+>>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86199/Desktop/redgreenlight/redgreenlight/sources/main.v' (VERI-1482)
+  load_design elapsed_time 0.47 seconds, cpu_time 0.47 seconds
+  load_design used memory 8MB, procise used peak memory 1735MB, current used memory 265MB
+>>rtl_analyze
+  rtl_analyze -> elaborate
+  Info: SDB transformed into DM successfully.  
+  C:/Users/86199/Desktop/redgreenlight/redgreenlight/sources/main.v(3): INFO: compiling module 'main_default' (VERI-1018)
+  write out edif file main_elaborate.edif
+  rtl_analyze -> read edif source files
+  rtl_analyze -> read ip edif files
+  rtl_analyze -> bind_design -verbose 0
+  rtl_analyze -> uniquify
+  rtl_analyze -> read_ucf C:/Users/86199/Desktop/redgreenlight/redgreenlight/constraints/constrs_1/main.ucf
+    ERROR: CONSTRAINT-0302: {C:/Users/86199/Desktop/redgreenlight/redgreenlight/constraints/constrs_1/main.ucf:3} ucf_yyerror {syntax error}
+  yyparse returns 1! total 2 lines parsed!
+    ERROR: GUI-0065: Command "rtl_analyze" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86199/Desktop/redgreenlight/redgreenlight/sources/main.v' (VERI-1482)
+  load_design elapsed_time 0.57 seconds, cpu_time 0.52 seconds
+  load_design used memory 39MB, procise used peak memory 1735MB, current used memory 256MB
+>>rtl_analyze
+  rtl_analyze -> elaborate
+  Info: SDB transformed into DM successfully.  
+  C:/Users/86199/Desktop/redgreenlight/redgreenlight/sources/main.v(3): INFO: compiling module 'main_default' (VERI-1018)
+  write out edif file main_elaborate.edif
+  rtl_analyze -> read edif source files
+  rtl_analyze -> read ip edif files
+  rtl_analyze -> bind_design -verbose 0
+  rtl_analyze -> uniquify
+  rtl_analyze -> read_ucf C:/Users/86199/Desktop/redgreenlight/redgreenlight/constraints/constrs_1/main.ucf
+  yyparse returns 0! total 13 lines parsed!
+  rtl_analyze elapsed_time 0.15 seconds, cpu_time 0.11 seconds
+  rtl_analyze used memory 12MB, procise used peak memory 1735MB, current used memory 257MB
+>>synthesize
+  synthesize -> flatten
+  synthesize -> logic opt and lut mapping
+  synthesize -> insert_io -bufg_limit_cnt 16
+  write out edif file main.edif
+  Generate timing summary report with max_paths=10 nworst=3
+  ==========================================================================
+  INFO static timing analysis results.
+  ==========================================================================
+  PathType  Requirement(setup)  Slack(setup)  Requirement(hold)  Slack(hold)
+  ==========================================================================
+  Trr                   10.000         9.491              1.000        0.076  
+  Tir                      N/A           N/A                N/A          N/A  
+  Tro                      N/A           N/A                N/A          N/A  
+  Tio                      N/A           N/A                N/A          N/A  
+  ==========================================================================
+  FDC_INFO! export constraints to file main_synthesized.fdc!
+  synthesize elapsed_time 0.24 seconds, cpu_time 0.19 seconds
+  synthesize used memory 32MB, procise used peak memory 1735MB, current used memory 261MB
+place -thread 4;write_phy_design C:/Users/86199/Desktop/redgreenlight/redgreenlight/rundir//.dec009b63c4e8681edbf28a3ba6a217f_place.phy 
+>>opt_design
+    DffDupPass : total create 0 insts for model 'main'
+    HfsPass : total split 0 nets for model 'main'
+    DffDupPass : total create 0 insts for model 'main'
+  opt_design used memory 0MB, procise used peak memory 1735MB, current used memory 261MB
+>>place -thread 4
+  Phase 1 Placer Initialization
+  Phase 1.1 Placer Initialization Core
+  Phase 1.1.6 Build Placer Netlist Model
+  Building SiteChkr ...
+    Done.
+  Phase 1.1.6 Build Placer Netlist Model | Time: 0.774s
+  Phase 1.1.5.2 Implementation Feasibility check
+  IO Utilization:
+    Number of bonded IOBs:                          8 out of     250    3%
+  
+  IOPAD Utilization:
+    Number of bonded IOPADs:                        0 out of      22    0%
+  
+  Specific Feature Utilization:
+    Number of RAMH18E1/FIFO18E1s:                   0 out of     150    0%
+    Number of RAMHFIFO36E1/FIFO36E1s:               0 out of      75    0%
+    Number of GCDU/GCDU_CTRLs:                      1 out of      32    3%
+      Number used as GCDUs:                         0
+      Number used as GCDU_CTRLs:                    1
+    Number of ISTCE2/ISTCE2_FINESTCs:               0 out of     250    0%
+    Number of ILGKE2/ILGKE3/ISSE2s:                 0 out of     250    0%
+    Number of OLGKE2/OLGKE3/OSSE2s:                 0 out of     250    0%
+    Number of PSU_IN/PSU_IN_PHYs:                   0 out of      20    0%
+    Number of PSU_OUT/PSU_OUT_PHYs:                 0 out of      20    0%
+    Number of JTBSs:                                0 out of       4    0%
+    Number of HCDU_CEs:                             0 out of      72    0%
+    Number of RCDUs:                                0 out of      20    0%
+    Number of CAPs:                                 0 out of       1    0%
+    Number of DNA_PORTs:                            0 out of       1    0%
+    Number of CU48E1s:                              0 out of     120    0%
+    Number of UNRECOVER_USRs:                       0 out of       1    0%
+    Number of SECTOR_ECCs:                          0 out of       1    0%
+    Number of UHST2E2_CHs:                          0 out of       4    0%
+    Number of UHST2E2_COMs:                         0 out of       1    0%
+    Number of IDU_DS_UHSTE2s:                       0 out of       2    0%
+    Number of UACs:                                 0 out of       2    0%
+    Number of ISTC_CTRLs:                           0 out of       5    0%
+    Number of IFIFOs:                               0 out of      20    0%
+    Number of DCCUE2_ADVs:                          0 out of       5    0%
+    Number of OFIFOs:                               0 out of      20    0%
+    Number of PCIE_2_1s:                            0 out of       1    0%
+    Number of PSU_REFs:                             0 out of       5    0%
+    Number of PHY_CTRLs:                            0 out of       5    0%
+    Number of PLLE2_ADVs:                           0 out of       5    0%
+    Number of BOOTUPs:                              0 out of       1    0%
+    Number of FADCs:                                0 out of       1    0%
+  
+  Phase 1.1.5.2 Implementation Feasibility check | Time: 0.792s
+  Phase 1.1.7 Constrain Clocks/Macros
+  Phase 1.1.7 Constrain Clocks/Macros | Time: 32.552s
+  Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device
+    WARNING: PLACE-1501: IO port clk use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+    WARNING: PLACE-1501: IO port lt1[0] use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+    WARNING: PLACE-1501: IO port lt1[1] use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+    WARNING: PLACE-1501: IO port lt1[2] use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+    WARNING: PLACE-1501: IO port lt2[0] use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+    WARNING: PLACE-1501: IO port lt2[1] use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+    WARNING: PLACE-1501: IO port lt2[2] use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+    WARNING: PLACE-1501: IO port reset use I/O standard(IOSTANDARD) value "DEFAULT", instead of a user assigned specific value.
+  IO Placement: total number IdelayCtrl banks: 0
+  IO placement: total number of IO banks: 2
+  Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Time: 32.579s
+  Phase 1.1.8 Build Shapes/ HD Config
+  Phase 1.1.8.1 Build Macros
+  Phase 1.1.8.1 Build Macros | Time: 32.58s
+  Phase 1.1.8 Build Shapes/ HD Config | Time: 32.58s
+  Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Time: 32.58s
+  Phase 1.1 Placer Initialization Core | Time: 32.592s
+  Phase 1 Placer Initialization | Time: 32.592s
+  Phase 2 Global Placement
+  Phase 2.1 Distribute Placement
+  cluster_view_->num_total_clusters() = 44
+  .  
+  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  
+  .  
+  Phase 2.1 Distribute Placement | Time: 33.823s
+  hpwl = 160.1
+  Phase 2.2 Legalize Placement
+  Phase 2.2 Legalize Placement | Time: 33.851s
+  hpwl = 162.3
+  Phase 2 Global Placement | Time: 33.852s
+  The worst negtive slack is: 0.000000.
+  The total negtive slack is: 0.000000.
+  Generating physical netlist ... 
+  
+                           DEVICE UTILIZATION                   
+  ------------------------------------------------------------------
+  resource                      used/available     utilization      
+  ------------------------------------------------------------------
+  GCDU_CTRL                         1/32             3.13%
+  IOU33                             1/10            10.00%
+  IOU33M                            4/120            3.33%
+  IOU33S                            3/120            2.50%
+  LC                                5/8150           0.06%
+  ------------------------------------------------------------------
+  FDC_INFO! export constraints to file main_placed.fdc!
+  Building SiteChkr ...
+    Done.
+  Phase 3 Detail Placement
+  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  
+  Phase 3 Detail Placement | Time: 40.005s
+  Phase 4 Post Placement Optimization and Clean-Up
+  Phase 4.2 Post Placement Cleanup
+  Phase 4.2 Post Placement Cleanup | Time: 40.005s
+  Phase 4.4 Final Placement Cleanup
+  Phase 4.4 Final Placement Cleanup | Time: 40.006s
+  Phase 4 Post Placement Optimization and Clean-Up | Time: 40.006s
+  The worst negtive slack is: 0.000000.
+  The total negtive slack is: 0.000000.
+  Generate timing summary report with max_paths=10 nworst=3
+  ==========================================================================
+  INFO static timing analysis results.
+  ==========================================================================
+  PathType  Requirement(setup)  Slack(setup)  Requirement(hold)  Slack(hold)
+  ==========================================================================
+  Trr                   10.000         5.839              1.000        0.310  
+  Tir                      N/A           N/A                N/A          N/A  
+  Tro                      N/A           N/A                N/A          N/A  
+  Tio                      N/A           N/A                N/A          N/A  
+  ==========================================================================
+  place elapsed_time 42.11 seconds, cpu_time 45.16 seconds
+  place used memory 1148MB, procise used peak memory 1735MB, current used memory 378MB
+>>write_phy_design C:/Users/86199/Desktop/redgreenlight/redgreenlight/rundir//.dec009b63c4e8681edbf28a3ba6a217f_place.phy
+  write_phy_design used memory 0MB, procise used peak memory 1735MB, current used memory 373MB
+route;write_phy_design C:/Users/86199/Desktop/redgreenlight/redgreenlight/rundir//.dec009b63c4e8681edbf28a3ba6a217f_route.phy 
+>>route
+  DataModel: remove 1 TIE HIGH nets.
+  DataModel: create 3 dummy TIE HIGH nets.
+  DataModel: remove 0 TIE LOW nets.
+  DataModel: created 0 dummy TIE LOW nets.
+  DataModel: remove 3 PULL insts.
+  DataModel: remove 0 CU PULL insts.
+  DataModel: created 0 dummy LC insts.
+  Router: build routing data...
+  Router: 38 nets, 17 insts.
+  Router: sort net pins...
+  Router: initial routability-driven routing...
+  Router: No unrouted net
+  Router: 17 routing nodes have overflow, Time : 0.16 s
+  Router: 10 routing nodes have overflow, Time : 0.00 s
+  Router: 3 routing nodes have overflow, Time : 0.00 s
+  Router: 0 routing nodes have overflow, Time : 0.00 s
+  Router: routability driven finished elapsed_time 0.26 seconds, cpu_time 0.25 seconds
+  Router: pre-processing for timing-driven reroute...
+  Router: worst slack : 6.134, total negative slack : 0.000.
+  Router: start timing-driven reroute...
+  Router: worst slack : 6.134, total negative slack : 0.000.
+  Router: 0 routing nodes have overflow, Time : 0.00 s
+  Router: The init hold worst slack:
+  Router: worst slack : 0.207, total negative slack : 0.000.
+  Router: The init setup worst slack:
+  Router: worst slack : 6.134, total negative slack : 0.000.
+  Router: Start to optimize the hold slack
+  Router: Optimize the hold slack finish
+  Router: 0 routing nodes have overflow, Time : 0.00 s
+  Router: The final hold worst slack:
+  Router: worst slack : 0.207, total negative slack : 0.000.
+  Router: The final setup worst slack:
+  Router: worst slack : 6.134, total negative slack : 0.000.
+  Router: successfully routed after 1 iterations.
+  Router: SIGNAL wirelength : 192.
+  Router: CLOCK wirelength  : 107.
+  Router: P/G wirelength    : 0.
+  Router: timing driven successful elapsed_time 0.85 seconds, cpu_time 0.84 seconds
+  Router: created 8 dummy I/O insts.
+  Router: created 1 dummy HCDU_CE insts.
+  Generate timing summary report with max_paths=10 nworst=3
+  ==========================================================================
+  INFO static timing analysis results.
+  ==========================================================================
+  PathType  Requirement(setup)  Slack(setup)  Requirement(hold)  Slack(hold)
+  ==========================================================================
+  Trr                   10.000         6.087              1.000        0.207  
+  Tir                      N/A           N/A                N/A          N/A  
+  Tro                      N/A           N/A                N/A          N/A  
+  Tio                      N/A           N/A                N/A          N/A  
+  ==========================================================================
+  route elapsed_time 2.00 seconds, cpu_time 1.98 seconds
+  route used memory 317MB, procise used peak memory 1735MB, current used memory 511MB
+>>write_phy_design C:/Users/86199/Desktop/redgreenlight/redgreenlight/rundir//.dec009b63c4e8681edbf28a3ba6a217f_route.phy
+  write_phy_design used memory 0MB, procise used peak memory 1735MB, current used memory 485MB
+>>bitgen redgreenlight.bit -g bpi_sync_mode:Disable spi_32bit_addr:No spi_buswidth:1 Encrypt:No
+  assemble bitstream elapsed_time 0.04 seconds, cpu_time -16.00 seconds
+  Writing out bitstream file redgreenlight.bit
+  Writing out bgn file redgreenlight.bgn
+  bitgen elapsed_time 0.81 seconds, cpu_time 0.83 seconds
+  bitgen used memory 317MB, procise used peak memory 1735MB, current used memory 495MB
+>>write_phy_design C:/Users/86199/Desktop/redgreenlight/redgreenlight/rundir//.dec009b63c4e8681edbf28a3ba6a217f.phy
+  write_phy_design used memory 0MB, procise used peak memory 1735MB, current used memory 491MB
+>>init_chain -cable_type usb-jtag-smt2
+  hw_server:  Set FTDI speed to 15000khz successfully
+  hw_server:  FTDI speed is already 15000khz
+  hw_server:  JTAG tap: Procise found HwServer chain_info: 0x0222c143 (mfg:0x0a1(FMSH), part:0x222c(fmk50), ver:0x0)
+  ----------------------------------------------------------------------
+  device_id:    00000010001000101100000101000011
+  manufacturer: FMSH
+  part_name:    fmk50
+  part_id:      0
+  ir_length:    6
+  version:      0
+  step_id:      0
+  hw_server:  SVF instructions execute success
+  init_chain elapsed_time 2.47 seconds, cpu_time 0.17 seconds
+  init_chain used memory 1MB, procise used peak memory 1735MB, current used memory 259MB
+hw_server message connection interrupt, errno code = 0
+>>init_chain -cable_type usb-jtag-smt2
+  hw_server:  Set FTDI speed to 15000khz successfully
+  hw_server:  FTDI speed is already 15000khz
+  hw_server:  JTAG tap: Procise found HwServer chain_info: 0x0222c143 (mfg:0x0a1(FMSH), part:0x222c(fmk50), ver:0x0)
+  ----------------------------------------------------------------------
+  device_id:    00000010001000101100000101000011
+  manufacturer: FMSH
+  part_name:    fmk50
+  part_id:      0
+  ir_length:    6
+  version:      0
+  step_id:      0
+  hw_server:  SVF instructions execute success
+  init_chain elapsed_time 2.44 seconds, cpu_time 0.09 seconds
+  init_chain used memory 0MB, procise used peak memory 1735MB, current used memory 263MB
+hw_server message connection interrupt, errno code = 0
+>>init_chain -cable_type usb-jtag-smt2
+  hw_server:  Set FTDI speed to 15000khz successfully
+  hw_server:  FTDI speed is already 15000khz
+  hw_server:  JTAG tap: Procise found HwServer chain_info: 0x0222c143 (mfg:0x0a1(FMSH), part:0x222c(fmk50), ver:0x0)
+  ----------------------------------------------------------------------
+  device_id:    00000010001000101100000101000011
+  manufacturer: FMSH
+  part_name:    fmk50
+  part_id:      0
+  ir_length:    6
+  version:      0
+  step_id:      0
+  hw_server:  SVF instructions execute success
+  init_chain elapsed_time 2.45 seconds, cpu_time 0.09 seconds
+  init_chain used memory 0MB, procise used peak memory 1735MB, current used memory 264MB
+hw_server message connection interrupt, errno code = 0
+>>init_chain -cable_type usb-jtag-smt2
+  hw_server:  Set FTDI speed to 15000khz successfully
+  hw_server:  FTDI speed is already 15000khz
+  hw_server:  JTAG tap: Procise found HwServer chain_info: 0x0222c143 (mfg:0x0a1(FMSH), part:0x222c(fmk50), ver:0x0)
+  ----------------------------------------------------------------------
+  device_id:    00000010001000101100000101000011
+  manufacturer: FMSH
+  part_name:    fmk50
+  part_id:      0
+  ir_length:    6
+  version:      0
+  step_id:      0
+  hw_server:  SVF instructions execute success
+  init_chain elapsed_time 2.44 seconds, cpu_time 0.13 seconds
+  init_chain used memory 0MB, procise used peak memory 1735MB, current used memory 266MB
+hw_server message connection interrupt, errno code = 0

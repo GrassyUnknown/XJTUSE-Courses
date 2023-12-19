@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="revision">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fifo|dual_port_ram:u_RAM|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_1hf1.tdf"/>
+	</PROJECT>
+	<PROJECT NAME="project">
+	</PROJECT>
+</LOG_ROOT>

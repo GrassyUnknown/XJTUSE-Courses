@@ -1,0 +1,64 @@
+Procise 2023.1 beta
+SVN Version : 28586
+Build  time : 2023/05/05 09:08:23
+Start  time : 2023-07-15 23:51:52
+>>set_device fmk50t4
+  set_device elapsed_time 3.54 seconds, cpu_time 3.55 seconds
+  set_device used memory 521MB, procise used peak memory 592MB, current used memory 467MB
+add_design_file -file C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v 
+>>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+  load_design elapsed_time 0.33 seconds, cpu_time 0.31 seconds
+  load_design used memory 7MB, procise used peak memory 1734MB, current used memory 1734MB
+>>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(4): ERROR: syntax error near ';' (VERI-1137)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(4): ERROR: syntax error near ';' (VERI-1137)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(4): ERROR: syntax error near 'input' (VERI-1137)
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(4): ERROR: Verilog 2000 keyword 'input' used in incorrect context (VERI-2344)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(6): ERROR: syntax error near 'reg' (VERI-1137)
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(6): ERROR: Verilog 2000 keyword 'reg' used in incorrect context (VERI-2344)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(3): ERROR: syntax error near ';' (VERI-1137)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(3): ERROR: syntax error near ';' (VERI-1137)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(5): ERROR: syntax error near 'input' (VERI-1137)
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(5): ERROR: Verilog 2000 keyword 'input' used in incorrect context (VERI-2344)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+    ERROR: GUI-0064: Error occurs while reloading design hierarchy:
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(64): ERROR: 'idle' is not declared (VERI-1128)
+	C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v(3): ERROR: module 'main' is ignored due to previous errors (VERI-1072)
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.
+  >>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+  load_design elapsed_time 0.33 seconds, cpu_time 0.34 seconds
+  load_design used memory 0MB, procise used peak memory 1749MB, current used memory 1749MB
+>>load_design -stage_elaborate -no_hier
+  -- Analyzing Verilog file 'C:/Users/86151/Documents/ProciseWorks/redgreenlight/sources/main.v' (VERI-1482)
+  load_design elapsed_time 0.33 seconds, cpu_time 0.31 seconds
+  load_design used memory 2MB, procise used peak memory 1750MB, current used memory 1750MB

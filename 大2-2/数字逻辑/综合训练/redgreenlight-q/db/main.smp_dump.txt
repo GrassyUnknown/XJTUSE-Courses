@@ -1,0 +1,8 @@
+
+State Machine - |main|state
+Name state.S3 state.S2 state.S1 state.000 state.S4 
+state.000 0 0 0 0 0 
+state.S1 0 0 1 1 0 
+state.S2 0 1 0 1 0 
+state.S3 1 0 0 1 0 
+state.S4 0 0 0 1 1 

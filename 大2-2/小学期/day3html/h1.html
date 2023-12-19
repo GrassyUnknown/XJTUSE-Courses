@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>列表样式</title>
+		<style>
+			/* 提示属性值的可选项：alt+/ 
+				list-style-type:修改列表项的样式
+				list-style-type:disc|circle|square|decimal|decimal-leading-zero|armenian
+			*/
+			ul{
+				list-style-type: lower-greek;
+			}
+			.webcontainter{
+				/* 自定义列表样式 */
+				list-style-image: url("../imgs/大保健.png");
+				list-style-position: outside;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>JavaSE 核心知识点</h3>
+		<ul>
+			<li>OOP</li>
+			<li>接口与抽象类</li>
+			<li>多线程和线程安全</li>
+			<li>集合与线程安全的集合</li>
+			<li>IO流和网络</li>
+		</ul>
+		<h3>Web核心技术栈</h3>
+		<ul class="webcontainter">
+			<li>HTML结构</li>
+			<li>CSS样式</li>
+			<li>JavaScript行为脚本</li>
+		</ul>
+	</body>
+</html>

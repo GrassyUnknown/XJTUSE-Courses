@@ -1,0 +1,11 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/users?useUnicode=true
+    username: root
+    password: 1352688
+mybatis:
+  type-aliases-package: com.zijie.entity
+  mapper-locations: classpath:mapper/*.xml

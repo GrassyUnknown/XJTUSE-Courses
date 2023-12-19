@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>大纲效果之锚点应用</title>
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+
+			#left {
+				display: inline-block;
+				position: fixed;
+				top: 10px;
+				width: 20%;
+				height: 100%;
+				background-color: skyblue;
+			}
+
+			#content {
+				display: inline-block;
+				position: relative;
+				left: 25%;
+				width: 75%;
+				height: 100%;
+			}
+
+			#content>p {
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left">
+			<h2 style="text-align: center;">文档大纲</h2>
+			<p><a href="#title1">Java基础</a></p>
+			<p><a href="#title2">Java面向对象</a></p>
+			<p><a href="#title3">JavaIO流</a></p>
+			<p><a href="#title4">Java集合框架</a></p>
+		</div>
+		<div id="content">
+			<h3 id="title1">Java基础</h3>
+			<p>
+				Java基础
+			</p>
+			<h3 id="title2">Java面向对象</h3>
+			<p>
+				Java面向对象....
+				Java面向对象....
+				Java面向对象....
+			</p>
+
+			<h3 id="title3">JavaIO流</h3>
+			<p>
+				JavaIO流....
+				JavaIO流....
+				JavaIO流....
+			</p>
+
+			<h3 id="title4">Java 集合框架</h3>
+			<p>
+				Java集合框架....
+				Java集合框架....
+				Java集合框架....
+			</p>
+		</div>
+	</body>
+</html>

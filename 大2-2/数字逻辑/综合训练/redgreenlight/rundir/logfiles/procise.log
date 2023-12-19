@@ -1,0 +1,11 @@
+Procise 2023.1 beta
+SVN Version : 28586
+Build  time : 2023/05/05 09:08:23
+Start  time : 2023-07-26 15:12:24
+>>set_device fmk50t4
+  set_device elapsed_time 4.09 seconds, cpu_time 2.00 seconds
+  set_device used memory 521MB, procise used peak memory 592MB, current used memory 475MB
+>>load_design -stage_elaborate -no_hier
+ERROR:  utility.cc:3389:nimbus::standardOutputRedirector::open
+"error_"
+    ERROR: GUI-0065: Command "load_design -stage_elaborate -no_hier" has error:.

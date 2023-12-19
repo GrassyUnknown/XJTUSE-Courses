@@ -1,0 +1,7 @@
+>>bitgen redgreenlight.bit -g bpi_sync_mode:Disable spi_32bit_addr:No spi_buswidth:1 Encrypt:No
+  preprocess elapsed_time 0.02 seconds, cpu_time 16.00 seconds
+  assemble bitstream elapsed_time 0.07 seconds, cpu_time -16.00 seconds
+  Writing out bitstream file redgreenlight.bit
+  Writing out bgn file redgreenlight.bgn
+  bitgen elapsed_time 1.00 seconds, cpu_time 0.91 seconds
+  bitgen used memory 323MB, procise used peak memory 3021MB, current used memory 2058MB

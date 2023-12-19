@@ -1,0 +1,111 @@
+place -thread 4;write_phy_design C:/Users/ZiJie/Desktop/redgreenlight/rundir//.dec009b63c4e8681edbf28a3ba6a217f_place.phy 
+>>opt_design
+  opt_design used memory 0MB, procise used peak memory 3018MB, current used memory 1945MB
+>>place -thread 4
+  Phase 1 Placer Initialization
+  Phase 1.1 Placer Initialization Core
+  Phase 1.1.6 Build Placer Netlist Model
+  Building SiteChkr ...
+    Done.
+  Phase 1.1.6 Build Placer Netlist Model | Time: 0.548s
+  Phase 1.1.5.2 Implementation Feasibility check
+  IO Utilization:
+    Number of bonded IOBs:                          8 out of     250    3%
+  
+  IOPAD Utilization:
+    Number of bonded IOPADs:                        0 out of      22    0%
+  
+  Specific Feature Utilization:
+    Number of RAMH18E1/FIFO18E1s:                   0 out of     150    0%
+    Number of RAMHFIFO36E1/FIFO36E1s:               0 out of      75    0%
+    Number of GCDU/GCDU_CTRLs:                      1 out of      32    3%
+      Number used as GCDUs:                         0
+      Number used as GCDU_CTRLs:                    1
+    Number of ISTCE2/ISTCE2_FINESTCs:               0 out of     250    0%
+    Number of ILGKE2/ILGKE3/ISSE2s:                 0 out of     250    0%
+    Number of OLGKE2/OLGKE3/OSSE2s:                 0 out of     250    0%
+    Number of PSU_IN/PSU_IN_PHYs:                   0 out of      20    0%
+    Number of PSU_OUT/PSU_OUT_PHYs:                 0 out of      20    0%
+    Number of JTBSs:                                0 out of       4    0%
+    Number of HCDU_CEs:                             0 out of      72    0%
+    Number of RCDUs:                                0 out of      20    0%
+    Number of CAPs:                                 0 out of       1    0%
+    Number of DNA_PORTs:                            0 out of       1    0%
+    Number of CU48E1s:                              0 out of     120    0%
+    Number of UNRECOVER_USRs:                       0 out of       1    0%
+    Number of SECTOR_ECCs:                          0 out of       1    0%
+    Number of UHST2E2_CHs:                          0 out of       4    0%
+    Number of UHST2E2_COMs:                         0 out of       1    0%
+    Number of IDU_DS_UHSTE2s:                       0 out of       2    0%
+    Number of UACs:                                 0 out of       2    0%
+    Number of ISTC_CTRLs:                           0 out of       5    0%
+    Number of IFIFOs:                               0 out of      20    0%
+    Number of DCCUE2_ADVs:                          0 out of       5    0%
+    Number of OFIFOs:                               0 out of      20    0%
+    Number of PCIE_2_1s:                            0 out of       1    0%
+    Number of PSU_REFs:                             0 out of       5    0%
+    Number of PHY_CTRLs:                            0 out of       5    0%
+    Number of PLLE2_ADVs:                           0 out of       5    0%
+    Number of BOOTUPs:                              0 out of       1    0%
+    Number of FADCs:                                0 out of       1    0%
+  
+  Phase 1.1.5.2 Implementation Feasibility check | Time: 0.555s
+  Phase 1.1.7 Constrain Clocks/Macros
+  Phase 1.1.7 Constrain Clocks/Macros | Time: 35.626s
+  Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device
+  Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Time: 35.635s
+  Phase 1.1.8 Build Shapes/ HD Config
+  Phase 1.1.8.1 Build Macros
+  Phase 1.1.8.1 Build Macros | Time: 35.635s
+  Phase 1.1.8 Build Shapes/ HD Config | Time: 35.635s
+  Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Time: 35.635s
+  Phase 1.1 Placer Initialization Core | Time: 35.649s
+  Phase 1 Placer Initialization | Time: 35.65s
+  Phase 2 Global Placement
+  Phase 2.1 Distribute Placement
+  .  
+  .  .  .  .  .  .  .  .  .  .  .  .  .  .  
+  .  
+  Phase 2.1 Distribute Placement | Time: 37.153s
+  Phase 2.2 Legalize Placement
+  Phase 2.2 Legalize Placement | Time: 37.177s
+  Phase 2 Global Placement | Time: 37.179s
+  Generating physical netlist ... 
+  
+                           DEVICE UTILIZATION                   
+  ------------------------------------------------------------------
+  resource                      used/available     utilization      
+  ------------------------------------------------------------------
+  GCDU_CTRL                         1/32             3.13%
+  IOU33M                            4/120            3.33%
+  IOU33S                            4/120            3.33%
+  LC                               21/8150           0.26%
+  ------------------------------------------------------------------
+  FDC_INFO! export constraints to file main_placed.fdc!
+  "C:/Users/ZiJie/Desktop/redgreenlight/rundir/main_placed.fdc" is already in project.
+  Building SiteChkr ...
+    Done.
+  Phase 3 Detail Placement
+  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  
+  Phase 3 Detail Placement | Time: 44.117s
+  Phase 4 Post Placement Optimization and Clean-Up
+  Phase 4.2 Post Placement Cleanup
+  Phase 4.2 Post Placement Cleanup | Time: 44.117s
+  Phase 4.4 Final Placement Cleanup
+  Phase 4.4 Final Placement Cleanup | Time: 44.117s
+  Phase 4 Post Placement Optimization and Clean-Up | Time: 44.117s
+  Generate timing summary report with max_paths=10 nworst=3
+  ==========================================================================
+  INFO static timing analysis results.
+  ==========================================================================
+  PathType  Requirement(setup)  Slack(setup)  Requirement(hold)  Slack(hold)
+  ==========================================================================
+  Trr                   10.000         5.644              1.000        0.318  
+  Tir                      N/A           N/A                N/A          N/A  
+  Tro                      N/A           N/A                N/A          N/A  
+  Tio                      N/A           N/A                N/A          N/A  
+  ==========================================================================
+  place elapsed_time 46.72 seconds, cpu_time 28.44 seconds
+  place used memory 1076MB, procise used peak memory 3021MB, current used memory 1964MB
+>>write_phy_design C:/Users/ZiJie/Desktop/redgreenlight/rundir//.dec009b63c4e8681edbf28a3ba6a217f_place.phy
+  write_phy_design used memory 1057MB, procise used peak memory 3021MB, current used memory 1961MB

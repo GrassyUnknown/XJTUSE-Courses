@@ -1,0 +1,82 @@
+
+
+module main(
+clk,reset,lt1,lt2);
+input clk;
+input reset;
+output[2:0] lt1;//红黄绿
+output[2:0] lt2;//另一方向红黄绿
+
+
+
+  reg [2:0] state=3'b000;
+  reg [2:0] lt1_s=3'b010;
+  reg [2:0] lt2_s=3'b010;
+  reg [26:0] count='d0;
+  parameter IDLE=3'b000;//闲置
+  parameter S1=3'b001;//1红2绿
+  parameter S2=3'b010;//1红2黄
+  parameter S3=3'b011;//1绿2红
+  parameter S4=3'b100;//1黄2红
+  parameter T='d1;
+ 
+always @ (posedge clk or negedge reset)
+  begin
+	if(~reset)
+	begin
+		state<=IDLE;
+		lt1_s<=3'b010;
+		lt2_s<=3'b010;
+	end
+	else
+		case(state)
+		  IDLE: 
+		  begin
+			  lt1_s <= 3'b100;
+			  lt2_s <= 3'b001;
+			  state <= S1;
+		  end
+		  S1: if(count==T-1)
+		  begin
+			  lt1_s <= 3'b100;
+			  lt2_s <= 3'b010;
+			  state <= S2;
+		  end
+		  S2: if(count==T-1)
+		  begin
+			  lt1_s <= 3'b001;
+			  lt2_s <= 3'b100;
+			  state <= S3;
+		  end
+		  S3: if(count==T-1)
+		  begin
+			  lt1_s <= 3'b010;
+			  lt2_s <= 3'b100;
+			  state <= S4;
+		  end
+		  S4: if(count==T-1)
+		  begin
+			  lt1_s <= 3'b100;
+			  lt2_s <= 3'b001;
+			  state <= S1;
+		  end
+		  default:
+			  begin
+			  state<=IDLE;
+			  end
+	  endcase
+  end
+  
+  assign lt1=lt1_s;
+  assign lt2=lt2_s;
+
+  always @ (posedge clk or negedge reset)
+  begin
+    if(~reset)count<='d0;
+    else if(count==T-1)count<='d0;
+    else count<=count+1;
+  end
+
+
+endmodule
+

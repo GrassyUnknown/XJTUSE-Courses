@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>样式引入的方式及优先级</title>
+		<link rel="stylesheet" href="../day3css/c10.css">
+		<style>
+			/* 在外联样式的基础之上，再修改样式 ,但是不能修改！important修改过的样式
+				除非修改外联已存在的属性时间，同时添加！implement
+			*/
+			a{
+				display: inline-block;
+				margin: 20px;
+				color: red !important;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 样式的优先级：行内高于内联高于外联。！important可以修改优先级 -->
+		<div>
+			<a style="color: blue !important;" href="h1.html">h1</a>
+			<a href="h2.html">h2</a>
+			<a href="h3.html">h3</a>
+			
+		</div>
+	</body>
+</html>

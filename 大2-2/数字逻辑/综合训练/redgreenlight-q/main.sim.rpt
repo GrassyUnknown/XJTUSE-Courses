@@ -1,0 +1,374 @@
+Simulator report for main
+Wed Jul 26 17:17:26 2023
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 s      ;
+; Simulation Netlist Size     ; 93 nodes     ;
+; Simulation Coverage         ;      22.69 % ;
+; Total Number of Transitions ; 2097         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      22.69 % ;
+; Total nodes checked                                 ; 93           ;
+; Total output ports checked                          ; 119          ;
+; Total output ports with complete 1/0-value coverage ; 27           ;
+; Total output ports with no 1/0-value coverage       ; 91           ;
+; Total output ports with no 1-value coverage         ; 91           ;
+; Total output ports with no 0-value coverage         ; 92           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------+
+; Complete 1/0-Value Coverage                              ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |main|lt1_s[0]    ; |main|lt1_s[0]    ; regout           ;
+; |main|lt1_s[1]    ; |main|lt1_s[1]    ; regout           ;
+; |main|lt1_s[2]    ; |main|lt1_s[2]    ; regout           ;
+; |main|lt2_s[0]    ; |main|lt2_s[0]    ; regout           ;
+; |main|lt2_s[1]    ; |main|lt2_s[1]    ; regout           ;
+; |main|lt2_s[2]    ; |main|lt2_s[2]    ; regout           ;
+; |main|state.S3    ; |main|state.S3    ; regout           ;
+; |main|state.S4    ; |main|state.S4    ; regout           ;
+; |main|state.S1    ; |main|state.S1    ; regout           ;
+; |main|state.S2    ; |main|state.S2    ; regout           ;
+; |main|Selector7~0 ; |main|Selector7~0 ; combout          ;
+; |main|Selector5~0 ; |main|Selector5~0 ; combout          ;
+; |main|Selector4~0 ; |main|Selector4~0 ; combout          ;
+; |main|Selector5~1 ; |main|Selector5~1 ; combout          ;
+; |main|Selector2~0 ; |main|Selector2~0 ; combout          ;
+; |main|Selector1~0 ; |main|Selector1~0 ; combout          ;
+; |main|Selector2~1 ; |main|Selector2~1 ; combout          ;
+; |main|lt1_s[2]~7  ; |main|lt1_s[2]~7  ; combout          ;
+; |main|lt2_s[2]~6  ; |main|lt2_s[2]~6  ; combout          ;
+; |main|lt1[0]      ; |main|lt1[0]      ; padio            ;
+; |main|lt1[1]      ; |main|lt1[1]      ; padio            ;
+; |main|lt1[2]      ; |main|lt1[2]      ; padio            ;
+; |main|lt2[0]      ; |main|lt2[0]      ; padio            ;
+; |main|lt2[1]      ; |main|lt2[1]      ; padio            ;
+; |main|lt2[2]      ; |main|lt2[2]      ; padio            ;
+; |main|clk         ; |main|clk~corein  ; combout          ;
+; |main|clk~clkctrl ; |main|clk~clkctrl ; outclk           ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------+
+; Missing 1-Value Coverage                                           ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |main|count[25]        ; |main|count[25]        ; regout           ;
+; |main|count[13]        ; |main|count[13]        ; regout           ;
+; |main|count[19]        ; |main|count[19]        ; regout           ;
+; |main|count[10]        ; |main|count[10]        ; regout           ;
+; |main|count[7]         ; |main|count[7]         ; regout           ;
+; |main|count[0]         ; |main|count[0]         ; regout           ;
+; |main|count[3]         ; |main|count[3]         ; regout           ;
+; |main|count[1]         ; |main|count[1]         ; regout           ;
+; |main|count[11]        ; |main|count[11]        ; regout           ;
+; |main|count[15]        ; |main|count[15]        ; regout           ;
+; |main|count[9]         ; |main|count[9]         ; regout           ;
+; |main|count[17]        ; |main|count[17]        ; regout           ;
+; |main|count[8]         ; |main|count[8]         ; regout           ;
+; |main|count[20]        ; |main|count[20]        ; regout           ;
+; |main|count[2]         ; |main|count[2]         ; regout           ;
+; |main|count[16]        ; |main|count[16]        ; regout           ;
+; |main|count[22]        ; |main|count[22]        ; regout           ;
+; |main|count[18]        ; |main|count[18]        ; regout           ;
+; |main|count[4]         ; |main|count[4]         ; regout           ;
+; |main|count[6]         ; |main|count[6]         ; regout           ;
+; |main|count[24]        ; |main|count[24]        ; regout           ;
+; |main|count[26]        ; |main|count[26]        ; regout           ;
+; |main|count[12]        ; |main|count[12]        ; regout           ;
+; |main|count[5]         ; |main|count[5]         ; regout           ;
+; |main|count[21]        ; |main|count[21]        ; regout           ;
+; |main|count[23]        ; |main|count[23]        ; regout           ;
+; |main|count[14]        ; |main|count[14]        ; regout           ;
+; |main|Add0~1           ; |main|Add0~1           ; sumout           ;
+; |main|Add0~1           ; |main|Add0~2           ; cout             ;
+; |main|Add0~5           ; |main|Add0~5           ; sumout           ;
+; |main|Add0~5           ; |main|Add0~6           ; cout             ;
+; |main|Add0~9           ; |main|Add0~9           ; sumout           ;
+; |main|Add0~9           ; |main|Add0~10          ; cout             ;
+; |main|Add0~13          ; |main|Add0~13          ; sumout           ;
+; |main|Add0~13          ; |main|Add0~14          ; cout             ;
+; |main|Add0~17          ; |main|Add0~17          ; sumout           ;
+; |main|Add0~17          ; |main|Add0~18          ; cout             ;
+; |main|Add0~21          ; |main|Add0~21          ; sumout           ;
+; |main|Add0~21          ; |main|Add0~22          ; cout             ;
+; |main|Add0~25          ; |main|Add0~25          ; sumout           ;
+; |main|Add0~25          ; |main|Add0~26          ; cout             ;
+; |main|Add0~29          ; |main|Add0~29          ; sumout           ;
+; |main|Add0~29          ; |main|Add0~30          ; cout             ;
+; |main|Add0~33          ; |main|Add0~33          ; sumout           ;
+; |main|Add0~33          ; |main|Add0~34          ; cout             ;
+; |main|Add0~37          ; |main|Add0~37          ; sumout           ;
+; |main|Add0~37          ; |main|Add0~38          ; cout             ;
+; |main|Add0~41          ; |main|Add0~41          ; sumout           ;
+; |main|Add0~41          ; |main|Add0~42          ; cout             ;
+; |main|Add0~45          ; |main|Add0~45          ; sumout           ;
+; |main|Add0~45          ; |main|Add0~46          ; cout             ;
+; |main|Add0~49          ; |main|Add0~49          ; sumout           ;
+; |main|Add0~49          ; |main|Add0~50          ; cout             ;
+; |main|Add0~53          ; |main|Add0~53          ; sumout           ;
+; |main|Add0~53          ; |main|Add0~54          ; cout             ;
+; |main|Add0~57          ; |main|Add0~57          ; sumout           ;
+; |main|Add0~57          ; |main|Add0~58          ; cout             ;
+; |main|Add0~61          ; |main|Add0~61          ; sumout           ;
+; |main|Add0~61          ; |main|Add0~62          ; cout             ;
+; |main|Add0~65          ; |main|Add0~65          ; sumout           ;
+; |main|Add0~65          ; |main|Add0~66          ; cout             ;
+; |main|Add0~69          ; |main|Add0~69          ; sumout           ;
+; |main|Add0~69          ; |main|Add0~70          ; cout             ;
+; |main|Add0~73          ; |main|Add0~73          ; sumout           ;
+; |main|Add0~73          ; |main|Add0~74          ; cout             ;
+; |main|Add0~77          ; |main|Add0~77          ; sumout           ;
+; |main|Add0~77          ; |main|Add0~78          ; cout             ;
+; |main|Add0~81          ; |main|Add0~81          ; sumout           ;
+; |main|Add0~81          ; |main|Add0~82          ; cout             ;
+; |main|Add0~85          ; |main|Add0~85          ; sumout           ;
+; |main|Add0~85          ; |main|Add0~86          ; cout             ;
+; |main|Add0~89          ; |main|Add0~89          ; sumout           ;
+; |main|Add0~89          ; |main|Add0~90          ; cout             ;
+; |main|Add0~93          ; |main|Add0~93          ; sumout           ;
+; |main|Add0~93          ; |main|Add0~94          ; cout             ;
+; |main|Add0~97          ; |main|Add0~97          ; sumout           ;
+; |main|Add0~97          ; |main|Add0~98          ; cout             ;
+; |main|Add0~101         ; |main|Add0~101         ; sumout           ;
+; |main|Add0~101         ; |main|Add0~102         ; cout             ;
+; |main|Add0~105         ; |main|Add0~105         ; sumout           ;
+; |main|Equal0~0         ; |main|Equal0~0         ; combout          ;
+; |main|Equal0~1         ; |main|Equal0~1         ; combout          ;
+; |main|Equal0~2         ; |main|Equal0~2         ; combout          ;
+; |main|Equal0~3         ; |main|Equal0~3         ; combout          ;
+; |main|Equal0~4         ; |main|Equal0~4         ; combout          ;
+; |main|lt1_s[2]~6       ; |main|lt1_s[2]~6       ; combout          ;
+; |main|Equal0~5         ; |main|Equal0~5         ; combout          ;
+; |main|Equal0~6         ; |main|Equal0~6         ; combout          ;
+; |main|reset            ; |main|reset~corein     ; combout          ;
+; |main|reset~clkctrl    ; |main|reset~clkctrl    ; outclk           ;
+; |main|state.000~feeder ; |main|state.000~feeder ; combout          ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------+
+; Missing 0-Value Coverage                                           ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |main|count[25]        ; |main|count[25]        ; regout           ;
+; |main|count[13]        ; |main|count[13]        ; regout           ;
+; |main|count[19]        ; |main|count[19]        ; regout           ;
+; |main|count[10]        ; |main|count[10]        ; regout           ;
+; |main|count[7]         ; |main|count[7]         ; regout           ;
+; |main|count[0]         ; |main|count[0]         ; regout           ;
+; |main|count[3]         ; |main|count[3]         ; regout           ;
+; |main|count[1]         ; |main|count[1]         ; regout           ;
+; |main|count[11]        ; |main|count[11]        ; regout           ;
+; |main|count[15]        ; |main|count[15]        ; regout           ;
+; |main|count[9]         ; |main|count[9]         ; regout           ;
+; |main|count[17]        ; |main|count[17]        ; regout           ;
+; |main|count[8]         ; |main|count[8]         ; regout           ;
+; |main|count[20]        ; |main|count[20]        ; regout           ;
+; |main|count[2]         ; |main|count[2]         ; regout           ;
+; |main|count[16]        ; |main|count[16]        ; regout           ;
+; |main|count[22]        ; |main|count[22]        ; regout           ;
+; |main|count[18]        ; |main|count[18]        ; regout           ;
+; |main|count[4]         ; |main|count[4]         ; regout           ;
+; |main|count[6]         ; |main|count[6]         ; regout           ;
+; |main|count[24]        ; |main|count[24]        ; regout           ;
+; |main|count[26]        ; |main|count[26]        ; regout           ;
+; |main|count[12]        ; |main|count[12]        ; regout           ;
+; |main|count[5]         ; |main|count[5]         ; regout           ;
+; |main|count[21]        ; |main|count[21]        ; regout           ;
+; |main|count[23]        ; |main|count[23]        ; regout           ;
+; |main|count[14]        ; |main|count[14]        ; regout           ;
+; |main|Add0~1           ; |main|Add0~1           ; sumout           ;
+; |main|Add0~1           ; |main|Add0~2           ; cout             ;
+; |main|Add0~5           ; |main|Add0~5           ; sumout           ;
+; |main|Add0~5           ; |main|Add0~6           ; cout             ;
+; |main|Add0~9           ; |main|Add0~9           ; sumout           ;
+; |main|Add0~9           ; |main|Add0~10          ; cout             ;
+; |main|Add0~13          ; |main|Add0~13          ; sumout           ;
+; |main|Add0~13          ; |main|Add0~14          ; cout             ;
+; |main|Add0~17          ; |main|Add0~17          ; sumout           ;
+; |main|Add0~17          ; |main|Add0~18          ; cout             ;
+; |main|Add0~21          ; |main|Add0~21          ; sumout           ;
+; |main|Add0~21          ; |main|Add0~22          ; cout             ;
+; |main|Add0~25          ; |main|Add0~25          ; sumout           ;
+; |main|Add0~25          ; |main|Add0~26          ; cout             ;
+; |main|Add0~29          ; |main|Add0~29          ; sumout           ;
+; |main|Add0~29          ; |main|Add0~30          ; cout             ;
+; |main|Add0~33          ; |main|Add0~33          ; sumout           ;
+; |main|Add0~33          ; |main|Add0~34          ; cout             ;
+; |main|Add0~37          ; |main|Add0~37          ; sumout           ;
+; |main|Add0~37          ; |main|Add0~38          ; cout             ;
+; |main|Add0~41          ; |main|Add0~41          ; sumout           ;
+; |main|Add0~41          ; |main|Add0~42          ; cout             ;
+; |main|Add0~45          ; |main|Add0~45          ; sumout           ;
+; |main|Add0~45          ; |main|Add0~46          ; cout             ;
+; |main|Add0~49          ; |main|Add0~49          ; sumout           ;
+; |main|Add0~49          ; |main|Add0~50          ; cout             ;
+; |main|Add0~53          ; |main|Add0~53          ; sumout           ;
+; |main|Add0~53          ; |main|Add0~54          ; cout             ;
+; |main|Add0~57          ; |main|Add0~57          ; sumout           ;
+; |main|Add0~57          ; |main|Add0~58          ; cout             ;
+; |main|Add0~61          ; |main|Add0~61          ; sumout           ;
+; |main|Add0~61          ; |main|Add0~62          ; cout             ;
+; |main|Add0~65          ; |main|Add0~65          ; sumout           ;
+; |main|Add0~65          ; |main|Add0~66          ; cout             ;
+; |main|Add0~69          ; |main|Add0~69          ; sumout           ;
+; |main|Add0~69          ; |main|Add0~70          ; cout             ;
+; |main|Add0~73          ; |main|Add0~73          ; sumout           ;
+; |main|Add0~73          ; |main|Add0~74          ; cout             ;
+; |main|Add0~77          ; |main|Add0~77          ; sumout           ;
+; |main|Add0~77          ; |main|Add0~78          ; cout             ;
+; |main|Add0~81          ; |main|Add0~81          ; sumout           ;
+; |main|Add0~81          ; |main|Add0~82          ; cout             ;
+; |main|Add0~85          ; |main|Add0~85          ; sumout           ;
+; |main|Add0~85          ; |main|Add0~86          ; cout             ;
+; |main|Add0~89          ; |main|Add0~89          ; sumout           ;
+; |main|Add0~89          ; |main|Add0~90          ; cout             ;
+; |main|Add0~93          ; |main|Add0~93          ; sumout           ;
+; |main|Add0~93          ; |main|Add0~94          ; cout             ;
+; |main|Add0~97          ; |main|Add0~97          ; sumout           ;
+; |main|Add0~97          ; |main|Add0~98          ; cout             ;
+; |main|Add0~101         ; |main|Add0~101         ; sumout           ;
+; |main|Add0~101         ; |main|Add0~102         ; cout             ;
+; |main|Add0~105         ; |main|Add0~105         ; sumout           ;
+; |main|state.000        ; |main|state.000        ; regout           ;
+; |main|Equal0~0         ; |main|Equal0~0         ; combout          ;
+; |main|Equal0~1         ; |main|Equal0~1         ; combout          ;
+; |main|Equal0~2         ; |main|Equal0~2         ; combout          ;
+; |main|Equal0~3         ; |main|Equal0~3         ; combout          ;
+; |main|Equal0~4         ; |main|Equal0~4         ; combout          ;
+; |main|lt1_s[2]~6       ; |main|lt1_s[2]~6       ; combout          ;
+; |main|Equal0~5         ; |main|Equal0~5         ; combout          ;
+; |main|Equal0~6         ; |main|Equal0~6         ; combout          ;
+; |main|reset            ; |main|reset~corein     ; combout          ;
+; |main|reset~clkctrl    ; |main|reset~clkctrl    ; outclk           ;
+; |main|state.000~feeder ; |main|state.000~feeder ; combout          ;
++------------------------+------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Wed Jul 26 17:17:26 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off main -c main
+Info: Using vector source file "E:/学/大2-2/数字逻辑/综合训练/redgreenlight-q/main.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |main|lt1_s[1]
+    Info: Register: |main|lt2_s[1]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      22.69 %
+Info: Number of transitions in simulation is 2097
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Wed Jul 26 17:17:26 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

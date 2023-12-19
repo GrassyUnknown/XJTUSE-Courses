@@ -1,0 +1,487 @@
+Classic Timing Analyzer report for revision
+Thu Jul 06 21:09:31 2023
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                     ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------+---------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From               ; To                                                                                                      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------+---------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.668 ns                                       ; rden               ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.428 ns                                       ; data_avail[1]~reg0 ; full                                                                                                    ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.133 ns                                      ; wren               ; data_avail[3]~reg0                                                                                      ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                    ;                                                                                                         ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+--------------------+---------------------------------------------------------------------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                                                                                                                    ;
++-------+------------------------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                                   ; To                                                                                                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg       ; clk        ; clk      ; None                        ; None                      ; 1.410 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.410 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.410 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.410 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk        ; clk      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.405 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.405 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.405 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a1~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a2~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a3~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a4~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a5~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a6~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7 ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a7~porta_memory_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.720 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; rd_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.427 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; rd_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.423 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; data_avail[1]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.699 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; data_avail[2]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.699 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; data_avail[3]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.699 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg       ; clk        ; clk      ; None                        ; None                      ; 1.300 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.300 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.300 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.300 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk        ; clk      ; None                        ; None                      ; 1.301 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.298 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.298 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.298 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; data_avail[3]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.656 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg       ; clk        ; clk      ; None                        ; None                      ; 1.265 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.265 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.265 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.265 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk        ; clk      ; None                        ; None                      ; 1.266 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.245 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.245 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.245 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; data_avail[2]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.607 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; rd_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.320 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; rd_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.313 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; data_avail[3]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.578 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; rd_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.278 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; rd_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.268 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; rd_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.268 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; rd_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.267 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; data_avail[1]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.540 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; data_avail[2]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.529 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.145 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.145 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.145 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; data_avail[1]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.475 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; rd_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.167 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg       ; clk        ; clk      ; None                        ; None                      ; 1.068 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 1.068 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 1.068 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 1.068 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk        ; clk      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; rd_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.161 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; rd_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.108 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; wt_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.089 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; wt_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.085 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; wt_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.078 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; data_avail[3]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.314 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; rd_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.008 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; data_avail[0]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.287 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; data_avail[1]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.286 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; data_avail[2]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.286 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; wt_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.979 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; wt_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.975 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; wt_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.968 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; wt_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.944 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; wt_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.940 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; wt_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.933 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; data_avail[0]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.128 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; data_avail[0]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.063 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; wt_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.747 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; wt_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.743 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; wt_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.736 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[0]                                                                                               ; rd_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 1.015 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[1]                                                                                               ; rd_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.883 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; data_avail[0]~reg0                                                                                      ; clk        ; clk      ; None                        ; None                      ; 0.874 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[0]~reg0                                                                                     ; almost_empty$latch                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.218 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[2]~reg0                                                                                     ; almost_empty$latch                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.198 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[0]                                                                                               ; wt_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.809 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[0]                                                                                               ; wt_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.785 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[1]                                                                                               ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 0.672 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[0]                                                                                               ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 0.646 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[1]                                                                                               ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg1 ; clk        ; clk      ; None                        ; None                      ; 0.632 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[2]                                                                                               ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 0.617 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[0]                                                                                               ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; clk        ; clk      ; None                        ; None                      ; 0.627 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[2]                                                                                               ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; clk        ; clk      ; None                        ; None                      ; 0.622 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[3]~reg0                                                                                     ; almost_empty$latch                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.042 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; data_avail[1]~reg0                                                                                     ; almost_empty$latch                                                                                      ; clk        ; clk      ; None                        ; None                      ; 1.026 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[0]                                                                                               ; rd_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.668 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[1]                                                                                               ; wt_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.638 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[0]                                                                                               ; wt_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[1]                                                                                               ; wt_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; wt_pt[2]                                                                                               ; wt_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[0]                                                                                               ; rd_pt[0]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[1]                                                                                               ; rd_pt[1]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; rd_pt[2]                                                                                               ; rd_pt[2]                                                                                                ; clk        ; clk      ; None                        ; None                      ; 0.488 ns                ;
++-------+------------------------------------------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                                ;
++-------+--------------+------------+-----------+---------------------------------------------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From      ; To                                                                                                      ; To Clock ;
++-------+--------------+------------+-----------+---------------------------------------------------------------------------------------------------------+----------+
+; N/A   ; None         ; 3.668 ns   ; rden      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; clk      ;
+; N/A   ; None         ; 3.668 ns   ; rden      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; clk      ;
+; N/A   ; None         ; 3.668 ns   ; rden      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; clk      ;
+; N/A   ; None         ; 3.608 ns   ; rden      ; rd_pt[0]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.502 ns   ; rden      ; data_avail[1]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 3.502 ns   ; rden      ; data_avail[2]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 3.502 ns   ; rden      ; data_avail[3]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg       ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg0 ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg1 ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg2 ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk      ;
+; N/A   ; None         ; 3.485 ns   ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk      ;
+; N/A   ; None         ; 3.449 ns   ; rden      ; rd_pt[1]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.449 ns   ; rden      ; rd_pt[2]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.442 ns   ; wrdata[1] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk      ;
+; N/A   ; None         ; 3.403 ns   ; wren      ; rd_pt[1]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.321 ns   ; wren      ; data_avail[1]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 3.321 ns   ; wren      ; data_avail[2]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 3.321 ns   ; wren      ; data_avail[3]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 3.211 ns   ; wrdata[4] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk      ;
+; N/A   ; None         ; 3.090 ns   ; rden      ; data_avail[0]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 3.069 ns   ; wren      ; wt_pt[2]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.069 ns   ; wren      ; rd_pt[2]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.065 ns   ; wren      ; wt_pt[1]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.063 ns   ; wren      ; rd_pt[0]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.058 ns   ; wren      ; wt_pt[0]                                                                                                ; clk      ;
+; N/A   ; None         ; 3.032 ns   ; wrdata[7] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk      ;
+; N/A   ; None         ; 3.011 ns   ; wrdata[0] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk      ;
+; N/A   ; None         ; 2.909 ns   ; wren      ; data_avail[0]~reg0                                                                                      ; clk      ;
+; N/A   ; None         ; 2.846 ns   ; wrdata[5] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk      ;
+; N/A   ; None         ; 2.621 ns   ; wrdata[2] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk      ;
+; N/A   ; None         ; 2.615 ns   ; wrdata[6] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk      ;
+; N/A   ; None         ; 2.460 ns   ; wrdata[3] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk      ;
++-------+--------------+------------+-----------+---------------------------------------------------------------------------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                                      ;
++-------+--------------+------------+---------------------------------------------------------------------------------------------------------+---------------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                                    ; To            ; From Clock ;
++-------+--------------+------------+---------------------------------------------------------------------------------------------------------+---------------+------------+
+; N/A   ; None         ; 8.428 ns   ; data_avail[1]~reg0                                                                                      ; full          ; clk        ;
+; N/A   ; None         ; 8.400 ns   ; data_avail[3]~reg0                                                                                      ; full          ; clk        ;
+; N/A   ; None         ; 8.322 ns   ; data_avail[0]~reg0                                                                                      ; full          ; clk        ;
+; N/A   ; None         ; 8.058 ns   ; data_avail[2]~reg0                                                                                      ; full          ; clk        ;
+; N/A   ; None         ; 7.979 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[7]     ; clk        ;
+; N/A   ; None         ; 7.979 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[7]     ; clk        ;
+; N/A   ; None         ; 7.979 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[7]     ; clk        ;
+; N/A   ; None         ; 7.965 ns   ; data_avail[1]~reg0                                                                                      ; room_avail[1] ; clk        ;
+; N/A   ; None         ; 7.650 ns   ; data_avail[1]~reg0                                                                                      ; room_avail[3] ; clk        ;
+; N/A   ; None         ; 7.507 ns   ; data_avail[0]~reg0                                                                                      ; room_avail[1] ; clk        ;
+; N/A   ; None         ; 7.471 ns   ; almost_empty$latch                                                                                      ; almost_empty  ; clk        ;
+; N/A   ; None         ; 7.418 ns   ; data_avail[0]~reg0                                                                                      ; room_avail[3] ; clk        ;
+; N/A   ; None         ; 7.416 ns   ; data_avail[1]~reg0                                                                                      ; empty         ; clk        ;
+; N/A   ; None         ; 7.342 ns   ; data_avail[0]~reg0                                                                                      ; empty         ; clk        ;
+; N/A   ; None         ; 7.253 ns   ; data_avail[3]~reg0                                                                                      ; room_avail[3] ; clk        ;
+; N/A   ; None         ; 7.246 ns   ; data_avail[2]~reg0                                                                                      ; room_avail[3] ; clk        ;
+; N/A   ; None         ; 7.191 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[3]     ; clk        ;
+; N/A   ; None         ; 7.191 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[3]     ; clk        ;
+; N/A   ; None         ; 7.191 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[3]     ; clk        ;
+; N/A   ; None         ; 7.177 ns   ; data_avail[3]~reg0                                                                                      ; empty         ; clk        ;
+; N/A   ; None         ; 7.171 ns   ; data_avail[2]~reg0                                                                                      ; empty         ; clk        ;
+; N/A   ; None         ; 7.123 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[4]     ; clk        ;
+; N/A   ; None         ; 7.123 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[4]     ; clk        ;
+; N/A   ; None         ; 7.123 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[4]     ; clk        ;
+; N/A   ; None         ; 6.960 ns   ; data_avail[2]~reg0                                                                                      ; data_avail[2] ; clk        ;
+; N/A   ; None         ; 6.933 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[2]     ; clk        ;
+; N/A   ; None         ; 6.933 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[2]     ; clk        ;
+; N/A   ; None         ; 6.933 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[2]     ; clk        ;
+; N/A   ; None         ; 6.925 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[0]     ; clk        ;
+; N/A   ; None         ; 6.925 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[0]     ; clk        ;
+; N/A   ; None         ; 6.925 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[0]     ; clk        ;
+; N/A   ; None         ; 6.920 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[6]     ; clk        ;
+; N/A   ; None         ; 6.920 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[6]     ; clk        ;
+; N/A   ; None         ; 6.920 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[6]     ; clk        ;
+; N/A   ; None         ; 6.889 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[1]     ; clk        ;
+; N/A   ; None         ; 6.889 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[1]     ; clk        ;
+; N/A   ; None         ; 6.889 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[1]     ; clk        ;
+; N/A   ; None         ; 6.727 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; rddata[5]     ; clk        ;
+; N/A   ; None         ; 6.727 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; rddata[5]     ; clk        ;
+; N/A   ; None         ; 6.727 ns   ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; rddata[5]     ; clk        ;
+; N/A   ; None         ; 6.365 ns   ; data_avail[1]~reg0                                                                                      ; room_avail[2] ; clk        ;
+; N/A   ; None         ; 6.004 ns   ; data_avail[0]~reg0                                                                                      ; room_avail[2] ; clk        ;
+; N/A   ; None         ; 5.960 ns   ; data_avail[2]~reg0                                                                                      ; room_avail[2] ; clk        ;
+; N/A   ; None         ; 5.830 ns   ; data_avail[1]~reg0                                                                                      ; data_avail[1] ; clk        ;
+; N/A   ; None         ; 5.577 ns   ; data_avail[3]~reg0                                                                                      ; data_avail[3] ; clk        ;
+; N/A   ; None         ; 5.451 ns   ; data_avail[0]~reg0                                                                                      ; room_avail[0] ; clk        ;
+; N/A   ; None         ; 5.441 ns   ; data_avail[0]~reg0                                                                                      ; data_avail[0] ; clk        ;
++-------+--------------+------------+---------------------------------------------------------------------------------------------------------+---------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                                       ;
++---------------+-------------+-----------+-----------+---------------------------------------------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From      ; To                                                                                                      ; To Clock ;
++---------------+-------------+-----------+-----------+---------------------------------------------------------------------------------------------------------+----------+
+; N/A           ; None        ; -2.133 ns ; wren      ; data_avail[1]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -2.133 ns ; wren      ; data_avail[3]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -2.134 ns ; wren      ; data_avail[2]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -2.235 ns ; wrdata[3] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk      ;
+; N/A           ; None        ; -2.390 ns ; wrdata[6] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk      ;
+; N/A           ; None        ; -2.396 ns ; wrdata[2] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk      ;
+; N/A           ; None        ; -2.621 ns ; wrdata[5] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk      ;
+; N/A           ; None        ; -2.670 ns ; wren      ; data_avail[0]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -2.786 ns ; wrdata[0] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk      ;
+; N/A           ; None        ; -2.807 ns ; wrdata[7] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk      ;
+; N/A           ; None        ; -2.819 ns ; wren      ; wt_pt[0]                                                                                                ; clk      ;
+; N/A           ; None        ; -2.824 ns ; wren      ; rd_pt[0]                                                                                                ; clk      ;
+; N/A           ; None        ; -2.826 ns ; wren      ; wt_pt[1]                                                                                                ; clk      ;
+; N/A           ; None        ; -2.830 ns ; wren      ; wt_pt[2]                                                                                                ; clk      ;
+; N/A           ; None        ; -2.830 ns ; wren      ; rd_pt[2]                                                                                                ; clk      ;
+; N/A           ; None        ; -2.851 ns ; rden      ; data_avail[0]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -2.986 ns ; wrdata[4] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk      ;
+; N/A           ; None        ; -3.044 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg       ; clk      ;
+; N/A           ; None        ; -3.164 ns ; wren      ; rd_pt[1]                                                                                                ; clk      ;
+; N/A           ; None        ; -3.210 ns ; rden      ; rd_pt[1]                                                                                                ; clk      ;
+; N/A           ; None        ; -3.210 ns ; rden      ; rd_pt[2]                                                                                                ; clk      ;
+; N/A           ; None        ; -3.217 ns ; wrdata[1] ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg0  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg0 ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg1 ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_address_reg2 ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg1  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg2  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg3  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg4  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg5  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg6  ; clk      ;
+; N/A           ; None        ; -3.260 ns ; wren      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_datain_reg7  ; clk      ;
+; N/A           ; None        ; -3.263 ns ; rden      ; data_avail[1]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -3.263 ns ; rden      ; data_avail[2]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -3.263 ns ; rden      ; data_avail[3]~reg0                                                                                      ; clk      ;
+; N/A           ; None        ; -3.369 ns ; rden      ; rd_pt[0]                                                                                                ; clk      ;
+; N/A           ; None        ; -3.443 ns ; rden      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0 ; clk      ;
+; N/A           ; None        ; -3.443 ns ; rden      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg1 ; clk      ;
+; N/A           ; None        ; -3.443 ns ; rden      ; dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg2 ; clk      ;
++---------------+-------------+-----------+-----------+---------------------------------------------------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Jul 06 21:09:31 2023
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off project -c revision --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "almost_full$latch" is a latch
+    Warning: Node "almost_empty$latch" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 5 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "Equal2~0" as buffer
+    Info: Detected ripple clock "data_avail[0]~reg0" as buffer
+    Info: Detected ripple clock "data_avail[3]~reg0" as buffer
+    Info: Detected ripple clock "data_avail[2]~reg0" as buffer
+    Info: Detected ripple clock "data_avail[1]~reg0" as buffer
+Info: Clock "clk" Internal fmax is restricted to 500.0 MHz between source register "data_avail[1]~reg0" and destination memory "dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg"
+    Info: fmax restricted to Clock High delay (1.0 ns) plus Clock Low delay (1.0 ns) : restricted to 2.0 ns. Expand message to see actual delay path.
+        Info: + Longest register to memory delay is 1.410 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X5_Y3_N19; Fanout = 13; REG Node = 'data_avail[1]~reg0'
+            Info: 2: + IC(0.282 ns) + CELL(0.346 ns) = 0.628 ns; Loc. = LCCOMB_X5_Y3_N0; Fanout = 19; COMB Node = 'wen_con'
+            Info: 3: + IC(0.342 ns) + CELL(0.440 ns) = 1.410 ns; Loc. = M512_X4_Y3; Fanout = 0; MEM Node = 'dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg'
+            Info: Total cell delay = 0.786 ns ( 55.74 % )
+            Info: Total interconnect delay = 0.624 ns ( 44.26 % )
+        Info: - Smallest clock skew is -0.443 ns
+            Info: + Shortest clock path from clock "clk" to destination memory is 2.322 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+                Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 29; COMB Node = 'clk~clkctrl'
+                Info: 3: + IC(0.667 ns) + CELL(0.458 ns) = 2.322 ns; Loc. = M512_X4_Y3; Fanout = 0; MEM Node = 'dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~porta_we_reg'
+                Info: Total cell delay = 1.312 ns ( 56.50 % )
+                Info: Total interconnect delay = 1.010 ns ( 43.50 % )
+            Info: - Longest clock path from clock "clk" to source register is 2.765 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+                Info: 2: + IC(1.293 ns) + CELL(0.618 ns) = 2.765 ns; Loc. = LCFF_X5_Y3_N19; Fanout = 13; REG Node = 'data_avail[1]~reg0'
+                Info: Total cell delay = 1.472 ns ( 53.24 % )
+                Info: Total interconnect delay = 1.293 ns ( 46.76 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.022 ns
+Info: tsu for memory "dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0" (data pin = "rden", clock pin = "clk") is 3.668 ns
+    Info: + Longest pin to memory delay is 5.981 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.817 ns) = 0.817 ns; Loc. = PIN_T14; Fanout = 2; PIN Node = 'rden'
+        Info: 2: + IC(4.017 ns) + CELL(0.366 ns) = 5.200 ns; Loc. = LCCOMB_X5_Y3_N8; Fanout = 6; COMB Node = 'ren_con'
+        Info: 3: + IC(0.328 ns) + CELL(0.453 ns) = 5.981 ns; Loc. = M512_X4_Y3; Fanout = 8; MEM Node = 'dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0'
+        Info: Total cell delay = 1.636 ns ( 27.35 % )
+        Info: Total interconnect delay = 4.345 ns ( 72.65 % )
+    Info: + Micro setup delay of destination is 0.022 ns
+    Info: - Shortest clock path from clock "clk" to destination memory is 2.335 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 29; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.667 ns) + CELL(0.471 ns) = 2.335 ns; Loc. = M512_X4_Y3; Fanout = 8; MEM Node = 'dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0~portb_address_reg0'
+        Info: Total cell delay = 1.325 ns ( 56.75 % )
+        Info: Total interconnect delay = 1.010 ns ( 43.25 % )
+Info: tco from clock "clk" to destination pin "full" through register "data_avail[1]~reg0" is 8.428 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.765 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+        Info: 2: + IC(1.293 ns) + CELL(0.618 ns) = 2.765 ns; Loc. = LCFF_X5_Y3_N19; Fanout = 13; REG Node = 'data_avail[1]~reg0'
+        Info: Total cell delay = 1.472 ns ( 53.24 % )
+        Info: Total interconnect delay = 1.293 ns ( 46.76 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 5.569 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X5_Y3_N19; Fanout = 13; REG Node = 'data_avail[1]~reg0'
+        Info: 2: + IC(0.441 ns) + CELL(0.228 ns) = 0.669 ns; Loc. = LCCOMB_X5_Y3_N24; Fanout = 6; COMB Node = 'Equal0~0'
+        Info: 3: + IC(2.938 ns) + CELL(1.962 ns) = 5.569 ns; Loc. = PIN_D12; Fanout = 0; PIN Node = 'full'
+        Info: Total cell delay = 2.190 ns ( 39.32 % )
+        Info: Total interconnect delay = 3.379 ns ( 60.68 % )
+Info: th for register "data_avail[1]~reg0" (data pin = "wren", clock pin = "clk") is -2.133 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.765 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 5; CLK Node = 'clk'
+        Info: 2: + IC(1.293 ns) + CELL(0.618 ns) = 2.765 ns; Loc. = LCFF_X5_Y3_N19; Fanout = 13; REG Node = 'data_avail[1]~reg0'
+        Info: Total cell delay = 1.472 ns ( 53.24 % )
+        Info: Total interconnect delay = 1.293 ns ( 46.76 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 5.047 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.807 ns) = 0.807 ns; Loc. = PIN_R14; Fanout = 7; PIN Node = 'wren'
+        Info: 2: + IC(3.772 ns) + CELL(0.371 ns) = 4.950 ns; Loc. = LCCOMB_X5_Y3_N18; Fanout = 1; COMB Node = 'Add2~6'
+        Info: 3: + IC(0.000 ns) + CELL(0.097 ns) = 5.047 ns; Loc. = LCFF_X5_Y3_N19; Fanout = 13; REG Node = 'data_avail[1]~reg0'
+        Info: Total cell delay = 1.275 ns ( 25.26 % )
+        Info: Total interconnect delay = 3.772 ns ( 74.74 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 196 megabytes
+    Info: Processing ended: Thu Jul 06 21:09:31 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

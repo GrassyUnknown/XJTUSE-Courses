@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS新特性</title>
+	<style>
+			.round-button{
+				display: inline-block;
+				margin: 2px;
+				padding:10px 30px;
+				border-radius: 5px;
+				font-size: 0.8rem;
+				user-select: none;
+				background-color: bisque;
+				text-decoration: none;
+				color: black;
+			}
+			.round-button:hover{
+				opacity: 0.75;
+				border-color: blanchedalmond;
+			}
+			.round-button:active{
+				background-color: rgb(190, 212, 226);
+			}
+			.round-button-success{
+				background-color: greenyellow;
+				color: white;
+			}
+			.round-button-error{
+				background-color: orangered;
+				color: white;
+			}
+			.img-container{
+				border: 1px solid gainsboro;
+				border-radius: 10px;
+				overflow: hidden;
+				width: 200px;
+				height: 120px;
+				margin: 10px;
+				/* 阴影，相对偏移值 */
+				box-shadow: 2px 0 10px blue;
+			}
+			.circle-img{
+				width: 100px;
+				height: 100px;
+				overflow: hidden;
+				border-radius: 50%;
+				box-shadow: 0 0 10px orangered;
+				margin: 10px;
+			}
+			.circle-img>img{
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="round-button">
+			提交
+		</span>
+		<span class="round-button round-button-success">
+			修改
+		</span>
+		<span class="round-button round-button-error">
+			删除
+		</span>
+		<a href="" class="round-button">打开主页</a>
+		
+		<div class="img-container">
+			<img src="../imgs/微信图片_20230131205646.png" width="230" alt="">
+		</div>
+		<div class="circle-img">
+			<img src="../imgs/微信图片_20230131205646.png" width="230" alt="">
+		</div>
+	</body>
+</html>

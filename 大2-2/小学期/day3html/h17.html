@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>关键帧动画</title>
+		<style>
+			@keyframes anim1 {
+				form{
+					padding-left: 0px;
+				}
+				to{
+					padding-left: 100%;
+				}
+			}
+			@keyframes anim1 {
+				0%{
+					padding-left: 0px;
+				}
+				20%{
+					padding-left: 200px;
+				}
+				50%{
+					padding-left: 500px;
+				}
+				100%{
+					padding-left: 90%;
+				}
+			}
+			span{
+				/* 匀速 */
+				animation: anim1 5s linear;
+				/* 指定执行次数，in无限次 */
+				animation-iteration-count: infinite;
+				/* 制定动画执行方向，alternate 先正向后反向，再正向，交替方式 */
+				animation-direction: alternate;
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			<span>
+				RaoLin
+			</span>
+		</p>
+	</body>
+</html>

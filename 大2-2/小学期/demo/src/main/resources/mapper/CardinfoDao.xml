@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zijie.dao.CardinfoDao">
+
+    <resultMap type="com.zijie.entity.Cardinfo" id="CardinfoMap">
+        <result property="cardid" column="cardid" jdbcType="INTEGER"/>
+        <result property="balance" column="balance" jdbcType="INTEGER"/>
+        <result property="uid" column="uid" jdbcType="INTEGER"/>
+        <result property="uname" column="uname" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="CardinfoMap">
+        select
+          cardid, balance, uid, uname
+        from cardinfo
+        where cardid = #{cardid}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="CardinfoMap">
+        select
+          cardid, balance, uid, uname
+        from cardinfo
+        <where>
+            <if test="cardid != null">
+                and cardid = #{cardid}
+            </if>
+            <if test="balance != null">
+                and balance = #{balance}
+            </if>
+            <if test="uid != null">
+                and uid = #{uid}
+            </if>
+            <if test="uname != null and uname != ''">
+                and uname = #{uname}
+            </if>
+        </where>
+        limit #{pageable.offset}, #{pageable.pageSize}
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(1)
+        from cardinfo
+        <where>
+            <if test="cardid != null">
+                and cardid = #{cardid}
+            </if>
+            <if test="balance != null">
+                and balance = #{balance}
+            </if>
+            <if test="uid != null">
+                and uid = #{uid}
+            </if>
+            <if test="uname != null and uname != ''">
+                and uname = #{uname}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="cardid" useGeneratedKeys="true">
+        insert into cardinfo(balance, uid, uname)
+        values (#{balance}, #{uid}, #{uname})
+    </insert>
+
+    <insert id="insertBatch" keyProperty="cardid" useGeneratedKeys="true">
+        insert into cardinfo(balance, uid, uname)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+        (#{entity.balance}, #{entity.uid}, #{entity.uname})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="cardid" useGeneratedKeys="true">
+        insert into cardinfo(balance, uid, uname)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.balance}, #{entity.uid}, #{entity.uname})
+        </foreach>
+        on duplicate key update
+        balance = values(balance),
+        uid = values(uid),
+        uname = values(uname)
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update cardinfo
+        <set>
+            <if test="balance != null">
+                balance = #{balance},
+            </if>
+            <if test="uid != null">
+                uid = #{uid},
+            </if>
+            <if test="uname != null and uname != ''">
+                uname = #{uname},
+            </if>
+        </set>
+        where cardid = #{cardid}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from cardinfo where cardid = #{cardid}
+    </delete>
+
+</mapper>
+

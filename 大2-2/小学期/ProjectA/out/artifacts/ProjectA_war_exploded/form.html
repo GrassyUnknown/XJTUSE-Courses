@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">用户管理</a></li>
+        <li><a href="#">添加用户</a></li>
+    </ul>
+</div>
+
+<div class="formbody">
+
+    <div class="formtitle"><span>基本信息</span></div>
+
+    <ul class="forminfo">
+        <form action="adduser" method="post" name="addUserform">
+            <li><label>用户名</label><input name="userName" type="text" class="dfinput" /></li>
+            <li><label>密 码</label><input name="passWord" type="text" class="dfinput" /></li>
+            <li><label>角色</label>
+
+                <select class="dfinput" name="uroot">
+                    <option value="0">管理员</option>
+                    <option value="1">老师</option>
+                    <option value="2">学生</option>
+                </select>
+
+        </form>
+
+        </li>
+        <li></li>
+
+        <li><label>&nbsp;</label><input name="" type="button" onclick="subForm()" class="btn" value="确认添加" /></li>
+    </ul>
+
+
+</div>
+
+
+</body>
+<script type="text/javascript">
+    //按钮提交表单
+    function subForm() {
+        document.addUserform.submit();
+
+
+    }
+
+
+</script>
+
+</html>

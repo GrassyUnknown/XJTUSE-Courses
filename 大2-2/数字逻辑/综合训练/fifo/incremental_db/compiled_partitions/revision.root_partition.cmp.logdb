@@ -1,0 +1,10 @@
+v1
+REGISTER_PACKING,REG_PACK_TYPE_FINISHED,ADATA,0,full,full,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,10,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a0,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,9,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a1,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,4,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a2,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,5,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a3,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,2,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a4,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,8,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a5,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,0,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a6,
+RAM_PACKING,0,M512,18,18,SimpleDual,0,13,11110010,dual_port_ram:u_RAM|altsyncram:ram_rtl_0|altsyncram_1hf1:auto_generated|ram_block1a7,

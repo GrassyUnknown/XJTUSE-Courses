@@ -1,0 +1,21 @@
+# exported FDC from constraint manager
+
+# config constraints
+
+# inst constraints
+
+# net constraints
+
+# pin constraints
+set_property PACKAGE_PIN W17 [get_ports {clk}]
+set_property PACKAGE_PIN M17 [get_ports {lt1[0]}]
+set_property PACKAGE_PIN N17 [get_ports {lt1[1]}]
+set_property PACKAGE_PIN P18 [get_ports {lt1[2]}]
+set_property PACKAGE_PIN P19 [get_ports {lt2[0]}]
+set_property PACKAGE_PIN N19 [get_ports {lt2[1]}]
+set_property PACKAGE_PIN N18 [get_ports {lt2[2]}]
+set_property PACKAGE_PIN U19 [get_ports {reset}]
+
+# timing constraints
+create_clock -name TS_clk -period 10 -waveform {0 5} [get_ports {clk}]
+

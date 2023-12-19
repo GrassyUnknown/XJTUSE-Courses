@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格的三个区域</title>
+		<style>
+			table{
+				width: 300px;
+				text-align: center;
+				border: 1px solid;
+				border-radius: 20px;
+				overflow: hidden;
+			}
+			thead{
+				background-color: darkturquoise;
+				height: 30px;
+			}
+			thead th{
+				border-bottom: 1px solid;
+			}
+			tbody tr{
+				height: 50px;
+				background-color: pink;
+			}
+			tbody td{
+				border-bottom: 1px dashed;
+				border-right: 1px dashed;
+				font-size: 20px;
+			
+			}
+			
+			tbody td:last-child{
+				border-right:none;
+			}
+			tfoot td{
+				height: 40px;
+				border-bottom: 1px solid;
+			}
+			tfoot a{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<table cellspacing="0">
+			<thead>
+				<th>编号</th>
+				<th>名称</th>
+				<th>价格</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1001</td>
+					<td>火龙果</td>
+					<td>10.5</td>
+				</tr>
+				<tr>
+					<td>1002</td>
+					<td>苹果</td>
+					<td>12.5</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<!-- bgcolor制定列的背景颜色
+					colspan 制定跨列的个数，包含当前列本身
+				 -->
+				<td bgcolor="#8e3" colspan=3"" align="right">
+				<a >&lt;</a>
+				<a>1</a>
+				<a>&gt;</a>
+				</td>
+			</tfoot>
+		</table>
+	</body>
+</html>

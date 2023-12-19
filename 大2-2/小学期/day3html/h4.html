@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>z-index和透明度</title>
+		<style>
+			html{
+				padding: 0;
+				margin: 0;
+			}
+			#content,#dialog{
+				width: 200px;
+				height: 200px;
+			}
+			#dialog{
+				/* 通过absolute去设置脱离文本流 */
+				position: absolute;
+				top: 20px;
+				text-align: center;
+				/* z-index可以去设置底部或者顶部z轴位置 */
+				z-index:1;
+				background-color: #ffff7f;
+				opacity: 0.5;
+				color: white;
+			}
+			#content{
+				background-color: #ffaaff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			我是正文
+		</div>
+		<div id="dialog">
+			我是对话框
+		</div>
+	</body>
+</html>

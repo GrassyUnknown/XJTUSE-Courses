@@ -1,0 +1,13 @@
+Procise 2023.1 beta
+SVN Version : 28586
+Build  time : 2023/05/05 09:08:23
+Start  time : 2023-07-19 13:46:33
+>>set_device fmk50t4
+  set_device elapsed_time 3.90 seconds, cpu_time 3.19 seconds
+  set_device used memory 520MB, procise used peak memory 589MB, current used memory 474MB
+>>load_design -stage_post_map -no_hier
+  -- Analyzing Verilog file 'C:/Users/ZiJie/Desktop/redgreenlight/sources/main.v' (VERI-1482)
+  read_phy_design C:/Users/ZiJie/Desktop/redgreenlight/rundir/.dec009b63c4e8681edbf28a3ba6a217f.phy
+  Read FDC C:/Users/ZiJie/Desktop/redgreenlight/rundir/main_placed.fdc
+  load_design elapsed_time 0.52 seconds, cpu_time 0.39 seconds
+  load_design used memory 13MB, procise used peak memory 589MB, current used memory 495MB
