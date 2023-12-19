@@ -1,0 +1,41 @@
+@startuml
+class homework2.MyCircle {
+- int x
+- int y
+- int r
+- Color color
++ void draw(Graphics)
+}
+class homework2.DrawPanel {
+- MyGraph[] graphs
++ void paintComponent(Graphics)
+}
+abstract class homework2.MyGraph {
++ {abstract}void draw(Graphics)
+}
+class homework2.MyLine {
+- int x1
+- int y1
+- int x2
+- int y2
+- Color color
++ void draw(Graphics)
+}
+
+class homework2.MyRectangle {
+- int x
+- int y
+- int width
+- int height
+- Color color
++ void draw(Graphics)
+}
+
+
+
+homework2.MyGraph <|-- homework2.MyCircle
+javax.swing.JPanel <|-- homework2.DrawPanel
+homework2.MyGraph <|-- homework2.MyLine
+homework2.MyGraph <|-- homework2.MyRectangle
+homework2.DrawPanel --> homework2.MyGraph
+@enduml
