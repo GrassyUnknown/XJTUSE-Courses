@@ -1,0 +1,9 @@
+str='0123456789ABCDEF'
+num='0.'
+num1=float(input('输入要转换的十进制小数：'))
+n=int(input('要转换的进制：'))
+while(num1>0.01):
+    num1=num1*n
+    num=num+str[int(num1)]
+    num1=num1-int(num1)
+print('转换后的',n,'进制为：',num)

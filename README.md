@@ -1,4 +1,4 @@
-# XJTUSE-Courses-homework&etc.
+# XJTUSE-Courses
 
 ## Profile 简介
 
