@@ -4,7 +4,7 @@
 
 This repository contains homework and documents related to courses of Software Engineering in Xi'an Jiaotong University. 
 
-此仓库包括西安交通大学软件工程专业所需修读的课程的作业和资料。上传这些资料旨在让同学们修读课程时可以借鉴作业或者使用自己所需的资料，同时把github当成云盘用一用。
+此仓库包括西安交通大学软件工程专业所需修读的课程的作业和资料。上传这些资料旨在让同学们修读课程时可以借鉴作业或者使用自己所需的资料，同时把github当成云端备份用一用（
 
 **注意：作业答案的正确性不能保证，直接抄袭可能存在风险。**
 
