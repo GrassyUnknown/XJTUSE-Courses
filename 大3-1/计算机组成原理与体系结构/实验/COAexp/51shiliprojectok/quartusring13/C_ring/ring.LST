@@ -1,0 +1,89 @@
+C51 COMPILER V9.00   RING                                                                  06/30/2021 09:31:43 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE RING
+OBJECT MODULE PLACED IN ring.OBJ
+COMPILER INVOKED BY: C:\Keil_c51\C51\BIN\C51.EXE ring.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #define uint unsigned int
+   3          #define uchar unsigned char
+   4          //重新定义各个控制引脚的名称,  sbit 意思为<重定义>,,不要跟 bit 搞混,bit是汇编中 "位"
+   5          sbit led=P0^0; //指定发光管对应的输出口 
+   6          sbit sound=P1^0;//指定蜂鸣器对应的输出口
+   7          sbit key1=P3^0;//指定按键对应的输入口
+   8          uint g_count; //定义全局变量，用来计数
+   9          
+  10          //定时器1的中断函数，中断号为3
+  11          void timer1_int() interrupt 3
+  12          {
+  13   1        sound=~sound;//蜂鸣器引脚取反，以此来产生一定频率波发声
+  14   1        led=1;           //发光管同时亮起
+  15   1        g_count++;   //延时计数器计数
+  16   1        if (g_count<400)
+  17   1        {     //延时数小于定量1时产生固定频率1的声音
+  18   2          TH1=(8192-700)/32;
+  19   2              TL1=(8192-700)%32;
+  20   2         }
+  21   1         else if (g_count<800)
+  22   1         { ////延时数大于定量1小于定量2时产生固定频率2的声音
+  23   2           TH1=(8192-1000)/32;
+  24   2               TL1=(8192-1000)%32;
+  25   2          }
+  26   1              else
+  27   1              { // 关中断 返回
+  28   2                TR1=0;
+  29   2                g_count=0;
+  30   2                led=0;
+  31   2               }
+  32   1      }
+  33          
+  34          //普通延时函数
+  35          void delay_ms(uint ms)
+  36          {
+  37   1              uchar t;
+  38   1              while(ms--)
+  39   1              {
+  40   2                      for(t=0;t<120;t++);
+  41   2              }
+  42   1      }
+  43          
+  44          void main()
+  45          {
+  46   1        g_count=0; //全局变量赋初值
+  47   1       
+  48   1        sound=0;      //初始化蜂鸣器 
+  49   1        //led=0;   //初始化发光管，也可以不初始化
+  50   1      //
+  51   1        TMOD=0x00;
+  52   1        TH1=(8192-700)/32;
+  53   1        TL1=(8192-700)%32;
+  54   1        ET1=1;
+  55   1        EA=1;
+C51 COMPILER V9.00   RING                                                                  06/30/2021 09:31:43 PAGE 2   
+
+  56   1       //
+  57   1        while(1)
+  58   1        {
+  59   2          led=0;//进入程序后再次初始化发光管，以同步蜂鸣器
+  60   2          if(key1==1)   
+  61   2                TR1=1;        //启动定时器发声 
+  62   2        }
+  63   1      }
+  64          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    117    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

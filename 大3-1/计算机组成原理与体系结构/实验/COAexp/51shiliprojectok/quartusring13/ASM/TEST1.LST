@@ -1,0 +1,177 @@
+                                                                                        页     1
+                                                                                        04-25-06
+                                                                                        16:07:36
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            
+             ; KX_BASIC_CPU基本8051 CPU核测试程序：选择模式1，键2/键1输入8位2进制数加上
+             ; 键4/键3输入的8位2进制数，其和显示于数码管8/7 , 
+             ; P0/P3定义为输入口，模式1情况下，P0口的数据由键2/键1输入；P3口的数据由键4/键3输入；
+             ; P2/P1定义为输出口，模式1情况下，P2口的数据由数码8/7显示；P1口的数据由数码6/5显示； 
+             ; 注意，各端口作为输入/输出口是独立的，此例中，P0口作为输入口，与FPGA的PIO7-PIO0相接，
+             ; P0口同时作为输出口时，与FPGA的PIO39-PIO33相接，对应模式3的发光管D8-D1。
+                      ORG 0000H
+                      
+0000 758160 MAIN :    MOV   SP,#60H
+0003 752400           MOV   24H,#00H
+0006 753001           MOV   30H,#01H
+0009 120037 ROUND:    LCALL  DELAY1
+000C E524             MOV   A,24H
+000E 04               INC   A
+000F F524             MOV   24H,A   
+0011 F590             MOV   P1,A
+                      
+0013 E530             MOV   A,30H
+0015 03               RR    A
+0016 F580             MOV   P0,A
+0018 F530             MOV   30H,A
+001A 00               NOP
+001B 00               NOP
+001C E580             MOV   A,P0
+001E 85B0F0           MOV   B,P3
+0021 25F0             ADD   A,B
+0023 F5A0             MOV   P2,A
+0025 120037           LCALL  DELAY1
+0028 80DF             SJMP  ROUND
+                      
+002A 7520FF DELAY:    MOV   20H,#0FFH
+002D 7521FF    W1:    MOV   21H,#0FFH
+0030 D521FD    W2:    DJNZ  21H,W2
+0033 D520F7           DJNZ  20H,W1
+0036 22               RET                        
+            	  
+0037 752208 DELAY1:   MOV   22H,#08H
+003A 12002A     W3:   LCALL DELAY
+003D D522FA           DJNZ  22H,W3
+0040 22               RET              
+            
+                      END
+
+
+
+
+
+
+
+D:\D8051_COPY\KX_BASIC_CPU\ASM\TEST1.ASM                                            
+ 
+                                                                                        页     2
+                                                                                        04-25-06
+                                                                                        16:07:36
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+
+
+            符号                       值     类型
+
+            AC                       = 00D6H CONST 常量 
+            ACC                      = 00E0H CONST 常量 
+            B                        = 00F0H CONST 常量 
+            BGEN                     = 00CBH CONST 常量 
+            CP_RL2                   = 00C8H CONST 常量 
+            CY                       = 00D7H CONST 常量 
+            C_T2                     = 00C9H CONST 常量 
+            DELAY                    = 002AH CODE  标号 
+            DELAY1                   = 0037H CODE  标号 
+            DPH                      = 0083H CONST 常量 
+            DPL                      = 0082H CONST 常量 
+            EA                       = 00AFH CONST 常量 
+            ES                       = 00ACH CONST 常量 
+            ET0                      = 00A9H CONST 常量 
+            ET1                      = 00ABH CONST 常量 
+            ET2                      = 00ADH CONST 常量 
+            EX0                      = 00A8H CONST 常量 
+            EX1                      = 00AAH CONST 常量 
+            F0                       = 00D5H CONST 常量 
+            IE                       = 00A8H CONST 常量 
+            IE0                      = 0089H CONST 常量 
+            IE1                      = 008BH CONST 常量 
+            INT0                     = 00B2H CONST 常量 
+            INT1                     = 00B3H CONST 常量 
+            IP                       = 00B8H CONST 常量 
+            IT0                      = 0088H CONST 常量 
+            IT1                      = 008AH CONST 常量 
+            MAIN                     = 0000H CODE  标号 
+            OV                       = 00D2H CONST 常量 
+            P                        = 00D0H CONST 常量 
+            P0                       = 0080H CONST 常量 
+            P1                       = 0090H CONST 常量 
+            P2                       = 00A0H CONST 常量 
+            P3                       = 00B0H CONST 常量 
+            PCON                     = 0087H CONST 常量 
+            PS                       = 00BCH CONST 常量 
+            PSW                      = 00D0H CONST 常量 
+            PT0                      = 00B9H CONST 常量 
+            PT1                      = 00BBH CONST 常量 
+            PX0                      = 00B8H CONST 常量 
+            PX1                      = 00BAH CONST 常量 
+            RB8                      = 009AH CONST 常量 
+            RCAP2H                   = 00CBH CONST 常量 
+            RCAP2L                   = 00CAH CONST 常量 
+
+
+D:\D8051_COPY\KX_BASIC_CPU\ASM\TEST1.ASM                                            
+ 
+                                                                                        页     3
+                                                                                        04-25-06
+                                                                                        16:07:36
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            RD                       = 00B7H CONST 常量 
+            REN                      = 009CH CONST 常量 
+            RI                       = 0098H CONST 常量 
+            ROUND                    = 0009H CODE  标号 
+            RS0                      = 00D3H CONST 常量 
+            RS1                      = 00D4H CONST 常量 
+            RXD                      = 00B0H CONST 常量 
+            SBUF                     = 0099H CONST 常量 
+            SCON                     = 0098H CONST 常量 
+            SM0                      = 009FH CONST 常量 
+            SM1                      = 009EH CONST 常量 
+            SM2                      = 009DH CONST 常量 
+            SP                       = 0081H CONST 常量 
+            T0                       = 00B4H CONST 常量 
+            T1                       = 00B5H CONST 常量 
+            T2CON                    = 00C8H CONST 常量 
+            T2IE                     = 00CDH CONST 常量 
+            T2IP                     = 00CEH CONST 常量 
+            T2RSE                    = 00CCH CONST 常量 
+            TB8                      = 009BH CONST 常量 
+            TCON                     = 0088H CONST 常量 
+            TF0                      = 008DH CONST 常量 
+            TF1                      = 008FH CONST 常量 
+            TF2                      = 00CFH CONST 常量 
+            TH0                      = 008CH CONST 常量 
+            TH1                      = 008DH CONST 常量 
+            TH2                      = 00CDH CONST 常量 
+            TI                       = 0099H CONST 常量 
+            TL0                      = 008AH CONST 常量 
+            TL1                      = 008BH CONST 常量 
+            TL2                      = 00CCH CONST 常量 
+            TMOD                     = 0089H CONST 常量 
+            TR0                      = 008CH CONST 常量 
+            TR1                      = 008EH CONST 常量 
+            TR2                      = 00CAH CONST 常量 
+            TXD                      = 00B1H CONST 常量 
+            W1                       = 002DH CODE  标号 
+            W2                       = 0030H CODE  标号 
+            W3                       = 003AH CODE  标号 
+            WR                       = 00B6H CONST 常量 
+
+
+            公有符号:   84
+            私有符号:    0
+
+
+
+
+
+
+D:\D8051_COPY\KX_BASIC_CPU\ASM\TEST1.ASM                                            
+ 

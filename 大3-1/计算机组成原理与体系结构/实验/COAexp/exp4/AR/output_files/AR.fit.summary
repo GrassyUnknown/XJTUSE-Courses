@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Nov 08 16:50:14 2023
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : AR
+Top-level Entity Name : AR
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 24 / 6,272 ( < 1 % )
+    Total combinational functions : 24 / 6,272 ( < 1 % )
+    Dedicated logic registers : 8 / 6,272 ( < 1 % )
+Total registers : 8
+Total pins : 30 / 92 ( 33 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

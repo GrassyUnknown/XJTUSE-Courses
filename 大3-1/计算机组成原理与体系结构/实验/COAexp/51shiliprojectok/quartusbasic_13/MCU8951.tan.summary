@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.344 ns
+From           : P0I[7]
+To             : CPU_Core:inst|MCU80512:inst3|m3s008bo:U7|L_FA[0]
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.258 ns
+From           : CPU_Core:inst|SCHKT:inst|ENA
+To             : P2O[1]
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.851 ns
+From           : RST
+To             : POE[4]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.741 ns
+From           : altera_internal_jtag
+To             : sld_hub:sld_hub_inst|jtag_ir_reg[9]
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Worst-case Minimum tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.769 ns
+From           : pll50:inst17|altpll:altpll_component|_clk0
+To             : POE[3]
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case Minimum tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.124 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll50:inst17|altpll:altpll_component|_clk0'
+Slack          : 29.956 ns
+Required Time  : 20.00 MHz ( period = 50.000 ns )
+Actual Time    : 49.89 MHz ( period = 20.044 ns )
+From           : CPU_Core:inst|SCHKT:inst|ENA
+To             : CPU_Core:inst|MCU80512:inst3|m3s010bo:U8|EXT_PROG_EN
+From Clock     : pll50:inst17|altpll:altpll_component|_clk0
+To Clock       : pll50:inst17|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 91.96 MHz ( period = 10.874 ns )
+From           : sld_hub:sld_hub_inst|irf_reg[1][2]
+To             : sld_hub:sld_hub_inst|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll50:inst17|altpll:altpll_component|_clk0'
+Slack          : 0.134 ns
+Required Time  : 20.00 MHz ( period = 50.000 ns )
+Actual Time    : N/A
+From           : CPU_Core:inst|SCHKT:inst|CT2[1]
+To             : CPU_Core:inst|SCHKT:inst|CT2[1]
+From Clock     : pll50:inst17|altpll:altpll_component|_clk0
+To Clock       : pll50:inst17|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

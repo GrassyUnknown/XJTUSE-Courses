@@ -1,0 +1,32 @@
+|exp51
+SE[1] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+SE[2] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+SE[3] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+SE[4] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+SE[5] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+SE[6] <= <VCC>
+I[2] => inst7.IN0
+I[3] => inst4.IN0
+I[4] => inst6.IN0
+I[5] => inst3.IN0
+I[6] => inst2.IN0
+I[7] => inst1.IN0
+CLK => inst6.IN1
+CLK => inst7.IN1
+CLK => inst8.IN1
+CLK => inst3.IN1
+CLK => inst4.IN1
+CLK => inst5.IN1
+CLK => inst2.IN1
+CLK => inst1.IN1
+CLK => inst.IN1
+P[1] => inst12.IN0
+P[2] => inst13.IN0
+P[3] => inst14.IN0
+P[4] => inst15.IN0
+SWA => inst8.IN2
+SWB => inst5.IN2
+FZ => inst11.IN0
+FC => inst11.IN1
+
+

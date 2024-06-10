@@ -1,0 +1,18 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+ENTITY REG32B IS
+    PORT (  Load : IN STD_LOGIC;
+             DIN : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+            DOUT : OUT STD_LOGIC_VECTOR(31 DOWNTO 0) );
+END REG32B;
+ARCHITECTURE behav OF REG32B IS
+BEGIN
+    PROCESS(Load, DIN)
+   BEGIN
+   IF Load'EVENT AND Load = '1' THEN    -- 时钟到来时，锁存输入数据
+            DOUT <= DIN;
+        END IF;
+    END PROCESS;
+END behav;
+
+

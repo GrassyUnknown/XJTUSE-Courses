@@ -1,0 +1,75 @@
+C51 COMPILER V9.54   MUSIC                                                                 03/28/2024 20:06:46 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MUSIC
+OBJECT MODULE PLACED IN music.OBJ
+COMPILER INVOKED BY: D:\Applications\Keil\C51\BIN\C51.EXE music.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #define uchar unsigned char
+   3          #define uint unsigned int
+   4          //ÖØÐÂ¶¨Òå¸÷¸ö¿ØÖÆÒý½ÅµÄÃû³Æ,  sbit ÒâË¼Îª<ÖØ¶¨Òå>,,²»Òª¸ú bit ¸ã»ì,bitÊÇ»ã±àÖÐ "Î»"
+   5          sbit beep = P1^0;
+   6          uchar code song_tone[]= // ÉúÈÕ¿ìÀÖ¸èµÄÒô·ûÆµÂÊ±í£¬²»Í¬ÆµÂÊÓÉ²»Í¬µÄÑÓÊ±À´¾ö¶¨ 
+   7          {
+   8            212,212,190,212,159,169,212,212,190,212,142,159,212,212,106,126,129,169,190,119,119,126,159,142,159,0
+   9          };
+  10          uchar code song_long[]= // ÉúÈÕ¿ìÀÖ¸è½ÚÅÄ±í£¬½ÚÅÄ¾ö¶¨Ã¿¸öÒô·ûµÄÑÝ×à³¤¶Ì
+  11          {
+  12            9,3,12,12,12,24,9,3,12,12,12,24,9,3,12,12,12,12,12,9,3,12,12,12,24,0
+  13          };
+  14          
+  15          void delay_ms(uint ms)
+  16          {
+  17   1        uchar t;
+  18   1        while(ms--)
+  19   1        {
+  20   2          for(t=0;t<120;t++);
+  21   2        }
+  22   1      }
+  23          
+  24          // ²¥·Åº¯Êý
+  25          void playmusic()  
+  26          {
+  27   1        uint i =0,j,k;
+  28   1        while(song_long[i]!=0||song_tone[i]!=0) //ÅÐ¶ÏÊÇ·ñÊ±³¤»òÕßÒô·û³¤¶ÈÎª0£¬Îª0¸èÇú¼´½áÊø
+  29   1        {
+  30   2          for(j=0;j<song_long[i]*20;j++) //Ê±³¤¼°Òô·û³¤¶È²»Îª0Ê±£¬ÖðÒ»²¥·Å¸÷¸öÒô·û£¬song_long ÎªÅÄ×Ó³¤¶È£¬ÕâÀï20Î
+             -ªÑÓÊ±±¶Êý£¬ÐÞ¸ÄÕâ¸öÖµ¿É¼Ó¿ì»ò¼õ»ºÒôÀÖµÄ²¥·ÅËÙ¶È
+  31   2          {                //song_longÎªÅÄ×Ó³¤¶È,Ò»¸ö½ÚÅÄ´ó¸ÅÎª 400ms-500ms£¬ÕâÀïµÄ½ÚÅÄÓÖÊÜÏÂÃæÒ»¸öÒô·ûµÄÓ°Ïì£¬ËùÒÔÖ»ÄÜ¸
+             -ù¾Ý´ó¸ÅµÄÀ´È¡Öµ
+  32   3            beep = ~beep; //µçÆ½·­×ªµÄÆµÂÊ»á²úÉú³ö²»Í¬µÄÒôµ÷µÄ²¥·ÅÐ§¹û
+  33   3            for(k=0;k<song_tone[i]/3;k++); //ÕâÀïµÄ3ÎªÆµÂÊÔö¼õµ÷½Ú£¬ÐÞ¸Ä¸ÃÖµ»áÕûÌåµ÷¸ß»òÕß½µµÍÒôµ÷£¬µ«½µµÍ¸ÃÖµÊ±£¬Ó
+             -¦ÊÊµ±¼Ó´ó½ÚÅÄÑÓÊ±£¬·´Ö®Ó¦ÊÊµ±½«½ÚÅÄÑÓÊ±µ÷Ð¡
+  34   3          }
+  35   2          delay_ms(10);
+  36   2          i++;
+  37   2        }
+  38   1      }
+  39          
+  40          void main()
+  41          {
+  42   1        while(1)
+  43   1        {
+  44   2          playmusic();
+  45   2          delay_ms(500);
+  46   2        }
+  47   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    165    ----
+   CONSTANT SIZE    =     52    ----
+C51 COMPILER V9.54   MUSIC                                                                 03/28/2024 20:06:46 PAGE 2   
+
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,85 @@
+EDA Netlist Writer report for exp51
+Fri Apr 05 03:52:51 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. EDA Netlist Writer Summary
+  3. EDA Netlist Writer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; EDA Netlist Writer Summary                                    ;
++---------------------------+-----------------------------------+
+; EDA Netlist Writer Status ; Failed - Fri Apr 05 03:52:51 2024 ;
+; Revision Name             ; exp51                             ;
+; Top-level Entity Name     ; exp51                             ;
+; Family                    ; Cyclone IV E                      ;
++---------------------------+-----------------------------------+
+
+
++-----------------------------+
+; EDA Netlist Writer Messages ;
++-----------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit EDA Netlist Writer
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Copyright (C) 1991-2013 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, Altera MegaCore Function License 
+    Info: Agreement, or other applicable license agreement, including, 
+    Info: without limitation, that your use is for the sole purpose of 
+    Info: programming logic devices manufactured by Altera and sold by 
+    Info: Altera or its authorized distributors.  Please refer to the 
+    Info: applicable agreement for further details.
+    Info: Processing started: Fri Apr 05 03:52:50 2024
+Info: Command: quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog exp51 -c exp51 --vector_source=C:/Users/ZiJie/Desktop/COAexp/exp5/exp5_1/Waveform.vwf --testbench_file=C:/Users/ZiJie/Desktop/COAexp/exp5/exp5_1/simulation/qsim/Waveform.vwf.vt
+Error (201008): Bus port "SE" specified in vector source file has ports with indices that do not fall in the range of port SE[6:1] in top level design of Quartus II project
+Error (201008): Bus port "SE" specified in vector source file has ports with indices that do not fall in the range of port SE[6:1] in top level design of Quartus II project
+Warning (201007): Can't find port "SE[0]" in design
+Error (201008): Bus port "I" specified in vector source file has ports with indices that do not fall in the range of port I[7:2] in top level design of Quartus II project
+Error (201008): Bus port "P" specified in vector source file has ports with indices that do not fall in the range of port P[4:1] in top level design of Quartus II project
+Error (201008): Bus port "I" specified in vector source file has ports with indices that do not fall in the range of port I[7:2] in top level design of Quartus II project
+Error (201008): Bus port "P" specified in vector source file has ports with indices that do not fall in the range of port P[4:1] in top level design of Quartus II project
+Error (201008): Bus port "SE" specified in vector source file has ports with indices that do not fall in the range of port SE[6:1] in top level design of Quartus II project
+Error (201008): Bus port "I" specified in vector source file has ports with indices that do not fall in the range of port I[7:2] in top level design of Quartus II project
+Warning (201007): Can't find port "I[1]" in design
+Warning (201007): Can't find port "I[0]" in design
+Error (201008): Bus port "P" specified in vector source file has ports with indices that do not fall in the range of port P[4:1] in top level design of Quartus II project
+Warning (201007): Can't find port "P[0]" in design
+Info (201000): Generated Verilog Test Bench File C:/Users/ZiJie/Desktop/COAexp/exp5/exp5_1/simulation/qsim/Waveform.vwf.vt for simulation
+Error: Quartus II 64-Bit EDA Netlist Writer was unsuccessful. 9 errors, 4 warnings
+    Error: Peak virtual memory: 4556 megabytes
+    Error: Processing ended: Fri Apr 05 03:52:51 2024
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,16 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+D:\组成实验箱\keil study\51示例工程全ok\quartusmusic90\C_music\music.uvproj
+Project File Date:  03/04/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling music.c...
+linking...
+Program Size: data=11.0 xdata=0 code=200
+creating hex file from "music"...
+"music" - 0 Error(s), 0 Warning(s).

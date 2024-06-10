@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.061 ns
+From           : altera_reserved_tms
+To             : sld_hub:sld_hub_inst|irf_reg[1][1]
+From Clock     : --
+To Clock       : altera_reserved_tck
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 35.796 ns
+From           : lpm_latch0:inst19|lpm_latch:lpm_latch_component|latches[0]
+To             : P10_1
+From Clock     : CLK0
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 20.555 ns
+From           : SWA
+To             : P10_1
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.107 ns
+From           : IN[6]
+To             : counter:inst37|lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_k5j:auto_generated|counter_reg_bit[6]
+From Clock     : --
+To Clock       : CLK0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK0'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 25.96 MHz ( period = 38.522 ns )
+From           : lpm_latch0:inst19|lpm_latch:lpm_latch_component|latches[0]
+To             : lpm_rom0:inst5|altsyncram:altsyncram_component|altsyncram_ol91:auto_generated|altsyncram_3s82:altsyncram1|ram_block3a6~porta_address_reg0
+From Clock     : CLK0
+To Clock       : CLK0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_reserved_tck'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 154.46 MHz ( period = 6.474 ns )
+From           : lpm_ram_dq0:inst24|altsyncram:altsyncram_component|altsyncram_11k1:auto_generated|sld_mod_ram_rom:mgl_prim2|bypass_reg_out
+To             : sld_hub:sld_hub_inst|tdo
+From Clock     : altera_reserved_tck
+To Clock       : altera_reserved_tck
+Failed Paths   : 0
+
+Type           : Clock Setup: 'P11_2'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 250.00 MHz ( period = 4.000 ns )
+From           : dsplay:inst1|dsp:48|cnt4:212|lpm_counter1:inst1|lpm_counter:lpm_counter_component|cntr_46i:auto_generated|counter_reg_bit[0]
+To             : dsplay:inst1|dsp:48|cnt4:212|lpm_counter1:inst1|lpm_counter:lpm_counter_component|cntr_46i:auto_generated|counter_reg_bit[4]
+From Clock     : P11_2
+To Clock       : P11_2
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLK0'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : counter:inst37|lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_k5j:auto_generated|counter_reg_bit[0]
+To             : counter:inst37|lpm_counter0:inst1|lpm_counter:lpm_counter_component|cntr_k5j:auto_generated|counter_reg_bit[0]
+From Clock     : CLK0
+To Clock       : CLK0
+Failed Paths   : 4
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 4
+
+--------------------------------------------------------------------------------------
+

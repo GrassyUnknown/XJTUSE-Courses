@@ -1,0 +1,11 @@
+
+
+C:/Users/ZiJie/Desktop/COAexp/51shiliprojectok/quartuslcd_display13/ram256.vhd
+
+Mar 26 01PM:36:39>: Megafunction LPM_RAM_DQ is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/ZiJie/Desktop/COAexp/51shiliprojectok/quartuslcd_display13/ram256.vhd
+
+Mar 26 01PM:37:00>: Megafunction LPM_RAM_DQ is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

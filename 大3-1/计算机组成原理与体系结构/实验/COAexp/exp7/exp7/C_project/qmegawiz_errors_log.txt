@@ -1,0 +1,16 @@
+
+
+C:/Users/ZiJie/Desktop/7final1/7final/ram256.vhd
+
+Mar 26 05PM:11:56>: Megafunction LPM_RAM_DQ is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/ZiJie/Desktop/7final1/7final/ram256.vhd
+
+Mar 26 05PM:12:27>: Megafunction LPM_RAM_DQ is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/Users/ZiJie/Desktop/7final1/7final/ram256.vhd
+
+Mar 26 05PM:14:49>: Megafunction LPM_RAM_DQ is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

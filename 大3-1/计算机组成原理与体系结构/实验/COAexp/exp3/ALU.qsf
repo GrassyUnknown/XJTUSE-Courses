@@ -1,0 +1,110 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+# Date created = 10:08:07  October 25, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ALU_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY ALU
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:08:07  OCTOBER 25, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name VHDL_FILE ALU181.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE ALU.bdf
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_64 -to A0_B1
+set_location_assignment PIN_44 -to A[0]
+set_location_assignment PIN_43 -to A[1]
+set_location_assignment PIN_49 -to A[2]
+set_location_assignment PIN_46 -to A[3]
+set_location_assignment PIN_51 -to A[4]
+set_location_assignment PIN_50 -to A[5]
+set_location_assignment PIN_59 -to A[6]
+set_location_assignment PIN_54 -to A[7]
+set_location_assignment PIN_69 -to B[0]
+set_location_assignment PIN_68 -to B[1]
+set_location_assignment PIN_72 -to B[2]
+set_location_assignment PIN_71 -to B[3]
+set_location_assignment PIN_76 -to B[4]
+set_location_assignment PIN_73 -to B[5]
+set_location_assignment PIN_85 -to B[6]
+set_location_assignment PIN_80 -to B[7]
+set_location_assignment PIN_34 -to CN
+set_location_assignment PIN_135 -to CN4
+set_location_assignment PIN_101 -to F[0]
+set_location_assignment PIN_100 -to F[1]
+set_location_assignment PIN_113 -to F[2]
+set_location_assignment PIN_105 -to F[3]
+set_location_assignment PIN_120 -to F[4]
+set_location_assignment PIN_114 -to F[5]
+set_location_assignment PIN_128 -to F[6]
+set_location_assignment PIN_125 -to F[7]
+set_location_assignment PIN_60 -to IN[0]
+set_location_assignment PIN_65 -to IN[1]
+set_location_assignment PIN_70 -to IN[2]
+set_location_assignment PIN_74 -to IN[3]
+set_location_assignment PIN_77 -to IN[4]
+set_location_assignment PIN_83 -to IN[5]
+set_location_assignment PIN_42 -to IN[6]
+set_location_assignment PIN_39 -to IN[7]
+set_location_assignment PIN_84 -to M
+set_location_assignment PIN_141 -to S[0]
+set_location_assignment PIN_142 -to S[1]
+set_location_assignment PIN_143 -to S[2]
+set_location_assignment PIN_144 -to S[3]
+set_location_assignment PIN_75 -to Sclk
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/ZiJie/Desktop/COAexp/exp3/simulation/qsim/" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation

@@ -1,0 +1,144 @@
+C51 COMPILER V9.54   LEDDISPLAY                                                            03/26/2024 14:27:12 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE LEDDISPLAY
+OBJECT MODULE PLACED IN leddisplay.OBJ
+COMPILER INVOKED BY: D:\Applications\Keil\C51\BIN\C51.EXE leddisplay.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(
+                    -2)
+
+line level    source
+
+   1          #include <reg51.h>
+   2          #include <string.h> //ºóÃæ×Ö·û´®º¯ÊýÖÐÈ¡µÃÊý×éµÄ¸öÊýÖÐÓÃµ½;µ÷ÓÃstrlenº¯Êý
+   3          #define uchar unsigned char
+   4          #define uint unsigned int
+   5          
+   6          uchar code tab1[]={"Hello, world!"}; //¶¨ÒåÒ»¸öÐèÒªÏÔÊ¾µÄÊý×é
+   7          uchar code tab2[]={"Welcome!"};
+   8          uchar i;
+   9          
+  10          //ÖØÐÂ¶¨Òå¸÷¸ö¿ØÖÆÒý½ÅµÄÃû³Æ,  sbit ÒâË¼Îª<ÖØ¶¨Òå>,,²»Òª¸ú bit ¸ã»ì,bitÊÇ»ã±àÖÐ "Î»"
+  11          
+  12          sbit lcdrs = P1^0;         //ÖØ¶¨Òå,rsµçÆ½Îª1Ôò´«ËÍÊý¾Ý,Îª0Ôò×ªËÍÖ¸Áî
+  13          sbit lcdrw = P1^1;        //¿ØÖÆLCD¶Á»òÕßÐ´;Îª1Ôò¶ÁLCD,Îª0ÔòÐ´ÈëLCD
+  14          sbit lcden = P1^2;        //LCDÐÐ¶¯¿ØÖÆ,ENÎªÏÂ½µÑØÔò½»»¥Ö´ÐÐ,¼´EN = 1;¸ú×ÅEN = 0;
+  15            
+  16          
+  17          //¶ÌÔÝÑÓÊ±º¯Êý
+  18          void delay_ms(uint z) 
+  19          { 
+  20   1        uchar x,y;
+  21   1         for(x=z;x>0;x--)
+  22   1          for(y=124;y>0;y--);
+  23   1      }
+  24          
+  25          //********************************************¶ÁÃ¦×Ó³ÌÐò*************
+  26          // ¶ÁÃ¦×Ö³ÌÐò,ÓÃÓÚÅÐ¶ÏLCDÒº¾§ÊÇ·ñÃ¦×´Ì¬.Èç¹û²»½øÐÐÅÐ¶Ï¿ÉÄÜ»áµ¼ÖÂÊý¾ÝÐ´ÈëLCDÊ§°Ü.
+  27          
+  28          void dbusy()                  //ÎÞ·µ»ØÖµ º¯ÊýÃû (¿Õ)
+  29          {
+  30   1           P0 = 0xff;                //°Ñ0xff·¢ËÍ¸øLCDµÄÊý¾Ý×ÜÏß
+  31   1           lcdrs = 0;               //Ñ¡Ö¸Áî
+  32   1           lcdrw = 1;               //Ñ¡Ôñ¶Á
+  33   1           lcden = 1;               //Ê¹ÄÜ¶ËÖÃ1(¸ßµçÆ½)
+  34   1           while (P0 & 0x80);    //Ñ­»· (Èç¹ûP0ºÍ0x80ÏàµÈµÄ»°) P0 & 0x80ÏàÓë,¼´P0×ÜÏßµÄ8Î»¶þ½øÖÆÊýÓë10000000±È½Ï
+             -,
+  35   1                                     //È«²¿ÏàÍ¬Ôò½á¹ûÎª 1<Õæ>;Ã¦×´Ì¬³ÉÁ¢,³ÌÐòÔÚ´Ë´¦ËÀÑ­»·ÏàÓë
+  36   1           lcden = 0;               //Ê¹ÄÜ¶ËÖÃ0(µÍµçÆ½)
+  37   1      }
+  38          /**************************************************************************************/
+  39          
+  40          /***********************************************Ð´Êý¾Ý»òÖ¸Áî×Ó³ÌÐò*******************/
+  41          void tcmddata (int x, unsigned char  DATA)//ÎÞ·µ»ØÖµ º¯ÊýÃû (¶¨ÒåÕûÐÎ±äÁ¿ x, ¶¨Òå×Ö·ûÐÍ±äÁ¿ DATA)
+  42          {
+  43   1         dbusy();
+  44   1         delay_ms(50);              //¶ÁÃ¦×Ó³ÌÐò
+  45   1         P0 = DATA;      //Èç¹û²»Ã¦,Ôò°Ñ²ÎÊý DDATA »ñÈ¡µ½µÄ±äÁ¿¸³Öµ¸ø ×ÜÏß<P0>
+  46   1         lcdrw = 0;      //¶ÁÐ´¶ËÑ¡ÔñÎª Ð´<0>
+  47   1         lcdrs = x;      //Êý¾Ý»òÖ¸Áî¶ËÑ¡ÔñÎª²ÎÊý <x>µÄÖµ, xµÄÖµÎª0»òÕß1;Îª0±íÊ¾×ÜÏß´«ÊäµÄÊÇ¿ØÖÆLCDÖ¸Áî,Îª1±íÊ¾Ò
+             -ªÏÔÊ¾µÄÊý¾Ý
+  48   1         lcden = 1;      //Ê¹ÄÜ¶ËÖÃ1
+  49   1         lcden = 0;      //Ê¹ÄÜ¶ËÖÃ0; ½ÓÉÏÒ»ÌõÖ¸ÁîÐÎ³ÉÒ»¸öÏÂ½µÑØ,LCDÊ¶±ðµ½ÏÂ½µÑØÐÅºÅÔò¶ÁÈ¡×ÜÏßÄÚÈÝ
+  50   1      }
+  51          /**************************************************************************************/
+  52          //
+C51 COMPILER V9.54   LEDDISPLAY                                                            03/26/2024 14:27:12 PAGE 2   
+
+  53          /************************************************LCD³õÊ¼»¯º¯Êý******************/
+  54          void lcd_init()            //ÎÞ·µ»ØÖµ º¯ÊýÃû (¿Õ)£¬ÕâÀï2004µÄ³õÊ¼»¯ºÍ1602µÄ³õÊ¼»¯Ö¸ÁîÍêÈ«ÏàÍ¬ 
+  55          {
+  56   1         lcden=0;           //Ê¹ÄÜ¶ËENÇåÁã£¬ÒòÎªÉÏµçÊÇÄ¬ÈÏ¸ßµçÆ½£¬ËùÒÔÏÈÇåÁã
+  57   1           
+  58   1         //ÏÔÊ¾Ä£Ê½ÉèÖÃ
+  59   1        tcmddata(0, 0x38);  //º¯ÊýÃû (Ö¸Áî, Ö¸ÁîÄÚÈÝ)  //  0·¢ËÍ¸øtcmddataº¯ÊýÖÐµÄx,ÔÙ¾­tcmddataº¯Êý·¢ËÍ¸ørs,¼´r
+             -s=0´ú±í´ËÊ±ÉèÖÃÎªÃüÁî·½Ê½;0x38ÎªÃüÁîÄÚÈÝ
+  60   1                            //0x38  ¶Ô1602ÉèÖÃ16*2£¬¶Ô2004¾Í´ú±í16*4ÏÔÊ¾£»5*7µãÕó£»8Î»Êý¾Ý½Ó¿Ú
+  61   1         //ÏÔÊ¾¿ª¹Ø¼°¹â±êÉèÖÃ
+  62   1        tcmddata(0, 0x08);  //0ÉèÖÃÃüÁî·½Ê½£¬0x08  ±íÊ¾Ö»¿ªÏÔÊ¾
+  63   1         //Êý¾Ý¿ØÖÆÉèÖÃ
+  64   1        tcmddata(0, 0x06); //0ÉèÖÃÃüÁî·½Ê½£¬0x06  ±íÊ¾µ±Ð´ÈëÒ»¸ö×Ö·ûµÄÊý¾Ýºó£¬µØÖ·Ö¸Õë×Ô¶¯¼Ó1£¬ÇÒ¹â±êÓÒÒÆ£¬×Ö·û²
+             -»¶¯
+  65   1      
+  66   1        tcmddata(0, 0x0c);  //0ÉèÖÃÃüÁî·½Ê½£¬0x0c  ±íÊ¾¿ªÏÔÊ¾£¬²»ÏÔÊ¾¹â±ê
+  67   1      }
+  68          /*************************************************************************************/
+  69          
+  70           
+  71          /**********************¶¨ÒåÏÔÊ¾Î»ÖÃ*******************************************************************/
+  72          void set_xy(uchar x,uchar y)
+  73          {  
+  74   1         switch(x)
+  75   1         {
+  76   2          case 1: y = y + 0x80;break;
+  77   2        case 2: y = y + 0xc0;break;
+  78   2        case 3: y = y + 0x94;break;
+  79   2        case 4: y = y + 0xd4;break;
+  80   2        default: y = y + 0x80;//
+  81   2         }
+  82   1         tcmddata(0,y);//0ÉèÖÃÃüÁî·½Ê½£¬¹æ¶¨ÏÔÊ¾ÆðÊ¼µÄÐÐÁÐ£¬xÐÐ£¬yÁÐ 
+  83   1      
+  84   1      }
+  85          
+  86          /**********************ÏÔÊ¾º¯Êý***********************************************************************/
+  87          
+  88          void display(uchar x,uchar y,uchar *s)
+  89          {          
+  90   1          set_xy(x,y); 
+  91   1          while(*s)   //¶ÔÓÚÒ»¸ö²»¶¨³¤µÄ×Ö·û´®½øÐÐÏÔÊ¾  
+  92   1          {
+  93   2           P0=*s;
+  94   2         tcmddata(1,*s);
+  95   2         s++;
+  96   2          }
+  97   1      }
+  98          
+  99          void main()
+ 100          {
+ 101   1         lcd_init();//³õÊ¼»¯
+ 102   1         
+ 103   1         while(1)
+ 104   1         {
+ 105   2          display(1,0,tab1);
+ 106   2          display(2,0,tab2);
+ 107   2          display(3,0,"line helloooooo");
+ 108   2          display(4,0,"line helloooooo");
+ 109   2         }
+ 110   1      }
+ 111          
+ 112          
+C51 COMPILER V9.54   LEDDISPLAY                                                            03/26/2024 14:27:12 PAGE 3   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    230    ----
+   CONSTANT SIZE    =     39    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

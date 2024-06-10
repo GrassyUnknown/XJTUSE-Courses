@@ -1,0 +1,11 @@
+
+
+E:/OA/wjllt6/lpm_rom0.vhd
+
+Sep 12 08AM:15:44>: Megafunction LPM_ROM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/OA/wjllt6/lpm_rom0.vhd
+
+Sep 12 08AM:15:45>: Megafunction LPM_ROM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

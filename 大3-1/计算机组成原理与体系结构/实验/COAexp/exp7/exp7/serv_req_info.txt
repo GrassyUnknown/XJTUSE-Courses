@@ -1,0 +1,115 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0ce25c3d: saui_ase + 0x5c3d (saui_ase_get_module_handle + 0x1bbd)
+	0x0ce3cdb9: saui_ase + 0x1cdb9 (saui_ase_dll_get_template_classes + 0x101d9)
+	0x0ce428bf: saui_ase + 0x228bf (saui_ase_dll_get_template_classes + 0x15cdf)
+	0x0041ded2: quartus + 0x1ded2 (Pjm_Uninit + 0xec92)
+	</callstack>
+	<error>Current editor: ASE, GED</error>
+	<date>Fri Feb 24 18:16:14 2023</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X0CE25C3D
+Current editor: ASE, GED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6334afba: MSVCR90 + 0x3afba (memcpy + 0x19a)
+	0x00ce40b2: CCL_MIO + 0x40b2 (?convert_data_to_hex@MIO_RIF_FILE@@ABI_NABV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@PAV23@W4MIO_RADIXES@@I@Z + 0x202)
+	</callstack>
+	<error>Access Violation at 0X6334AFBA</error>
+	<date>Wed Feb 08 10:59:05 2023</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X6334AFBA
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6334afba: MSVCR90 + 0x3afba (memcpy + 0x19a)
+	0x00ce40b2: CCL_MIO + 0x40b2 (?convert_data_to_hex@MIO_RIF_FILE@@ABI_NABV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@PAV23@W4MIO_RADIXES@@I@Z + 0x202)
+	</callstack>
+	<error>Access Violation at 0X6334AFBA</error>
+	<date>Wed Feb 08 11:02:18 2023</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X6334AFBA
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6334afba: MSVCR90 + 0x3afba (memcpy + 0x19a)
+	0x00ce40b2: CCL_MIO + 0x40b2 (?convert_data_to_hex@MIO_RIF_FILE@@ABI_NABV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@PAV23@W4MIO_RADIXES@@I@Z + 0x202)
+	</callstack>
+	<error>Access Violation at 0X6334AFBA</error>
+	<date>Wed Feb 08 11:04:57 2023</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X6334AFBA
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6334afba: MSVCR90 + 0x3afba (memcpy + 0x19a)
+	0x00ce40b2: CCL_MIO + 0x40b2 (?convert_data_to_hex@MIO_RIF_FILE@@ABI_NABV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@PAV23@W4MIO_RADIXES@@I@Z + 0x202)
+	</callstack>
+	<error>Access Violation at 0X6334AFBA</error>
+	<date>Wed Feb 08 11:06:24 2023</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X6334AFBA
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6334afba: MSVCR90 + 0x3afba (memcpy + 0x19a)
+	0x00ce40b2: CCL_MIO + 0x40b2 (?convert_data_to_hex@MIO_RIF_FILE@@ABI_NABV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@PAV23@W4MIO_RADIXES@@I@Z + 0x202)
+	</callstack>
+	<error>Access Violation at 0X6334AFBA</error>
+	<date>Wed Feb 08 11:09:00 2023</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X6334AFBA
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus_map.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6334afba: MSVCR90 + 0x3afba (memcpy + 0x19a)
+	0x00ce40b2: CCL_MIO + 0x40b2 (?convert_data_to_hex@MIO_RIF_FILE@@ABI_NABV?$basic_string@DU?$char_traits@D@_Dinkum_std@@V?$MEM_STL_ALLOCATOR@D@@@_Dinkum_std@@PAV23@W4MIO_RADIXES@@I@Z + 0x202)
+	</callstack>
+	<error>Access Violation at 0X6334AFBA</error>
+	<date>Wed Feb 08 11:09:47 2023</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X6334AFBA
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

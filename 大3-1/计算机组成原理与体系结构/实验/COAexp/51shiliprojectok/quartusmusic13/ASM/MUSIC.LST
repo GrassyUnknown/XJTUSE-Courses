@@ -1,0 +1,236 @@
+                                                                                        页     1
+                                                                                        03-07-13
+                                                                                        09:43:46
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            ;用定时器T1方式1来产生歌谱中各音符对应频率的方波，由P1.0输出驱动喇叭。
+            ;节拍控制可通过调用延时子程序次数来实现。
+            				ORG		0000H
+            
+0000 0130   				AJMP	START
+            
+            				ORG		001BH
+            
+001B 0169   				AJMP	TIME
+            ;
+            ;***************************************************************
+            ;				/*主程序*/									   *
+            ;***************************************************************
+            ;
+            				ORG		0030H
+            
+0030 758910 START:			MOV		TMOD,#10H		;定时器1方式1
+0033 75A888 				MOV		IE,#88H			;允许中断
+0036 900070 				MOV		DPTR,#TAB
+0039 E4     LOOP:			CLR		A
+003A 93     				MOVC	A,@A+DPTR		;取节拍
+003B F9     				MOV		R1,A
+003C A3     				INC		DPTR
+003D E4     				CLR		A
+003E 93     				MOVC	A,@A+DPTR
+003F F8     				MOV		R0,A
+0040 49     				ORL		A,R1
+0041 600F   				JZ		NEXT0			;是休止符转停止发音
+0043 E8     				MOV		A,R0
+0044 59     				ANL		A,R1
+0045 B4FF02 				CJNE	A,#0FFH,NEXT	;没有结束转下一拍
+0048 0130   				AJMP	START
+            
+004A 898D   NEXT:			MOV		TH1,R1
+004C 888B   				MOV		TL1,R0
+004E D28E   				SETB	TR1
+0050 8002   				SJMP	NEXT1
+0052 C28E   NEXT0:			CLR		TR1				;是休止符关闭定时器，停止发音
+0054 E4     NEXT1:			CLR		A
+0055 A3     				INC		DPTR
+0056 93     				MOVC	A,@A+DPTR		;取延时常数
+0057 FA     				MOV		R2,A
+0058 120060 LOOP1:			CALL	DELAY200MS
+005B DAFB   				DJNZ	R2,LOOP1
+005D A3     				INC		DPTR
+005E 0139   				AJMP	LOOP
+            ;
+            ;***************************************************************
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC.ASM                                                   
+ 
+                                                                                        页     2
+                                                                                        03-07-13
+                                                                                        09:43:46
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            ;				/*延时子程序*/								   *
+            ;***************************************************************
+            ;
+0060 7CCF   DELAY200MS:		MOV		R4,#0CFH
+0062 7BFF   DEL1:			MOV		R3,#0FFH
+0064 DBFE   				DJNZ	R3,$
+0066 DCFA   				DJNZ	R4,DEL1
+0068 22     				RET
+            
+0069 898D   TIME:			MOV		TH1,R1
+006B 888B   				MOV		TL1,R0
+006D B290   				CPL		P1.0
+006F 32     				RETI
+            
+0070 FC4A04 
+0073 FC4A04 TAB:			        DB		0FCH,4AH,04H,0FCH,4AH,04H
+0076 FC4A08 
+0079 FB0008 				DB		0FCH,4AH,08H,0FBH,00H,08H
+007C FD0804 
+007F FD0804 				DB		0FDH,08H,04H,0FDH,08H,04H
+0082 FD0808 
+0085 FC4A08 				DB		0FDH,08H,08H,0FCH,4AH,08H
+0088 FC4A04 
+008B FD0804 				DB		0FCH,4AH,04H,0FDH,08H,04H
+008E FD8008 
+0091 FD8008 				DB		0FDH,80H,08H,0FDH,80H,08H
+0094 FD3004 
+0097 FD0804 				DB		0FDH,30H,04H,0FDH,08H,04H
+009A FCAE08 
+009D 000008 				DB		0FCH,0AEH,08H,00H,00H,08H
+00A0 FFFF   				DB		0FFH,0FFH
+            
+            				END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC.ASM                                                   
+ 
+                                                                                        页     3
+                                                                                        03-07-13
+                                                                                        09:43:46
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+
+
+            符号                       值     类型
+
+            AC                       = 00D6H CONST 常量 
+            ACC                      = 00E0H CONST 常量 
+            B                        = 00F0H CONST 常量 
+            BGEN                     = 00CBH CONST 常量 
+            CP_RL2                   = 00C8H CONST 常量 
+            CY                       = 00D7H CONST 常量 
+            C_T2                     = 00C9H CONST 常量 
+            DEL1                     = 0062H CODE  标号 
+            DELAY200MS               = 0060H CODE  标号 
+            DPH                      = 0083H CONST 常量 
+            DPL                      = 0082H CONST 常量 
+            EA                       = 00AFH CONST 常量 
+            ES                       = 00ACH CONST 常量 
+            ET0                      = 00A9H CONST 常量 
+            ET1                      = 00ABH CONST 常量 
+            ET2                      = 00ADH CONST 常量 
+            EX0                      = 00A8H CONST 常量 
+            EX1                      = 00AAH CONST 常量 
+            F0                       = 00D5H CONST 常量 
+            IE                       = 00A8H CONST 常量 
+            IE0                      = 0089H CONST 常量 
+            IE1                      = 008BH CONST 常量 
+            INT0                     = 00B2H CONST 常量 
+            INT1                     = 00B3H CONST 常量 
+            IP                       = 00B8H CONST 常量 
+            IT0                      = 0088H CONST 常量 
+            IT1                      = 008AH CONST 常量 
+            LOOP                     = 0039H CODE  标号 
+            LOOP1                    = 0058H CODE  标号 
+            NEXT                     = 004AH CODE  标号 
+            NEXT0                    = 0052H CODE  标号 
+            NEXT1                    = 0054H CODE  标号 
+            OV                       = 00D2H CONST 常量 
+            P                        = 00D0H CONST 常量 
+            P0                       = 0080H CONST 常量 
+            P1                       = 0090H CONST 常量 
+            P2                       = 00A0H CONST 常量 
+            P3                       = 00B0H CONST 常量 
+            PCON                     = 0087H CONST 常量 
+            PS                       = 00BCH CONST 常量 
+            PSW                      = 00D0H CONST 常量 
+            PT0                      = 00B9H CONST 常量 
+            PT1                      = 00BBH CONST 常量 
+            PX0                      = 00B8H CONST 常量 
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC.ASM                                                   
+ 
+                                                                                        页     4
+                                                                                        03-07-13
+                                                                                        09:43:46
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            PX1                      = 00BAH CONST 常量 
+            RB8                      = 009AH CONST 常量 
+            RCAP2H                   = 00CBH CONST 常量 
+            RCAP2L                   = 00CAH CONST 常量 
+            RD                       = 00B7H CONST 常量 
+            REN                      = 009CH CONST 常量 
+            RI                       = 0098H CONST 常量 
+            RS0                      = 00D3H CONST 常量 
+            RS1                      = 00D4H CONST 常量 
+            RXD                      = 00B0H CONST 常量 
+            SBUF                     = 0099H CONST 常量 
+            SCON                     = 0098H CONST 常量 
+            SM0                      = 009FH CONST 常量 
+            SM1                      = 009EH CONST 常量 
+            SM2                      = 009DH CONST 常量 
+            SP                       = 0081H CONST 常量 
+            START                    = 0030H CODE  标号 
+            T0                       = 00B4H CONST 常量 
+            T1                       = 00B5H CONST 常量 
+            T2CON                    = 00C8H CONST 常量 
+            T2IE                     = 00CDH CONST 常量 
+            T2IP                     = 00CEH CONST 常量 
+            T2RSE                    = 00CCH CONST 常量 
+            TAB                      = 0070H CODE  标号 
+            TB8                      = 009BH CONST 常量 
+            TCON                     = 0088H CONST 常量 
+            TF0                      = 008DH CONST 常量 
+            TF1                      = 008FH CONST 常量 
+            TF2                      = 00CFH CONST 常量 
+            TH0                      = 008CH CONST 常量 
+            TH1                      = 008DH CONST 常量 
+            TH2                      = 00CDH CONST 常量 
+            TI                       = 0099H CONST 常量 
+            TIME                     = 0069H CODE  标号 
+            TL0                      = 008AH CONST 常量 
+            TL1                      = 008BH CONST 常量 
+            TL2                      = 00CCH CONST 常量 
+            TMOD                     = 0089H CONST 常量 
+            TR0                      = 008CH CONST 常量 
+            TR1                      = 008EH CONST 常量 
+            TR2                      = 00CAH CONST 常量 
+            TXD                      = 00B1H CONST 常量 
+            WR                       = 00B6H CONST 常量 
+
+
+            公有符号:   87
+            私有符号:    0
+
+
+
+E:\A_BASIC8051_CORE\ASM\MUSIC.ASM                                                   
+ 

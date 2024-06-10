@@ -1,0 +1,33 @@
+CH0			BIT		P1.0
+CH1			BIT		P1.1
+
+			ORG		0000H
+		
+			AJMP	MAIN
+		
+			ORG		0030H
+			
+MAIN:		MOV		P1,#00H
+			CLR		CH0		;正转	
+			SETB	CH1	
+			CALL	DELAY
+			CLR		CH0		;停止
+			CLR		CH1
+			CALL	DELAY		
+			SETB	CH0		;反转
+			CLR		CH1
+			CALL	DELAY
+			CLR		CH0		;停止
+			CLR		CH1
+			CALL	DELAY	
+			AJMP	MAIN
+
+DELAY:		MOV		R5,#2FH
+DELAY2:		MOV		R6,#0FFH
+DELAY1:		MOV		R7,#0FFH
+			DJNZ	R7,$
+			DJNZ	R6,DELAY1
+			DJNZ	R5,DELAY2
+			RET
+		
+			END	

@@ -1,0 +1,28 @@
+<internal_error>
+	<executable>quartus_sta.exe</executable>
+	<sub_system>ATCL</sub_system>
+	<file>/quartus/ccl/atcl/atcl_tcl.cpp</file>
+	<line>183</line>
+	<callstack>
+	0x002f2225: CCL_ERR + 0x2225 (?err_report_internal_error@@YIXPBD00H@Z + 0x15)
+	</callstack>
+	<error>interp != NULL &amp;&amp; package &amp;&amp; *package</error>
+	<date>Sat Sep 09 11:24:22 2017</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>interp != NULL &amp;&amp; package &amp;&amp; *package
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<error>Current editor: RPW, GED, ASE</error>
+	<date>Sat Sep 09 16:58:17 2017</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 00000000
+Current editor: RPW, GED, ASE
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

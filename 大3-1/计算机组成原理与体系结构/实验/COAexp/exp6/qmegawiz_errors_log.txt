@@ -1,0 +1,61 @@
+
+
+E:/OA/wjllt6/lpm_rom0.vhd
+
+Sep 12 08AM:15:44>: Megafunction LPM_ROM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/OA/wjllt6/lpm_rom0.vhd
+
+Sep 12 08AM:15:45>: Megafunction LPM_ROM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:37:39>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:37:48>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:37:48>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:37:56>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:38:06>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:38:07>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:38:07>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:38:09>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:41:45>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/computer_org_EXPM/code/EXPM6/lpm_bustri1.vhd
+
+Mar 01 04PM:41:55>: Megafunction LPM_BUSTRI is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

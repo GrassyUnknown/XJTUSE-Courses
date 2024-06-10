@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="AR">
+		<CBX_INST_ENTRY INSTANCE_NAME="|AR|counter:inst|lpm_counter0:inst|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_t6j.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

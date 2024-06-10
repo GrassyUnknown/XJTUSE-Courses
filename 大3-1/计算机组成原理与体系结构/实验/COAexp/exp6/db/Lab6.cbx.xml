@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Lab6">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Lab6|counter:inst37|lpm_counter0:inst1|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_t6j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Lab6|dsplay:inst1|dsp:48|LPM_MUX:127" CBX_FILE_NAME="mux_8tc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Lab6|dsplay:inst1|dsp:48|cnt4:212|lpm_counter1:inst1|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_d7i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Lab6|ram1:inst35|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_ost3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Lab6|rom1:inst15|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_cnt3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Lab6|dsplay:inst1|dsp:48|LPM_MUX:131" CBX_FILE_NAME="mux_frc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Lab6|dsplay:inst1|dsp:48|cnt3:216|lpm_counter2:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_b7i.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

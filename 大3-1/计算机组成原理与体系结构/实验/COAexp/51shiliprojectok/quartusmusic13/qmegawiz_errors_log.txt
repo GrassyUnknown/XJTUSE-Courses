@@ -1,0 +1,11 @@
+
+
+E:/51shiliprojectok/quartusmusic90/ram256.vhd
+
+Jan 20 10AM:56:23>: Megafunction LPM_RAM_DQ is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+E:/51shiliprojectok/quartusmusic90/ram256.vhd
+
+Jan 20 10AM:56:24>: Megafunction LPM_RAM_DQ is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

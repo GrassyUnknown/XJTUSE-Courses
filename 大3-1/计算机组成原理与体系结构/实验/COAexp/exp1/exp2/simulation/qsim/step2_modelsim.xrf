@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/ZiJie/Desktop/COAexp/exp1/exp2/step2.bdf
+source_file = 1, C:/Users/ZiJie/Desktop/COAexp/exp1/exp2/Waveform.vwf
+source_file = 1, C:/Users/ZiJie/Desktop/COAexp/exp1/exp2/db/step2.cbx.xml
+design_name = step2
+instance = comp, \T1~output , T1~output, step2, 1
+instance = comp, \T4~output , T4~output, step2, 1
+instance = comp, \T2~output , T2~output, step2, 1
+instance = comp, \T3~output , T3~output, step2, 1
+instance = comp, \inst1~feeder , inst1~feeder, step2, 1
+instance = comp, \RST1~input , RST1~input, step2, 1
+instance = comp, \inst2~feeder , inst2~feeder, step2, 1
+instance = comp, \inst3~feeder , inst3~feeder, step2, 1
+instance = comp, \inst4~feeder , inst4~feeder, step2, 1
+instance = comp, \CLK1~input , CLK1~input, step2, 1
+instance = comp, \inst5~clkctrl , inst5~clkctrl, step2, 1
+instance = comp, \inst6~0 , inst6~0, step2, 1

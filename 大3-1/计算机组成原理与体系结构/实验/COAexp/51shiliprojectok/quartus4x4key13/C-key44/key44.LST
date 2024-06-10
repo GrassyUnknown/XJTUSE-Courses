@@ -1,0 +1,107 @@
+C51 COMPILER V9.00   KEY44                                                                 06/17/2021 17:06:12 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE KEY44
+OBJECT MODULE PLACED IN key44.OBJ
+COMPILER INVOKED BY: C:\Keil_c51\C51\BIN\C51.EXE key44.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #define uchar unsigned char
+   3          #define uint unsigned int
+   4          
+   5          //数码管显示码表，共阴极，本实验采用的
+   6          uchar code display_tab[]={0x3f,0x06,0x5b,0x4f,
+   7           0x66,0x6d,0x7d,0x07,
+   8           0x7f,0x6f,0x77,0x7c,
+   9           0x39,0x5e,0x79,0x71,0};
+  10            
+  11          /*数码管显示码表，共阳极
+  12          uchar code tab[]={0xc0,0xf9,0xa4,0xb0,
+  13           0x99,0x92,0x82,0xf8,
+  14           0x80,0x90,0x88,0x83,
+  15           0xc6,0xa1,0x86,0x8e,0}; */
+  16          
+  17          /*键盘显示码表，如果不想行列比较可以把键盘也编为表，只需判断一次就可以对应上
+  18          uchar code keycode[]={0xee,0xde,0xbe,0x7e,
+  19           0xed,0xdd,0xbd,0x7d,
+  20           0xeb,0xdb,0xbb,0x7b,
+  21           0xe7,0xd7,0xb7,0x77};*/
+  22          
+  23          uchar pre_keynum=16; keynum=16; //两个全局变量
+  24          
+  25          //短暂延时函数
+  26          void delay_ms(uint z) 
+  27          { 
+  28   1        uchar x,y;
+  29   1         for(x=z;x>0;x--)
+  30   1          for(y=124;y>0;y--);
+  31   1      }
+  32          
+  33          void key_scan()
+  34          { 
+  35   1        uchar temp_cow; // 行号
+  36   1        uchar temp_col; // 列号
+  37   1      
+  38   1        P3=0x0f;//先对行号置初值
+  39   1        delay_ms(1);
+  40   1        // 按键后00001111会变为0000xxxx，每个按键x中会有一个为0，其余为1
+  41   1        // 下面的异或会将其中的1,0互换，0变1,1变0
+  42   1        temp_cow=P3^0x0f;
+  43   1        // 判断按键发生于具体哪一行，为了查表每行都要隔4个数  
+  44   1        switch(temp_cow)
+  45   1        {
+  46   2          case 1: keynum=0;break;
+  47   2              case 2: keynum=4;break;
+  48   2              case 4: keynum=8;break;
+  49   2              case 8: keynum=12;break;
+  50   2              default: keynum=16;//
+  51   2        }
+  52   1      
+  53   1      
+  54   1        P3=0xf0; //先对列号置初值
+  55   1        temp_col=P3^0xf0;     //行号占高4位
+C51 COMPILER V9.00   KEY44                                                                 06/17/2021 17:06:12 PAGE 2   
+
+  56   1       // 判断按键发生于具体哪一列
+  57   1        switch(temp_col)
+  58   1        {
+  59   2          case 0x10: keynum+=0;break;
+  60   2              case 0x20: keynum+=1;break;
+  61   2              case 0x40: keynum+=2;break;
+  62   2              case 0x80: keynum+=3;break;
+  63   2        }
+  64   1       }
+  65              
+  66          void main()
+  67          {
+  68   1        P0=0x3f; //初始化数码管
+  69   1        while(1)
+  70   1        {
+  71   2          P3=0xf0;
+  72   2              if (P3!=0xf0) key_scan();//判断按键是否按下，按下时扫描键盘获得按键序号
+  73   2              if (pre_keynum!=keynum)
+  74   2              {
+  75   3                P0=display_tab[keynum];
+  76   3                pre_keynum=keynum;
+  77   3               }
+  78   2               delay_ms(2000);
+  79   2        }
+  80   1      }
+  81          
+  82            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    181    ----
+   CONSTANT SIZE    =     17    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

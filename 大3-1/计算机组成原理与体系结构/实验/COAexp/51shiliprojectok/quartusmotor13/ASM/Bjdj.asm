@@ -1,0 +1,52 @@
+;HA--P2.0	HB--P2.1	HC--P2.2	HD--P2.3
+		ORG		0000H
+		
+		AJMP	MAIN
+		
+		ORG	0013H
+		
+		AJMP	REV
+		
+		ORG	0030H
+		
+MAIN:	MOV	IE,#10000100B
+	CLR	IT1							;IT0=0低电平触发方式
+FOR:	MOV	P2,#0FFH
+	MOV	R3,#08H
+	MOV	R0,#00H
+FOR1:	MOV	A,R0
+	MOV	DPTR,#TABLE
+	MOVC	A,@A+DPTR					;取励磁信号
+	MOV	P2,A
+	CALL	DELAY						;延时
+	DJNZ	R3,FOR2						;励磁信号没结束转
+	AJMP	FOR							;结束转开始
+FOR2:	INC	R0							;不结束偏移量加1
+	AJMP	FOR1
+	
+REV:	MOV	P2,#0FFH					;
+	MOV	R3,#08H
+	MOV	R0,#09H
+REV1:	MOV	A,R0
+	MOV	DPTR,#TABLE
+	MOVC	A,@A+DPTR
+	MOV	P2,A
+	CALL	DELAY        
+	DJNZ	R3,REV2    ;先R3-1，接着判定若R3不等于0，就跳转到REV2，若R3＝0，则顺序执行
+	AJMP	REV3
+REV2:	INC	R0
+	AJMP	REV1	
+REV3:	MOV	P2,#0FFH
+	MOV	R3,#08H
+	MOV	R0,#00H
+	RETI
+		
+DELAY:	MOV	R1,#40H
+DELAY1:	MOV	R2,#48H
+        DJNZ	R2,$       ;先R2-1，接着判定若R2不等于0，就跳转到S，若R2＝0，则顺序执行
+	DJNZ	R1,DELAY1  ;先R1-1，接着判定若R1不等于0，就跳转到DELAY1，若R2＝0，则顺序执行；这两步的目的就在于将20M赫兹的频率降下来 
+	RET
+	
+TABLE:	DB		0EH,06H,07H,03H,0BH,09H,0DH,0CH	;A->AB->B->BC->C->CD->D->DA->A
+	DB		0EH,0CH,0DH,09H,0BH,03H,07H,06H	;A->AD->D->DC->C->CB->B->BA->A
+	END			

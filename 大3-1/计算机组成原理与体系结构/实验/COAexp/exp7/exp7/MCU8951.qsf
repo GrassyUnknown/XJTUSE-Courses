@@ -1,0 +1,115 @@
+set_location_assignment PIN_50 -to P1O[0]
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		MCU8951_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 4.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:52:23  AUGUST 25, 2005"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_25 -to CLK
+set_location_assignment PIN_53 -to RST
+set_location_assignment PIN_127 -to POE[0]
+set_location_assignment PIN_124 -to POE[2]
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name TOP_LEVEL_ENTITY MCU8951
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE10E22C8
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+
+# Assembler Assignments
+# =====================
+set_global_assignment -name CYCLONE_CONFIGURATION_DEVICE EPCS4
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT OFF
+
+set_global_assignment -name VQM_FILE CPU_Core.vqm
+set_global_assignment -name VHDL_FILE lpm_rom0.vhd
+set_global_assignment -name BDF_FILE MCU8951.bdf
+set_global_assignment -name VHDL_FILE pll50.vhd
+set_global_assignment -name VHDL_FILE ram256.vhd
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_location_assignment PIN_88 -to MT
+set_location_assignment PIN_89 -to NO
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_66 -to P2I[3]
+set_location_assignment PIN_67 -to P2I[2]
+set_location_assignment PIN_64 -to P2I[4]
+set_location_assignment PIN_101 -to P3[7]
+set_location_assignment PIN_100 -to P3[6]
+set_location_assignment PIN_113 -to P3[5]
+set_location_assignment PIN_105 -to P3[4]
+set_location_assignment PIN_120 -to P3[3]
+set_location_assignment PIN_114 -to P3[2]
+set_location_assignment PIN_125 -to P3[1]
+set_location_assignment PIN_128 -to P3[0]
+set_location_assignment PIN_55 -to P2I[5]
+set_location_assignment PIN_34 -to P2I[0]
+set_location_assignment PIN_75 -to P2I[1]
+set_location_assignment PIN_106 -to P0[0]
+set_location_assignment PIN_110 -to P0[1]
+set_location_assignment PIN_103 -to P0[2]
+set_location_assignment PIN_104 -to P0[3]
+set_location_assignment PIN_98 -to P0[4]
+set_location_assignment PIN_99 -to P0[5]
+set_location_assignment PIN_86 -to P0[6]
+set_location_assignment PIN_87 -to P0[7]
+set_location_assignment PIN_133 -to P1O[1]
+set_location_assignment PIN_126 -to P1O[2]
+set_location_assignment PIN_119 -to P1O[3]
+set_location_assignment PIN_52 -to P2I[6]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,236 @@
+                                                                                        页     1
+                                                                                        03-13-13
+                                                                                        18:29:40
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            ;HA--P2.0	HB--P2.1	HC--P2.2	HD--P2.3
+            		ORG		0000H
+            		
+0000 0130   		AJMP	MAIN
+            		
+            		ORG	0013H
+            		
+0013 014D   		AJMP	REV
+            		
+            		ORG	0030H
+            		
+0030 75A884 MAIN:	MOV	IE,#10000100B
+0033 C28A   	CLR	IT1							;IT0=0低电平触发方式
+0035 75A0FF FOR:	MOV	P2,#0FFH
+0038 7B08   	MOV	R3,#08H
+003A 7800   	MOV	R0,#00H
+003C E8     FOR1:	MOV	A,R0
+003D 900076 	MOV	DPTR,#TABLE
+0040 93     	MOVC	A,@A+DPTR					;取励磁信号
+0041 F5A0   	MOV	P2,A
+0043 12006D 	CALL	DELAY						;延时
+0046 DB02   	DJNZ	R3,FOR2						;励磁信号没结束转
+0048 0135   	AJMP	FOR							;结束转开始
+004A 08     FOR2:	INC	R0							;不结束偏移量加1
+004B 013C   	AJMP	FOR1
+            	
+004D 75A0FF REV:	MOV	P2,#0FFH					;
+0050 7B08   	MOV	R3,#08H
+0052 7809   	MOV	R0,#09H
+0054 E8     REV1:	MOV	A,R0
+0055 900076 	MOV	DPTR,#TABLE
+0058 93     	MOVC	A,@A+DPTR
+0059 F5A0   	MOV	P2,A
+005B 12006D 	CALL	DELAY        
+005E DB02   	DJNZ	R3,REV2    ;先R3-1，接着判定若R3不等于0，就跳转到REV2，若R3＝0，则顺序执行
+0060 0165   	AJMP	REV3
+0062 08     REV2:	INC	R0
+0063 0154   	AJMP	REV1	
+0065 75A0FF REV3:	MOV	P2,#0FFH
+0068 7B08   	MOV	R3,#08H
+006A 7800   	MOV	R0,#00H
+006C 32     	RETI
+            		
+006D 7940   DELAY:	MOV	R1,#40H
+006F 7A48   DELAY1:	MOV	R2,#48H
+0071 DAFE           DJNZ	R2,$       ;先R2-1，接着判定若R2不等于0，就跳转到S，若R2＝0，则顺序执行
+0073 D9FA   	DJNZ	R1,DELAY1  ;先R1-1，接着判定若R1不等于0，就跳转到DELAY1，若R2＝0，则顺序执行；这两步的目的就在于将20M赫兹的频率降下来 
+0075 22     	RET
+
+
+E:\51实验\MOTOR\ASM\BJDJ.ASM                                                        
+ 
+                                                                                        页     2
+                                                                                        03-13-13
+                                                                                        18:29:40
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            	
+0076 0E0607 
+0079 030B09 
+007C 0D0C   TABLE:	DB		0EH,06H,07H,03H,0BH,09H,0DH,0CH	;A->AB->B->BC->C->CD->D->DA->A
+007E 0E0C0D 
+0081 090B03 
+0084 0706   	DB		0EH,0CH,0DH,09H,0BH,03H,07H,06H	;A->AD->D->DC->C->CB->B->BA->A
+            	END							;IT0=0低电平触发方式
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E:\51实验\MOTOR\ASM\BJDJ.ASM                                                        
+ 
+                                                                                        页     3
+                                                                                        03-13-13
+                                                                                        18:29:40
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+
+
+            符号                       值     类型
+
+            AC                       = 00D6H CONST 常量 
+            ACC                      = 00E0H CONST 常量 
+            B                        = 00F0H CONST 常量 
+            BGEN                     = 00CBH CONST 常量 
+            CP_RL2                   = 00C8H CONST 常量 
+            CY                       = 00D7H CONST 常量 
+            C_T2                     = 00C9H CONST 常量 
+            DELAY                    = 006DH CODE  标号 
+            DELAY1                   = 006FH CODE  标号 
+            DPH                      = 0083H CONST 常量 
+            DPL                      = 0082H CONST 常量 
+            EA                       = 00AFH CONST 常量 
+            ES                       = 00ACH CONST 常量 
+            ET0                      = 00A9H CONST 常量 
+            ET1                      = 00ABH CONST 常量 
+            ET2                      = 00ADH CONST 常量 
+            EX0                      = 00A8H CONST 常量 
+            EX1                      = 00AAH CONST 常量 
+            F0                       = 00D5H CONST 常量 
+            FOR                      = 0035H CODE  标号 
+            FOR1                     = 003CH CODE  标号 
+            FOR2                     = 004AH CODE  标号 
+            IE                       = 00A8H CONST 常量 
+            IE0                      = 0089H CONST 常量 
+            IE1                      = 008BH CONST 常量 
+            INT0                     = 00B2H CONST 常量 
+            INT1                     = 00B3H CONST 常量 
+            IP                       = 00B8H CONST 常量 
+            IT0                      = 0088H CONST 常量 
+            IT1                      = 008AH CONST 常量 
+            MAIN                     = 0030H CODE  标号 
+            OV                       = 00D2H CONST 常量 
+            P                        = 00D0H CONST 常量 
+            P0                       = 0080H CONST 常量 
+            P1                       = 0090H CONST 常量 
+            P2                       = 00A0H CONST 常量 
+            P3                       = 00B0H CONST 常量 
+            PCON                     = 0087H CONST 常量 
+            PS                       = 00BCH CONST 常量 
+            PSW                      = 00D0H CONST 常量 
+            PT0                      = 00B9H CONST 常量 
+            PT1                      = 00BBH CONST 常量 
+            PX0                      = 00B8H CONST 常量 
+            PX1                      = 00BAH CONST 常量 
+
+
+E:\51实验\MOTOR\ASM\BJDJ.ASM                                                        
+ 
+                                                                                        页     4
+                                                                                        03-13-13
+                                                                                        18:29:40
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            RB8                      = 009AH CONST 常量 
+            RCAP2H                   = 00CBH CONST 常量 
+            RCAP2L                   = 00CAH CONST 常量 
+            RD                       = 00B7H CONST 常量 
+            REN                      = 009CH CONST 常量 
+            REV                      = 004DH CODE  标号 
+            REV1                     = 0054H CODE  标号 
+            REV2                     = 0062H CODE  标号 
+            REV3                     = 0065H CODE  标号 
+            RI                       = 0098H CONST 常量 
+            RS0                      = 00D3H CONST 常量 
+            RS1                      = 00D4H CONST 常量 
+            RXD                      = 00B0H CONST 常量 
+            SBUF                     = 0099H CONST 常量 
+            SCON                     = 0098H CONST 常量 
+            SM0                      = 009FH CONST 常量 
+            SM1                      = 009EH CONST 常量 
+            SM2                      = 009DH CONST 常量 
+            SP                       = 0081H CONST 常量 
+            T0                       = 00B4H CONST 常量 
+            T1                       = 00B5H CONST 常量 
+            T2CON                    = 00C8H CONST 常量 
+            T2IE                     = 00CDH CONST 常量 
+            T2IP                     = 00CEH CONST 常量 
+            T2RSE                    = 00CCH CONST 常量 
+            TABLE                    = 0076H CODE  标号 
+            TB8                      = 009BH CONST 常量 
+            TCON                     = 0088H CONST 常量 
+            TF0                      = 008DH CONST 常量 
+            TF1                      = 008FH CONST 常量 
+            TF2                      = 00CFH CONST 常量 
+            TH0                      = 008CH CONST 常量 
+            TH1                      = 008DH CONST 常量 
+            TH2                      = 00CDH CONST 常量 
+            TI                       = 0099H CONST 常量 
+            TL0                      = 008AH CONST 常量 
+            TL1                      = 008BH CONST 常量 
+            TL2                      = 00CCH CONST 常量 
+            TMOD                     = 0089H CONST 常量 
+            TR0                      = 008CH CONST 常量 
+            TR1                      = 008EH CONST 常量 
+            TR2                      = 00CAH CONST 常量 
+            TXD                      = 00B1H CONST 常量 
+            WR                       = 00B6H CONST 常量 
+
+
+            公有符号:   88
+            私有符号:    0
+
+
+E:\51实验\MOTOR\ASM\BJDJ.ASM                                                        
+ 

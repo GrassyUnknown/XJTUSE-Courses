@@ -1,0 +1,49 @@
+# do exp5_2.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uA_reg
+# 
+# Top level modules:
+# 	uA_reg
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module uA_reg_vlg_sample_tst
+# -- Compiling module uA_reg_vlg_check_tst
+# ** Warning: Waveform.vwf.vt(130): (vlog-2576) [BSOB] - Bit-select into 'q_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform.vwf.vt(130): (vlog-2576) [BSOB] - Bit-select into 'q_prev' is out of bounds.
+# 
+# ** Warning: Waveform.vwf.vt(130): (vlog-2576) [BSOB] - Bit-select into 'q_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform.vwf.vt(131): (vlog-2576) [BSOB] - Bit-select into 'q_expected_prev' is out of bounds.
+# 
+# ** Warning: Waveform.vwf.vt(131): (vlog-2576) [BSOB] - Bit-select into 'last_q_exp' is out of bounds.
+# 
+# ** Warning: Waveform.vwf.vt(140): (vlog-2576) [BSOB] - Bit-select into 'last_q_exp' is out of bounds.
+# 
+# ** Warning: Waveform.vwf.vt(140): (vlog-2576) [BSOB] - Bit-select into 'q_expected_prev' is out of bounds.
+# 
+# -- Compiling module uA_reg_vlg_vec_tst
+# 
+# Top level modules:
+# 	uA_reg_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.uA_reg_vlg_vec_tst 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.uA_reg_vlg_vec_tst
+# Loading work.uA_reg
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading work.uA_reg_vlg_sample_tst
+# Loading work.uA_reg_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : Waveform.vwf.vt(219)
+#    Time: 1 us  Iteration: 0  Instance: /uA_reg_vlg_vec_tst/tb_out

@@ -1,0 +1,413 @@
+                                                                                        页     1
+                                                                                        01-13-03
+                                                                                        17:54:53
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            
+            	   ORG	   0000H
+0000 020030 	   LJMP    MMMM
+            	   ORG	   000BH
+000B 8023   	   SJMP    MMMM
+            	   ORG	   001BH
+001B 8013   	   SJMP    MMMM
+            	   ORG	   0030H
+0030 758160 MMMM:	   MOV	   SP,#60H
+0033 C2B7              CLR     P3.7 
+            
+0035 7590FF            MOV     P1,#0FFH
+0038 C2B5              CLR     P3.5
+003A C2B2              CLR     P3.2         ;0000
+003C C2B3              CLR     P3.3
+003E C2B4              CLR     P3.4
+0040 00                NOP
+0041 E590              MOV     A,P1
+0043 540F              ANL     A,#0FH
+0045 F547              MOV     47H,A
+            
+0047 C2B5              CLR     P3.5
+0049 C2B2              CLR     P3.2         ;0001
+004B C2B3              CLR     P3.3
+004D D2B4              SETB    P3.4
+004F 00                NOP
+0050 E590              MOV     A,P1
+0052 540F              ANL     A,#0FH
+0054 F546              MOV     46H,A
+            
+0056 C2B5              CLR     P3.5
+0058 C2B2              CLR     P3.2         ;0010
+005A D2B3              SETB    P3.3
+005C C2B4              CLR     P3.4
+005E 00                NOP
+005F E590              MOV     A,P1
+0061 540F              ANL     A,#0FH
+0063 F545              MOV     45H,A
+            
+0065 C2B5              CLR     P3.5
+0067 C2B2              CLR     P3.2         ;0011
+0069 D2B3              SETB    P3.3
+006B D2B4              SETB    P3.4
+006D 00                NOP
+006E E590              MOV     A,P1
+0070 540F              ANL     A,#0FH
+0072 F544              MOV     44H,A
+            
+
+
+D:\003\CDWRITING1\DSPDEMO30\SENDFREOK\MCUCOM\COMM1.ASM                              
+ 
+                                                                                        页     2
+                                                                                        01-13-03
+                                                                                        17:54:53
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+0074 C2B5              CLR     P3.5
+0076 D2B2              SETB    P3.2         ;0100
+0078 C2B3              CLR     P3.3
+007A C2B4              CLR     P3.4
+007C 00                NOP
+007D E590              MOV     A,P1
+007F 540F              ANL     A,#0FH
+0081 F543              MOV     43H,A
+            
+0083 C2B5              CLR     P3.5
+0085 D2B2              SETB    P3.2         ;0101
+0087 C2B3              CLR     P3.3
+0089 D2B4              SETB    P3.4
+008B 00                NOP
+008C E590              MOV     A,P1
+008E 540F              ANL     A,#0FH
+0090 F542              MOV     42H,A
+            
+0092 C2B5              CLR     P3.5
+0094 D2B2              SETB    P3.2         ;0110
+0096 D2B3              SETB    P3.3
+0098 C2B4              CLR     P3.4
+009A 00                NOP
+009B E590              MOV     A,P1
+009D 540F              ANL     A,#0FH
+009F F541              MOV     41H,A
+            
+00A1 C2B5              CLR     P3.5
+00A3 D2B2              SETB    P3.2         ;0111
+00A5 D2B3              SETB    P3.3
+00A7 D2B4              SETB    P3.4
+00A9 00                NOP
+00AA E590              MOV     A,P1
+00AC 540F              ANL     A,#0FH
+00AE F540              MOV     40H,A
+            
+            
+            
+00B0 7548AA            MOV     48H,#0AAH
+00B3 7549AA            MOV     49H,#0AAH
+00B6 754AAA            MOV     4AH,#0AAH
+00B9 754BAA            MOV     4BH,#0AAH
+00BC 754CAA            MOV     4CH,#0AAH
+00BF 754DAA            MOV     4DH,#0AAH
+00C2 754EAA            MOV     4EH,#0AAH
+00C5 754FAA            MOV     4FH,#0AAH
+            
+00C8 12010A        LCALL   COMPC
+
+
+D:\003\CDWRITING1\DSPDEMO30\SENDFREOK\MCUCOM\COMM1.ASM                              
+ 
+                                                                                        页     3
+                                                                                        01-13-03
+                                                                                        17:54:53
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            
+00CB D2B5              SETB    P3.5
+00CD C2B2              CLR     P3.2
+00CF C2B3              CLR     P3.3       ; 1000
+00D1 C2B4              CLR     P3.4
+00D3 E552              MOV     A,52H
+00D5 C4                SWAP    A
+00D6 F590              MOV     P1,A
+00D8 00                NOP
+00D9 C2B7              CLR     P3.7
+00DB D2B7              SETB    P3.7
+00DD C2B7              CLR     P3.7
+            
+00DF D2B5              SETB    P3.5
+00E1 C2B2              CLR     P3.2
+00E3 C2B3              CLR     P3.3       ; 1001
+00E5 D2B4              SETB    P3.4
+00E7 E551              MOV     A,51H
+00E9 C4                SWAP    A 
+00EA F590              MOV     P1,A
+00EC 00                NOP
+00ED C2B7              CLR     P3.7
+00EF D2B7              SETB    P3.7
+00F1 C2B7              CLR     P3.7
+            
+00F3 D2B5              SETB    P3.5
+00F5 C2B2              CLR     P3.2
+00F7 D2B3              SETB    P3.3       ; 1010
+00F9 C2B4              CLR     P3.4
+00FB E550              MOV     A,50H
+00FD C4                SWAP    A
+00FE F590              MOV     P1,A
+0100 00                NOP
+0101 C2B7              CLR     P3.7
+0103 D2B7              SETB    P3.7
+0105 C2B7              CLR     P3.7
+            
+0107 020030            LJMP    MMMM   
+            
+            ;[]---------------------------------------[]
+            ;|	      8051  通信接口		   |
+            ;|					   |
+            ;|	       1997.2. HIEE		   |
+            ;[]---------------------------------------[]
+            ;--------------------------------------------
+            ;	 INTERFACE PROCEDURE
+            ;
+            ;  RAM & REGISTER USED:
+
+
+D:\003\CDWRITING1\DSPDEMO30\SENDFREOK\MCUCOM\COMM1.ASM                              
+ 
+                                                                                        页     4
+                                                                                        01-13-03
+                                                                                        17:54:53
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            ;	50H -- 5FH, A, R0, R1, PCON, TMOD,
+            ;	TL1, TH1, SBUF, SCON, C, RI, TI, TR8
+            ;--------------------------------------------
+            COMPC:
+010A 438780 	ORL	PCON, #80H	  ; 串口初始化
+010D 5389CF 	ANL	TMOD, #0CFH	  ; 11001111B
+0110 438920 	ORL	TMOD, #20H	  ; 00100000B
+            
+0113 4398D0 	ORL	SCON, #0D0H	  ; 11010000B
+0116 758BF7 	MOV	TL1, #247
+0119 758DF7 	MOV	TH1, #247
+011C D28E   	SETB	TR1
+            
+            HAND20:
+011E 3098FD  QW1:   JNB     RI, QW1
+0121 E599   	mov	a,sbuf
+0123 C298   	CLR	RI
+0125 B4F0F6 	cjne	a,#0f0h,hand20	;PC->MCU:0xf0
+            	
+0128 A2D0   	mov	c,p
+012A 929B   	mov	tb8,c
+012C F599   	mov	sbuf,a		;MCU->PC:0xf0
+012E 3099FD QW2:    jnb     ti,QW2
+0131 C299   	clr	ti
+            	
+0133 3098FD QW3:    jnb     ri,QW3             
+0136 E599   	mov	a,sbuf
+0138 C298   	clr	ri		
+013A B4A003 	cjne	a,#0a0h,lnext0		
+013D 020171         Ljmp     receive
+            lnext0:
+0140 B4AFDB 	cjne	a,#0afh,hand20	  
+            send:				;PC->MCU:0x0af	
+0143 74AF   	mov	a,#0afh		;MCU->PC:0x0af	
+0145 A2D0   	mov	c,p
+0147 929B   	mov	tb8,c
+0149 F599   	mov	sbuf,a
+014B 3099FD QW4:    jnb     ti,QW4
+014E C299   	clr	ti
+            	
+0150 7908   	mov	r1,#08h	
+0152 7840   	MOV	R0, #40H	  ;   FROM RAM 40H--4FH
+            sendloop:
+0154 E6     	MOV	A, @R0
+0155 A2D0   	MOV	C, P
+0157 929B   	MOV	TB8, C
+0159 F599   	MOV	SBUF, A
+015B 3099FD QW5:    JNB     TI, QW5
+
+
+D:\003\CDWRITING1\DSPDEMO30\SENDFREOK\MCUCOM\COMM1.ASM                              
+ 
+                                                                                        页     5
+                                                                                        01-13-03
+                                                                                        17:54:53
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+015E C299   	CLR	TI
+            	
+0160 08     	INC	R0
+0161 D9F1   	DJNZ	R1, sendloop
+            
+0163 74FF   	mov	a,#0ffh
+0165 A2D0   	mov	c,p
+0167 929B   	mov	tb8,c
+0169 F599   	mov	sbuf,a
+016B 3099FD QW6:    jnb     ti,QW6
+016E C299   	clr	ti	
+            	
+0170 22     	ret
+            	
+            receive:			;PC->MCU:0xa0
+0171 7903   	mov	r1, #03h  	; RECEIVE FROM IBM-PC
+0173 7850   	MOV	R0, #50H	  ;   SAVE IN RAM 50H--5FH
+            receloop:
+0175 3098FD QW7:    JNB     RI, QW7
+0178 A699   	MOV	@R0, SBUF
+017A C298   	CLR	RI
+            
+017C 08     	INC	R0
+017D D9F6   	DJNZ	R1, receloop
+            
+017F 3098FD QW8:    jnb     ri,QW8
+0182 C298   	clr	ri
+            		
+0184 74A0   	mov	a,#0a0h		;MCU->PC:0xa0
+0186 A2D0   	mov	c,p
+0188 F599   	mov	sbuf,a
+018A 3099FD QW9:    jnb     ti,QW9
+018D C299   	clr	ti
+            	
+018F 22     	ret
+            	
+            	END
+
+
+
+
+
+
+
+
+
+
+
+
+
+D:\003\CDWRITING1\DSPDEMO30\SENDFREOK\MCUCOM\COMM1.ASM                              
+ 
+                                                                                        页     6
+                                                                                        01-13-03
+                                                                                        17:54:53
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+
+
+            符号                       值     类型
+
+            AC                       = 00D6H CONST 常量 
+            ACC                      = 00E0H CONST 常量 
+            B                        = 00F0H CONST 常量 
+            COMPC                    = 010AH CODE  标号 
+            CY                       = 00D7H CONST 常量 
+            DPH                      = 0083H CONST 常量 
+            DPL                      = 0082H CONST 常量 
+            EA                       = 00AFH CONST 常量 
+            ES                       = 00ACH CONST 常量 
+            ET0                      = 00A9H CONST 常量 
+            ET1                      = 00ABH CONST 常量 
+            EX0                      = 00A8H CONST 常量 
+            EX1                      = 00AAH CONST 常量 
+            F0                       = 00D5H CONST 常量 
+            HAND20                   = 011EH CODE  标号 
+            IE                       = 00A8H CONST 常量 
+            IE0                      = 0089H CONST 常量 
+            IE1                      = 008BH CONST 常量 
+            INT0                     = 00B2H CONST 常量 
+            INT1                     = 00B3H CONST 常量 
+            IP                       = 00B8H CONST 常量 
+            IT0                      = 0088H CONST 常量 
+            IT1                      = 008AH CONST 常量 
+            LNEXT0                   = 0140H CODE  标号 
+            MMMM                     = 0030H CODE  标号 
+            OV                       = 00D2H CONST 常量 
+            P                        = 00D0H CONST 常量 
+            P0                       = 0080H CONST 常量 
+            P1                       = 0090H CONST 常量 
+            P2                       = 00A0H CONST 常量 
+            P3                       = 00B0H CONST 常量 
+            PCON                     = 0087H CONST 常量 
+            PS                       = 00BCH CONST 常量 
+            PSW                      = 00D0H CONST 常量 
+            PT0                      = 00B9H CONST 常量 
+            PT1                      = 00BBH CONST 常量 
+            PX0                      = 00B8H CONST 常量 
+            PX1                      = 00BAH CONST 常量 
+            QW1                      = 011EH CODE  标号 
+            QW2                      = 012EH CODE  标号 
+            QW3                      = 0133H CODE  标号 
+            QW4                      = 014BH CODE  标号 
+            QW5                      = 015BH CODE  标号 
+            QW6                      = 016BH CODE  标号 
+
+
+D:\003\CDWRITING1\DSPDEMO30\SENDFREOK\MCUCOM\COMM1.ASM                              
+ 
+                                                                                        页     7
+                                                                                        01-13-03
+                                                                                        17:54:53
+伟福汇编器 V5.00                               Copyright (c) 1989, 99 by CHY
+
+地址  机器码 源程序
+
+            QW7                      = 0175H CODE  标号 
+            QW8                      = 017FH CODE  标号 
+            QW9                      = 018AH CODE  标号 
+            RB8                      = 009AH CONST 常量 
+            RD                       = 00B7H CONST 常量 
+            RECEIVE                  = 0171H CODE  标号 
+            RECELOOP                 = 0175H CODE  标号 
+            REN                      = 009CH CONST 常量 
+            RI                       = 0098H CONST 常量 
+            RS0                      = 00D3H CONST 常量 
+            RS1                      = 00D4H CONST 常量 
+            RXD                      = 00B0H CONST 常量 
+            SBUF                     = 0099H CONST 常量 
+            SCON                     = 0098H CONST 常量 
+            SEND                     = 0143H CODE  标号 
+            SENDLOOP                 = 0154H CODE  标号 
+            SM0                      = 009FH CONST 常量 
+            SM1                      = 009EH CONST 常量 
+            SM2                      = 009DH CONST 常量 
+            SP                       = 0081H CONST 常量 
+            T0                       = 00B4H CONST 常量 
+            T1                       = 00B5H CONST 常量 
+            TB8                      = 009BH CONST 常量 
+            TCON                     = 0088H CONST 常量 
+            TF0                      = 008DH CONST 常量 
+            TF1                      = 008FH CONST 常量 
+            TH0                      = 008CH CONST 常量 
+            TH1                      = 008DH CONST 常量 
+            TI                       = 0099H CONST 常量 
+            TL0                      = 008AH CONST 常量 
+            TL1                      = 008BH CONST 常量 
+            TMOD                     = 0089H CONST 常量 
+            TR0                      = 008CH CONST 常量 
+            TR1                      = 008EH CONST 常量 
+            TXD                      = 00B1H CONST 常量 
+            WR                       = 00B6H CONST 常量 
+
+
+            公有符号:   80
+            私有符号:    0
+
+
+
+
+
+
+
+
+
+
+D:\003\CDWRITING1\DSPDEMO30\SENDFREOK\MCUCOM\COMM1.ASM                              
+ 

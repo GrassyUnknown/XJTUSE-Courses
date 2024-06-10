@@ -1,0 +1,18 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+ENTITY REG4 IS
+    PORT (  Load :  IN STD_LOGIC;
+             A  :  IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+             B  : OUT STD_LOGIC_VECTOR(3 DOWNTO 0) );
+END REG4;
+ARCHITECTURE behav OF REG4 IS
+BEGIN
+    PROCESS(Load, A)
+   BEGIN
+   IF Load'EVENT AND Load = '1' THEN   
+            B <= A; 
+        END IF;
+    END PROCESS;
+END behav;
+
+

@@ -1,0 +1,147 @@
+<session sof_file="" top_level_entity="MCU8951">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="HELLO" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="HELLO" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2017/09/08 15:04:00  #0">
+      <clock name="CLK" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="4096" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="P0O[0]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[1]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[2]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[3]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[4]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[5]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[6]" tap_mode="classic" type="output pin"/>
+          <wire name="P3[0]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[1]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[2]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[3]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[4]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[5]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[6]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[7]" tap_mode="classic" type="bidir pin"/>
+          <wire name="RST" tap_mode="classic" type="input pin"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="P0O[0]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[1]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[2]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[3]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[4]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[5]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[6]" tap_mode="classic" type="output pin"/>
+          <wire name="P3[0]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[1]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[2]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[3]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[4]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[5]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[6]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[7]" tap_mode="classic" type="bidir pin"/>
+          <wire name="RST" tap_mode="classic" type="input pin"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="P0O[0]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[1]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[2]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[3]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[4]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[5]" tap_mode="classic" type="output pin"/>
+          <wire name="P0O[6]" tap_mode="classic" type="output pin"/>
+          <wire name="P3[0]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[1]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[2]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[3]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[4]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[5]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[6]" tap_mode="classic" type="bidir pin"/>
+          <wire name="P3[7]" tap_mode="classic" type="bidir pin"/>
+          <wire name="RST" tap_mode="classic" type="input pin"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net is_signal_inverted="no" name="P0O[0]"/>
+          <net is_signal_inverted="no" name="P0O[1]"/>
+          <net is_signal_inverted="no" name="P0O[2]"/>
+          <net is_signal_inverted="no" name="P0O[3]"/>
+          <net is_signal_inverted="no" name="P0O[4]"/>
+          <net is_signal_inverted="no" name="P0O[5]"/>
+          <net is_signal_inverted="no" name="P0O[6]"/>
+          <net is_signal_inverted="no" name="RST"/>
+          <net is_signal_inverted="no" name="P3[0]"/>
+          <net is_signal_inverted="no" name="P3[1]"/>
+          <net is_signal_inverted="no" name="P3[2]"/>
+          <net is_signal_inverted="no" name="P3[3]"/>
+          <net is_signal_inverted="no" name="P3[4]"/>
+          <net is_signal_inverted="no" name="P3[5]"/>
+          <net is_signal_inverted="no" name="P3[6]"/>
+          <net is_signal_inverted="no" name="P3[7]"/>
+        </data_view>
+        <setup_view>
+          <net is_signal_inverted="no" name="P0O[0]"/>
+          <net is_signal_inverted="no" name="P0O[1]"/>
+          <net is_signal_inverted="no" name="P0O[2]"/>
+          <net is_signal_inverted="no" name="P0O[3]"/>
+          <net is_signal_inverted="no" name="P0O[4]"/>
+          <net is_signal_inverted="no" name="P0O[5]"/>
+          <net is_signal_inverted="no" name="P0O[6]"/>
+          <net is_signal_inverted="no" name="RST"/>
+          <net is_signal_inverted="no" name="P3[0]"/>
+          <net is_signal_inverted="no" name="P3[1]"/>
+          <net is_signal_inverted="no" name="P3[2]"/>
+          <net is_signal_inverted="no" name="P3[3]"/>
+          <net is_signal_inverted="no" name="P3[4]"/>
+          <net is_signal_inverted="no" name="P3[5]"/>
+          <net is_signal_inverted="no" name="P3[6]"/>
+          <net is_signal_inverted="no" name="P3[7]"/>
+        </setup_view>
+      </presentation>
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2017/09/08 15:04:00  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="1" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>0000000000000000
+            <pwr_up_transitional>0000000000000000
+            </pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <single attribute="lock mode" value="36110"/>
+    <multi attribute="window position" size="9" value="1280,923,398,124,356,50,124,0,50"/>
+  </global_info>
+</session>

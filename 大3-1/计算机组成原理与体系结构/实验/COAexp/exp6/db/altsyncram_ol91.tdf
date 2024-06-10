@@ -1,0 +1,57 @@
+--altsyncram CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" CLOCK_ENABLE_INPUT_A="BYPASS" CLOCK_ENABLE_OUTPUT_A="BYPASS" CYCLONEII_M4K_COMPATIBILITY="ON" DEVICE_FAMILY="Cyclone III" ENABLE_RUNTIME_MOD="YES" INIT_FILE="data.hex" INSTANCE_NAME="rom0" LOW_POWER_MODE="AUTO" NUMWORDS_A=64 OPERATION_MODE="ROM" OUTDATA_ACLR_A="NONE" OUTDATA_REG_A="UNREGISTERED" WIDTH_A=24 WIDTH_BYTEENA_A=1 WIDTHAD_A=6 address_a clock0 q_a CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 9.0 cbx_altsyncram 2008:11:06:10:05:41:SJ cbx_cycloneii 2008:05:19:10:57:37:SJ cbx_lpm_add_sub 2008:12:09:22:11:50:SJ cbx_lpm_compare 2009:02:03:01:43:16:SJ cbx_lpm_decode 2008:05:19:10:39:27:SJ cbx_lpm_mux 2008:05:19:10:30:36:SJ cbx_mgl 2009:01:29:16:12:07:SJ cbx_stratix 2008:09:18:16:08:35:SJ cbx_stratixii 2008:11:14:16:08:42:SJ cbx_stratixiii 2008:12:24:11:49:14:SJ cbx_util_mgl 2008:11:21:14:58:47:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2009 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION altsyncram_3s82 (address_a[5..0], address_b[5..0], clock0, clock1, data_b[23..0], wren_b)
+RETURNS ( q_a[23..0], q_b[23..0]);
+FUNCTION sld_mod_ram_rom (data_read[23..0])
+WITH ( CVALUE, IS_DATA_IN_RAM, IS_READABLE, NODE_NAME, NUMWORDS, SHIFT_COUNT_BITS, WIDTH_WORD, WIDTHAD)
+RETURNS ( address[5..0], data_write[23..0], enable_write, tck_usr);
+
+--synthesis_resources = M9K 2 sld_mod_ram_rom 1 
+SUBDESIGN altsyncram_ol91
+( 
+	address_a[5..0]	:	input;
+	clock0	:	input;
+	q_a[23..0]	:	output;
+) 
+VARIABLE 
+	altsyncram1 : altsyncram_3s82;
+	mgl_prim2 : sld_mod_ram_rom
+		WITH (
+			CVALUE = "000000000000000000000000",
+			IS_DATA_IN_RAM = 1,
+			IS_READABLE = 1,
+			NODE_NAME = 1919905072,
+			NUMWORDS = 64,
+			SHIFT_COUNT_BITS = 5,
+			WIDTH_WORD = 24,
+			WIDTHAD = 6
+		);
+
+BEGIN 
+	altsyncram1.address_a[] = address_a[];
+	altsyncram1.address_b[] = mgl_prim2.address[];
+	altsyncram1.clock0 = clock0;
+	altsyncram1.clock1 = mgl_prim2.tck_usr;
+	altsyncram1.data_b[] = mgl_prim2.data_write[];
+	altsyncram1.wren_b = mgl_prim2.enable_write;
+	mgl_prim2.data_read[] = altsyncram1.q_b[];
+	q_a[] = altsyncram1.q_a[];
+END;
+--VALID FILE
