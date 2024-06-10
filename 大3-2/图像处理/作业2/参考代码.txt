@@ -1,0 +1,30 @@
+close all
+clear all
+clc
+
+%读取图像
+img = imread('house.tif');  % 
+subplot(231),imshow(img),title('原始图像');
+
+%傅里叶变换
+F = fft2(img); %快速傅里叶变换
+F_amplitude = abs(F); %查看最大值，最小值
+subplot(232),imshow(F_amplitude,[]),title('傅里叶变换频谱图');
+
+%对数化，展示F的值，说明为什么要对数化
+L = log(1+F_amplitude);  %取对数
+subplot(233),imshow(L,[]), title('对数化的频谱图'); % imshow(,[])归一化
+
+%中心化
+S=fftshift(L);      %中心化
+subplot(234),imshow(S,[]), title('中心化的频谱图');
+
+%傅里叶反变换
+fr = ifft2(F);    
+ret = mat2gray(fr);     %矩阵转灰度图
+subplot(236),imshow(ret), title('傅里叶反变换');
+
+
+
+
+
