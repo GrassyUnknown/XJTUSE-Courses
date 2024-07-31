@@ -15,7 +15,7 @@ This repository contains homework and documents related to courses of Software E
 
 同时，可供参考的内容还有
 
-[Xjtuse-Guide](https://github.com/Xjtuse-Guide/Xjtuse-Guide)
+[Xjtuse-Guide](https://xjtuse-guide.github.io/Xjtuse-Guide/#/)
 
 [雨落俊泉-CSDN](https://blog.csdn.net/weixin_47692652/)
 
@@ -23,10 +23,14 @@ This repository contains homework and documents related to courses of Software E
 
 [IMZD-CSDN](https://blog.csdn.net/qq_39411709?type=blog)
 
+### Tips: How to download more quickly? 如何快速下载本仓库中的部分内容？
+
+由于本仓库的文件较多且总数据量大，可能经常需要部分下载仓库中的文件，推荐使用插件[GitZip](https://chromewebstore.google.com/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn?pli=1)
+
+[GitZip in Github](https://github.com/KinoLien/gitzip)
+
 ## Copyright Notice 版权声明
 
-***本仓库中的内容并非完全原创，仅供学习参考，请勿用作商用等其他用途。***
+***本仓库中的内容并非完全原创，仅供学习参考，请勿用作商用等其他用途。仓库中的许多内容与他人合作完成、仅由他人完成或参考其他资料完成。***
 
-仓库中的许多内容与他人合作完成、仅由他人完成或参考其他资料完成。
-
-***PPT等资料的版权属于授课教师。请勿将PPT外传。***
+***PPT等资料的版权属于授课教师。请勿将PPT外传。由于版权问题，本仓库存在随时关闭的可能，且其中的某些资料有可能随时被删除。***
