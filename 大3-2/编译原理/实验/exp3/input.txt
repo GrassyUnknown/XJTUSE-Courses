@@ -1,0 +1,5 @@
+int a;
+while a<10 do{
+	if a>3 then
+ {if a<5 then{a:=4;} else {a:=5;};}
+else {a:=2;};};

@@ -1,0 +1,8 @@
+1	j:=((k+j)*m)/20+7;	赋值语句
+2	if x then j:=(j+1);	if-then 分支语句, 嵌套 赋值语句
+3	if x then j:=j+1 else j:=j+2;	if-then-else 分支语句, 嵌套 赋值语句
+4	while x do j:=j+2;	while-do 循环语句, 嵌套 赋值语句
+5	j:=i*+1;	语法错误，位置 5: Invalid factor
+6	if x then y	语法错误，位置 End of input: Expected token type 23 but found None
+7	then a:=1;	语法错误，位置 1: Unsupported statement
+8	if x then while n do if a+b then j:=j+1 else j:=j+2;	if-then 分支语句, 嵌套 while-do 循环语句, 嵌套 if-then-else 分支语句, 嵌套 赋值语句

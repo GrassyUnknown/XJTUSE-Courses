@@ -1,0 +1,8 @@
+j:=((k+j)*m)/20+7;
+if x then j:=(j+1);
+if x then j:=j+1 else j:=j+2;
+while x do j:=j+2;
+j:=i*+1;
+if x then y
+then a:=1;
+if x then while n do if a+b then j:=j+1 else j:=j+2;
